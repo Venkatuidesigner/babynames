@@ -1,0 +1,37 @@
+.cta {
+  max-width: 1100px;
+  margin: 2rem auto 3rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(120deg, rgba(244, 167, 185, 0.25), rgba(252, 214, 184, 0.4));
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cta h2 {
+  color: var(--heading-color);
+  margin: 0 0 0.6rem;
+}
+
+.cta p {
+  color: var(--muted-color);
+  margin: 0;
+}
+
+.cta-btn {
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--accent-color), #fcd6b8);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

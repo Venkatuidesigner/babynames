@@ -1,0 +1,26 @@
+<section class="hero-section">
+  <div class="hero-content">
+    <p class="eyebrow">SEO-friendly Tamil names</p>
+    <h1>{{ content?.title }}</h1>
+    <p class="subtitle">{{ content?.subtitle }}</p>
+    <div class="hero-search">
+      <input
+        [(ngModel)]="searchValue"
+        (keyup.enter)="onSearch()"
+        [placeholder]="content?.searchPlaceholder"
+        aria-label="Search Tamil baby names"
+      />
+      <button type="button" (click)="onSearch()">Search</button>
+    </div>
+    <div class="hero-actions">
+      <a routerLink="/names" class="primary-btn">{{ content?.ctaPrimary }}</a>
+      <a href="#browse-letters" class="secondary-btn">{{ content?.ctaSecondary }}</a>
+    </div>
+    <div class="hero-links">
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'girl' }">Girl names</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'boy' }">Boy names</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'modern' }">Modern names</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'traditional' }">Traditional names</a>
+    </div>
+  </div>
+</section>

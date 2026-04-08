@@ -1,0 +1,12 @@
+<section id="browse-letters" class="section">
+  <div class="section-header">
+    <h2>Browse by Tamil letter</h2>
+    <p>Jump directly to SEO-friendly letter pages like /names/a and /names/ka.</p>
+  </div>
+  <div class="letters">
+    <a *ngFor="let letter of letters" [routerLink]="['/names', letter.slug]" class="letter-card">
+      <span class="tamil">{{ letter.tamil }}</span>
+      <span class="latin">{{ letter.label }}</span>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="section-header">
+    <h2>Baby name insights & guides</h2>
+    <p>SEO-rich articles that add value for parents and support AdSense approval.</p>
+  </div>
+  <div class="grid">
+    <article *ngFor="let post of posts" class="card">
+      <p class="read-time">{{ post.readTime }}</p>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt }}</p>
+      <a routerLink="/blog/top-tamil-baby-names" class="link">Read full guide</a>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<svg width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="16" width="288" height="168" rx="28" fill="#FFF8E8" />
+  <circle cx="96" cy="94" r="34" fill="#F7C39B" />
+  <path d="M78 112C88 126 116 126 126 112" stroke="#5B6EA9" stroke-width="6" stroke-linecap="round" />
+  <path d="M84 126L74 154" stroke="#5B6EA9" stroke-width="7" stroke-linecap="round" />
+  <path d="M108 126L118 154" stroke="#5B6EA9" stroke-width="7" stroke-linecap="round" />
+  <text x="170" y="92" font-size="18" fill="#B27346" font-family="sans-serif" font-weight="700">Semester 3</text>
+  <text x="170" y="118" font-size="12" fill="#B07A8C" font-family="sans-serif">12 - 18 months</text>
+</svg>

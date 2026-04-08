@@ -1,0 +1,20 @@
+<div class="home-shell">
+  <canvas #heroCanvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow"></div>
+  <app-header></app-header>
+
+  <ng-container *ngIf="content">
+    <app-home-hero [content]="content.hero"></app-home-hero>
+    <app-home-categories [categories]="content.categories"></app-home-categories>
+    <app-ad-slot label="Sponsored"></app-ad-slot>
+    <app-home-letters [letters]="content.letters"></app-home-letters>
+    <app-home-popular [names]="content.popular"></app-home-popular>
+    <app-ad-slot label="Sponsored"></app-ad-slot>
+    <app-home-blog [posts]="content.blog"></app-home-blog>
+    <app-home-affiliate [items]="content.affiliate"></app-home-affiliate>
+    <app-home-trust [items]="content.trust"></app-home-trust>
+    <app-home-cta [content]="content.cta"></app-home-cta>
+  </ng-container>
+
+  <app-site-footer></app-site-footer>
+</div>

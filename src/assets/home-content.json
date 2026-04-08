@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title": "Tamil Baby Names with Meaning",
+    "subtitle": "Explore meaningful Tamil baby names with origins, pronunciation, and cultural depth. Built for parents who want clarity, tradition, and modern name ideas in one place.",
+    "searchPlaceholder": "Search Tamil or English name...",
+    "ctaPrimary": "Explore Names",
+    "ctaSecondary": "Browse by Letter"
+  },
+  "categories": [
+    {
+      "title": "Girl Names",
+      "description": "Elegant Tamil girl names with meaning, cultural roots, and modern charm.",
+      "slug": "girl",
+      "icon": "🌸"
+    },
+    {
+      "title": "Boy Names",
+      "description": "Strong Tamil boy names inspired by tradition, mythology, and modern style.",
+      "slug": "boy",
+      "icon": "🦁"
+    },
+    {
+      "title": "Modern Names",
+      "description": "Short and stylish Tamil names that feel fresh without losing meaning.",
+      "slug": "modern",
+      "icon": "✨"
+    },
+    {
+      "title": "Traditional Names",
+      "description": "Timeless Tamil names that honor heritage and family history.",
+      "slug": "traditional",
+      "icon": "🏛️"
+    }
+  ],
+  "letters": [
+    { "tamil": "அ", "slug": "a", "label": "A" },
+    { "tamil": "ஆ", "slug": "aa", "label": "Aa" },
+    { "tamil": "இ", "slug": "i", "label": "I" },
+    { "tamil": "ஈ", "slug": "ii", "label": "Ii" },
+    { "tamil": "உ", "slug": "u", "label": "U" },
+    { "tamil": "ஊ", "slug": "uu", "label": "Uu" },
+    { "tamil": "எ", "slug": "e", "label": "E" },
+    { "tamil": "ஏ", "slug": "ee", "label": "Ee" },
+    { "tamil": "ஐ", "slug": "ai", "label": "Ai" },
+    { "tamil": "ஒ", "slug": "o", "label": "O" },
+    { "tamil": "ஓ", "slug": "oo", "label": "Oo" },
+    { "tamil": "ஔ", "slug": "au", "label": "Au" },
+    { "tamil": "க", "slug": "ka", "label": "Ka" },
+    { "tamil": "ச", "slug": "sa", "label": "Sa" },
+    { "tamil": "த", "slug": "tha", "label": "Tha" },
+    { "tamil": "ந", "slug": "na", "label": "Na" },
+    { "tamil": "ம", "slug": "ma", "label": "Ma" },
+    { "tamil": "ர", "slug": "ra", "label": "Ra" },
+    { "tamil": "ல", "slug": "la", "label": "La" },
+    { "tamil": "வ", "slug": "va", "label": "Va" }
+  ],
+  "popular": [
+    {
+      "name": "Aadhira",
+      "meaning": "Moonlight",
+      "description": "Aadhira reflects calm and gentle brightness, often associated with serenity and soft strength.",
+      "gender": "Girl"
+    },
+    {
+      "name": "Kavin",
+      "meaning": "Handsome / Poet",
+      "description": "Kavin is a modern Tamil name that blends creativity and confidence, making it popular among new parents.",
+      "gender": "Boy"
+    },
+    {
+      "name": "Ananya",
+      "meaning": "Unique",
+      "description": "Ananya stands for individuality and grace, often chosen for its timeless appeal in Tamil homes.",
+      "gender": "Girl"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Top Tamil Baby Names with Meaning (2026 List)",
+      "excerpt": "A curated list of trending Tamil baby names with cultural context, pronunciation tips, and meaning.",
+      "readTime": "6 min read"
+    },
+    {
+      "title": "How to Choose a Traditional Tamil Name",
+      "excerpt": "A step-by-step guide for parents who want to honor heritage while selecting a meaningful name.",
+      "readTime": "5 min read"
+    },
+    {
+      "title": "Modern Tamil Names That Still Feel Classic",
+      "excerpt": "Short, stylish, and meaningful names that blend contemporary taste with Tamil roots.",
+      "readTime": "4 min read"
+    }
+  ],
+  "affiliate": [
+    {
+      "title": "Soft Baby Swaddle Blanket",
+      "description": "Breathable cotton swaddles that keep newborns calm and comfortable.",
+      "link": "https://www.amazon.com/?tag=yourtag-20"
+    },
+    {
+      "title": "Baby Name Journal",
+      "description": "A guided notebook to save name ideas, meanings, and family notes.",
+      "link": "https://www.amazon.com/?tag=yourtag-20"
+    },
+    {
+      "title": "Nursery Night Light",
+      "description": "Warm, low-glare lighting perfect for late-night feeds and soothing routines.",
+      "link": "https://www.amazon.com/?tag=yourtag-20"
+    }
+  ],
+  "trust": [
+    {
+      "title": "Curated by Tamil speakers",
+      "detail": "Names reviewed for authenticity, spelling, and pronunciation." 
+    },
+    {
+      "title": "Meaning-first approach",
+      "detail": "Every name includes meaning and cultural context for clarity." 
+    },
+    {
+      "title": "Updated monthly",
+      "detail": "Fresh lists reflect trends without losing traditional roots." 
+    }
+  ],
+  "cta": {
+    "title": "Ready to find the perfect Tamil baby name?",
+    "subtitle": "Browse by letter or explore curated lists based on style and meaning.",
+    "button": "Start Exploring"
+  }
+}

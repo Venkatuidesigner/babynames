@@ -1,0 +1,13 @@
+<section class="section">
+  <div class="section-header">
+    <h2>Why families trust us</h2>
+    <p>Signals for quality, authenticity, and AdSense-ready content.</p>
+  </div>
+  <div class="grid">
+    <div *ngFor="let item of items" class="card">
+      <div class="badge">Verified</div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.detail }}</p>
+    </div>
+  </div>
+</section>

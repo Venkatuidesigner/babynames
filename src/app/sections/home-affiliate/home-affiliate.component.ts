@@ -1,0 +1,16 @@
+import { Component, Input } from '@angular/core';
+
+interface AffiliateItem {
+  title: string;
+  description: string;
+  link: string;
+}
+
+@Component({
+  selector: 'app-home-affiliate',
+  templateUrl: './home-affiliate.component.html',
+  styleUrls: ['./home-affiliate.component.scss']
+})
+export class HomeAffiliateComponent {
+  @Input() items: AffiliateItem[] = [];
+}

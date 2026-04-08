@@ -1,0 +1,8 @@
+<svg width="320" height="200" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="16" width="288" height="168" rx="28" fill="#FFF0F4" />
+  <circle cx="96" cy="100" r="36" fill="#F4A7B9" />
+  <path d="M76 90C84 102 108 102 116 90" stroke="#5B6EA9" stroke-width="6" stroke-linecap="round" />
+  <rect x="66" y="120" width="60" height="12" rx="6" fill="#F9D6B8" />
+  <text x="170" y="92" font-size="18" fill="#B05675" font-family="sans-serif" font-weight="700">Semester 2</text>
+  <text x="170" y="118" font-size="12" fill="#B07A8C" font-family="sans-serif">6 - 12 months</text>
+</svg>

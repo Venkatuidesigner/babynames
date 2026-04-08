@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="section-header">
+    <h2>Popular Tamil baby names</h2>
+    <p>Each name includes meaning and a short cultural description for richer SEO content.</p>
+  </div>
+  <div class="grid">
+    <article *ngFor="let item of names" class="card">
+      <div class="card-top">
+        <div>
+          <h3>{{ item.name }}</h3>
+          <p class="meaning">Meaning: {{ item.meaning }}</p>
+        </div>
+        <span class="tag">{{ item.gender }}</span>
+      </div>
+      <p class="description">{{ item.description }}</p>
+      <a routerLink="/names" class="link">Explore more names</a>
+    </article>
+  </div>
+</section>

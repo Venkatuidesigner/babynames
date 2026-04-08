@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="section-header">
+    <h2>Parent essentials we recommend</h2>
+    <p>Non-spammy Amazon affiliate picks that parents actually find useful.</p>
+  </div>
+  <div class="grid">
+    <article *ngFor="let item of items" class="card">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+      <a [href]="item.link" target="_blank" rel="sponsored noopener" class="link">View on Amazon</a>
+    </article>
+  </div>
+  <p class="disclosure">Disclosure: As an Amazon Associate we may earn from qualifying purchases.</p>
+</section>

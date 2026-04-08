@@ -1,0 +1,22 @@
+<header class="site-header">
+  <nav class="site-nav">
+    <span class="nav-pill">Baby Roots</span>
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        {{ ui.language === 'ta' ? 'முகப்பு' : 'Home' }}
+      </a>
+      <a routerLink="/names" routerLinkActive="active" class="nav-link">
+        {{ ui.language === 'ta' ? 'பெயர்கள்' : 'Explore Names' }}
+      </a>
+      <a routerLink="/add-name" routerLinkActive="active" class="nav-link">
+        {{ ui.language === 'ta' ? 'பெயர் சேர்' : 'Add Name' }}
+      </a>
+    </div>
+    <div class="nav-actions">
+      <button class="pill" (click)="ui.toggleLanguage()">{{ ui.language === 'ta' ? 'EN' : 'TA' }}</button>
+      <button class="pill" (click)="ui.toggleTheme()">
+        {{ ui.theme === 'dark' ? (ui.language === 'ta' ? 'ஒளி' : 'Light') : (ui.language === 'ta' ? 'இருள்' : 'Dark') }}
+      </button>
+    </div>
+  </nav>
+</header>

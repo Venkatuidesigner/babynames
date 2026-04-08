@@ -1,0 +1,37 @@
+<div class="add-shell">
+  <app-header></app-header>
+
+  <main class="add-main">
+    <section class="form-card">
+      <div class="form-head">
+        <p class="eyebrow">{{ ui.language === 'ta' ? 'பெயர் அனுப்பவும்' : 'Submit a Name' }}</p>
+        <h1>{{ ui.language === 'ta' ? 'புதிய தமிழ் பெயரை சேர்க்கவும்' : 'Add a new Tamil baby name' }}</h1>
+        <p class="subtitle">
+          {{ ui.language === 'ta'
+            ? 'உங்கள் விருப்ப பெயரை பகிர்ந்து எங்களது பட்டியலில் சேர்க்கவும்.'
+            : 'Share a favorite name and we will review and add it to the list.' }}
+        </p>
+      </div>
+
+      <form class="add-form">
+        <label>
+          {{ ui.language === 'ta' ? 'தமிழ் பெயர்' : 'Tamil name' }}
+          <input type="text" placeholder="அகல்விழி" />
+        </label>
+        <label>
+          {{ ui.language === 'ta' ? 'ஆங்கில எழுத்துப்பெயர்' : 'English transliteration' }}
+          <input type="text" placeholder="Akalvizhi" />
+        </label>
+        <label>
+          {{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning (optional)' }}
+          <input type="text" placeholder="Meaningful, modern, and rooted" />
+        </label>
+        <label>
+          {{ ui.language === 'ta' ? 'உங்கள் பெயர்' : 'Your name' }}
+          <input type="text" placeholder="Parent name" />
+        </label>
+        <button type="button" class="primary-btn">{{ ui.language === 'ta' ? 'பெயரை அனுப்பவும்' : 'Submit name' }}</button>
+      </form>
+    </section>
+  </main>
+</div>
