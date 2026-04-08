@@ -1,19 +1,19 @@
 <section class="section">
   <div class="section-header">
-    <h2>Popular Tamil baby names</h2>
-    <p>Each name includes meaning and a short cultural description for richer SEO content.</p>
+    <h2>பிரபலமான தமிழ் குழந்தை பெயர்கள்</h2>
+    <p>ஒவ்வொரு பெயரிலும் அர்த்தமும் குறுகிய கலாச்சார விளக்கமும் உள்ளது.</p>
   </div>
   <div class="grid">
     <article *ngFor="let item of names" class="card">
       <div class="card-top">
         <div>
           <h3>{{ item.name }}</h3>
-          <p class="meaning">Meaning: {{ item.meaning }}</p>
+          <p class="meaning">அர்த்தம்: {{ item.meaning }}</p>
         </div>
         <span class="tag">{{ item.gender }}</span>
       </div>
       <p class="description">{{ item.description }}</p>
-      <a routerLink="/names" class="link">Explore more names</a>
+      <a routerLink="/names" class="link">மேலும் பெயர்களை பார்க்க</a>
     </article>
   </div>
 </section>

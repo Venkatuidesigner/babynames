@@ -23,12 +23,14 @@ interface HomeContent {
     searchPlaceholder: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    visualBadge: string;
+    visuals: { title: string; subtitle: string; image: string }[];
   };
   categories: { title: string; description: string; slug: string }[];
   letters: { tamil: string; slug: string; label: string }[];
   popular: { name: string; meaning: string; description: string; gender: string }[];
   blog: { title: string; excerpt: string; readTime: string }[];
-  affiliate: { title: string; description: string; link: string }[];
+  affiliate: { title: string; description: string; link: string; image: string; tag: string }[];
   trust: { title: string; detail: string }[];
   cta: { title: string; subtitle: string; button: string };
 }

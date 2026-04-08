@@ -1,33 +1,51 @@
 {
   "hero": {
-    "title": "Tamil Baby Names with Meaning",
-    "subtitle": "Explore meaningful Tamil baby names with origins, pronunciation, and cultural depth. Built for parents who want clarity, tradition, and modern name ideas in one place.",
-    "searchPlaceholder": "Search Tamil or English name...",
-    "ctaPrimary": "Explore Names",
-    "ctaSecondary": "Browse by Letter"
+    "title": "அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள்",
+    "subtitle": "அர்த்தம், உச்சரிப்பு, கலாச்சார பின்னணி ஆகியவற்றுடன் தமிழ் குழந்தை பெயர்களை கண்டறியுங்கள். குடும்பங்களுக்கு தெளிவு, பாரம்பரியம், நவீனத்தன்மையை ஒரே இடத்தில் வழங்குகிறது.",
+    "searchPlaceholder": "தமிழ் அல்லது ஆங்கில பெயர் தேடு...",
+    "ctaPrimary": "பெயர்கள் பார்க்க",
+    "ctaSecondary": "எழுத்தால் தேடு",
+    "visualBadge": "குழந்தை வளர்ச்சி தருணங்கள்",
+    "visuals": [
+      {
+        "title": "புதிய பிறந்த மினுக்குகள்",
+        "subtitle": "1-4 வாரங்கள்",
+        "image": "assets/baby-growth-1.svg"
+      },
+      {
+        "title": "சிறிய ஆர்வலன்",
+        "subtitle": "சுமார் 6 மாதங்கள்",
+        "image": "assets/baby-growth-2.svg"
+      },
+      {
+        "title": "முதல் நடை",
+        "subtitle": "சுமார் 12 மாதங்கள்",
+        "image": "assets/baby-growth-3.svg"
+      }
+    ]
   },
   "categories": [
     {
-      "title": "Girl Names",
-      "description": "Elegant Tamil girl names with meaning, cultural roots, and modern charm.",
+      "title": "பெண் பெயர்கள்",
+      "description": "அர்த்தமுள்ள பெண் தமிழ் பெயர்கள்—கலாச்சார வேர்களுடன் அழகான தேர்வுகள்.",
       "slug": "girl",
       "icon": "🌸"
     },
     {
-      "title": "Boy Names",
-      "description": "Strong Tamil boy names inspired by tradition, mythology, and modern style.",
+      "title": "ஆண் பெயர்கள்",
+      "description": "பாரம்பரியம், கதைகள், நவீன தன்மை கொண்ட ஆண் பெயர்கள்.",
       "slug": "boy",
       "icon": "🦁"
     },
     {
-      "title": "Modern Names",
-      "description": "Short and stylish Tamil names that feel fresh without losing meaning.",
+      "title": "நவீன பெயர்கள்",
+      "description": "சுருக்கமான, ஸ்டைலான, அர்த்தமுள்ள தமிழ் பெயர்கள்.",
       "slug": "modern",
       "icon": "✨"
     },
     {
-      "title": "Traditional Names",
-      "description": "Timeless Tamil names that honor heritage and family history.",
+      "title": "பாரம்பரிய பெயர்கள்",
+      "description": "மரபை மதிக்கும் காலம் கடந்த தமிழ்ப்பெயர்கள்.",
       "slug": "traditional",
       "icon": "🏛️"
     }
@@ -56,75 +74,81 @@
   ],
   "popular": [
     {
-      "name": "Aadhira",
-      "meaning": "Moonlight",
-      "description": "Aadhira reflects calm and gentle brightness, often associated with serenity and soft strength.",
-      "gender": "Girl"
+      "name": "ஆதிரா",
+      "meaning": "நிலவொளி",
+      "description": "ஆதிரா மென்மையான வெளிச்சமும் அமைதியும் குறிக்கும் பெயர்.",
+      "gender": "பெண்"
     },
     {
-      "name": "Kavin",
-      "meaning": "Handsome / Poet",
-      "description": "Kavin is a modern Tamil name that blends creativity and confidence, making it popular among new parents.",
-      "gender": "Boy"
+      "name": "கவின்",
+      "meaning": "அழகு / கவிஞன்",
+      "description": "கவின் நவீன தமிழ்ப்பெயர்; படைப்பாற்றல் மற்றும் தன்னம்பிக்கையைக் காட்டும்.",
+      "gender": "ஆண்"
     },
     {
-      "name": "Ananya",
-      "meaning": "Unique",
-      "description": "Ananya stands for individuality and grace, often chosen for its timeless appeal in Tamil homes.",
-      "gender": "Girl"
+      "name": "அனன்யா",
+      "meaning": "தனித்துவம்",
+      "description": "அனன்யா தனித்துவமும் நயமும்கொண்ட காலத்திற்கேற்ற பெயர்.",
+      "gender": "பெண்"
     }
   ],
   "blog": [
     {
-      "title": "Top Tamil Baby Names with Meaning (2026 List)",
-      "excerpt": "A curated list of trending Tamil baby names with cultural context, pronunciation tips, and meaning.",
-      "readTime": "6 min read"
+      "title": "அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள் (2026 பட்டியல்)",
+      "excerpt": "பிரபலமான தமிழ் குழந்தை பெயர்கள், உச்சரிப்பு குறிப்புகள், அர்த்தம் ஆகியவற்றுடன் ஒரு தொகுப்பு.",
+      "readTime": "6 நிமிட வாசிப்பு"
     },
     {
-      "title": "How to Choose a Traditional Tamil Name",
-      "excerpt": "A step-by-step guide for parents who want to honor heritage while selecting a meaningful name.",
-      "readTime": "5 min read"
+      "title": "பாரம்பரிய தமிழ் பெயரை எப்படி தேர்வு செய்வது",
+      "excerpt": "குடும்ப மரபை மதிக்கும் பெற்றோருக்கான படிப்படியான வழிகாட்டி.",
+      "readTime": "5 நிமிட வாசிப்பு"
     },
     {
-      "title": "Modern Tamil Names That Still Feel Classic",
-      "excerpt": "Short, stylish, and meaningful names that blend contemporary taste with Tamil roots.",
-      "readTime": "4 min read"
+      "title": "நவீனமும் பாரம்பரியமும் கொண்ட தமிழ் பெயர்கள்",
+      "excerpt": "சுருக்கமும் அழகும் கொண்ட பெயர்கள்—தமிழ் வேர்களுடன்.",
+      "readTime": "4 நிமிட வாசிப்பு"
     }
   ],
   "affiliate": [
     {
-      "title": "Soft Baby Swaddle Blanket",
-      "description": "Breathable cotton swaddles that keep newborns calm and comfortable.",
-      "link": "https://www.amazon.com/?tag=yourtag-20"
+      "title": "மென்மையான ஸ்வாடில் போர்வை",
+      "description": "காற்றோட்டமான பருத்தி ஸ்வாடில், புதிதாக பிறந்த குழந்தைகளுக்கு அமைதியான உறக்கத்தை தருகிறது.",
+      "link": "https://www.amazon.com/?tag=yourtag-20",
+      "image": "assets/baby-product-swaddle.svg",
+      "tag": "அமைதியான தூக்கம்"
     },
     {
-      "title": "Baby Name Journal",
-      "description": "A guided notebook to save name ideas, meanings, and family notes.",
-      "link": "https://www.amazon.com/?tag=yourtag-20"
+      "title": "பெயர் குறிப்பேடு",
+      "description": "பெயர் யோசனைகள், அர்த்தங்கள், குடும்ப குறிப்புகளை சேமிக்க வழிகாட்டும் நோட்புக்.",
+      "link": "https://www.amazon.com/?tag=yourtag-20",
+      "image": "assets/baby-product-journal.svg",
+      "tag": "நினைவுகள் சேமிப்பு"
     },
     {
-      "title": "Nursery Night Light",
-      "description": "Warm, low-glare lighting perfect for late-night feeds and soothing routines.",
-      "link": "https://www.amazon.com/?tag=yourtag-20"
+      "title": "இரவு விளக்கு",
+      "description": "இரவுகளில் மென்மையான ஒளி, குழந்தையை அமைதியாக வைத்திருக்க உதவும்.",
+      "link": "https://www.amazon.com/?tag=yourtag-20",
+      "image": "assets/baby-product-nightlight.svg",
+      "tag": "மென்மையான ஒளி"
     }
   ],
   "trust": [
     {
-      "title": "Curated by Tamil speakers",
-      "detail": "Names reviewed for authenticity, spelling, and pronunciation." 
+      "title": "தமிழ் பேசுவோரால் தொகுப்பு",
+      "detail": "எழுத்துப்பிழை, உச்சரிப்பு, உண்மை ஆகியவை சரிபார்க்கப்பட்டவை."
     },
     {
-      "title": "Meaning-first approach",
-      "detail": "Every name includes meaning and cultural context for clarity." 
+      "title": "அர்த்தமே முதன்மை",
+      "detail": "ஒவ்வொரு பெயருக்கும் அர்த்தமும் கலாச்சார சூழலும் வழங்கப்படுகிறது."
     },
     {
-      "title": "Updated monthly",
-      "detail": "Fresh lists reflect trends without losing traditional roots." 
+      "title": "மாதந்தோறும் புதுப்பிப்பு",
+      "detail": "புதிய போக்குகளை பிரதிபலிக்கும் பட்டியல்கள்."
     }
   ],
   "cta": {
-    "title": "Ready to find the perfect Tamil baby name?",
-    "subtitle": "Browse by letter or explore curated lists based on style and meaning.",
-    "button": "Start Exploring"
+    "title": "சரியான தமிழ் குழந்தை பெயரைத் தேர்வுசெய்ய தயாரா?",
+    "subtitle": "எழுத்தால் தேடுங்கள் அல்லது தொகுப்புகளை ஆராயுங்கள்.",
+    "button": "இப்போது தொடங்குங்கள்"
   }
 }

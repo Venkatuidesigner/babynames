@@ -1,6 +1,6 @@
 <header class="site-header">
   <nav class="site-nav">
-    <span class="nav-pill">Baby Roots</span>
+    <span class="nav-pill">குழந்தை ரூட்ஸ்</span>
     <div class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
         {{ ui.language === 'ta' ? 'முகப்பு' : 'Home' }}
@@ -13,7 +13,6 @@
       </a>
     </div>
     <div class="nav-actions">
-      <button class="pill" (click)="ui.toggleLanguage()">{{ ui.language === 'ta' ? 'EN' : 'TA' }}</button>
       <button class="pill" (click)="ui.toggleTheme()">
         {{ ui.theme === 'dark' ? (ui.language === 'ta' ? 'ஒளி' : 'Light') : (ui.language === 'ta' ? 'இருள்' : 'Dark') }}
       </button>

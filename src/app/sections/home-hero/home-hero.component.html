@@ -1,26 +1,43 @@
 <section class="hero-section">
   <div class="hero-content">
-    <p class="eyebrow">SEO-friendly Tamil names</p>
-    <h1>{{ content?.title }}</h1>
-    <p class="subtitle">{{ content?.subtitle }}</p>
-    <div class="hero-search">
-      <input
-        [(ngModel)]="searchValue"
-        (keyup.enter)="onSearch()"
-        [placeholder]="content?.searchPlaceholder"
-        aria-label="Search Tamil baby names"
-      />
-      <button type="button" (click)="onSearch()">Search</button>
-    </div>
-    <div class="hero-actions">
-      <a routerLink="/names" class="primary-btn">{{ content?.ctaPrimary }}</a>
-      <a href="#browse-letters" class="secondary-btn">{{ content?.ctaSecondary }}</a>
-    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">எஸ்இஓ நட்பு தமிழ் பெயர்கள்</p>
+      <h1>{{ content?.title }}</h1>
+      <p class="subtitle">{{ content?.subtitle }}</p>
+      <div class="hero-search">
+        <input
+          [(ngModel)]="searchValue"
+          (keyup.enter)="onSearch()"
+          [placeholder]="content?.searchPlaceholder"
+          aria-label="தமிழ் குழந்தை பெயர்கள் தேடல்"
+        />
+        <button type="button" (click)="onSearch()">தேடல்</button>
+      </div>
+      <div class="hero-actions">
+        <a routerLink="/names" class="primary-btn">{{ content?.ctaPrimary }}</a>
+        <a href="#browse-letters" class="secondary-btn">{{ content?.ctaSecondary }}</a>
+      </div>
     <div class="hero-links">
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'girl' }">Girl names</a>
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'boy' }">Boy names</a>
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'modern' }">Modern names</a>
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'traditional' }">Traditional names</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'girl' }">பெண் பெயர்கள்</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'boy' }">ஆண் பெயர்கள்</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'modern' }">நவீன பெயர்கள்</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'traditional' }">பாரம்பரிய பெயர்கள்</a>
+    </div>
+    </div>
+    <div class="hero-visuals" aria-label="குழந்தை வளர்ச்சி தருணங்கள்">
+      <div class="visual-header">
+        <span class="visual-badge">{{ content?.visualBadge }}</span>
+        <p>ஒவ்வொரு பெயரும் ஒரு கதை. இவை வளர்ச்சியுடன் இணையும் தருணங்கள்.</p>
+      </div>
+      <div class="visual-grid">
+        <article *ngFor="let visual of content?.visuals" class="visual-card">
+          <img [src]="visual.image" [alt]="visual.title" loading="lazy" />
+          <div>
+            <h3>{{ visual.title }}</h3>
+            <span>{{ visual.subtitle }}</span>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>

@@ -15,7 +15,7 @@ interface UiState {
 export class UiService {
   private readonly storageKey = 'baby-names-ui';
   private state: UiState = {
-    language: 'en',
+    language: 'ta',
     theme: 'light'
   };
 
@@ -38,7 +38,7 @@ export class UiService {
   toggleLanguage(): void {
     this.state = {
       ...this.state,
-      language: this.state.language === 'en' ? 'ta' : 'en'
+      language: 'ta'
     };
     this.persist();
   }
@@ -69,7 +69,7 @@ export class UiService {
       }
       const parsed = JSON.parse(raw) as Partial<UiState>;
       this.state = {
-        language: parsed.language === 'ta' ? 'ta' : 'en',
+        language: 'ta',
         theme: parsed.theme === 'dark' ? 'dark' : 'light'
       };
       this.stateSubject.next(this.state);

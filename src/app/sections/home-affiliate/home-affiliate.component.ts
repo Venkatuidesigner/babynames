@@ -4,6 +4,8 @@ interface AffiliateItem {
   title: string;
   description: string;
   link: string;
+  image: string;
+  tag: string;
 }
 
 @Component({

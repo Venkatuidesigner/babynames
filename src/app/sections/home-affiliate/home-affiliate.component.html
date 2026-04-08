@@ -1,14 +1,20 @@
 <section class="section">
   <div class="section-header">
-    <h2>Parent essentials we recommend</h2>
-    <p>Non-spammy Amazon affiliate picks that parents actually find useful.</p>
+    <h2>பெற்றோருக்கான பயனுள்ள பொருட்கள்</h2>
+    <p>உண்மையில் உதவும் எளிய பரிந்துரைகள்.</p>
   </div>
   <div class="grid">
     <article *ngFor="let item of items" class="card">
-      <h3>{{ item.title }}</h3>
-      <p>{{ item.description }}</p>
-      <a [href]="item.link" target="_blank" rel="sponsored noopener" class="link">View on Amazon</a>
+      <div class="card-media">
+        <img [src]="item.image" [alt]="item.title" loading="lazy" />
+        <span class="chip">{{ item.tag }}</span>
+      </div>
+      <div class="card-body">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <a [href]="item.link" target="_blank" rel="sponsored noopener" class="link">அமேசானில் பார்க்க</a>
+      </div>
     </article>
   </div>
-  <p class="disclosure">Disclosure: As an Amazon Associate we may earn from qualifying purchases.</p>
+  <p class="disclosure">அறிவிப்பு: Amazon Associate திட்டத்தின் மூலம் தகுதியான வாங்குதல்களில் சிறிய கமிஷன் கிடைக்கலாம்.</p>
 </section>

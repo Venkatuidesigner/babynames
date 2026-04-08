@@ -28,7 +28,7 @@
               <div class="search-field">
                 <input
                   [(ngModel)]="searchValue"
-                  aria-label="search name"
+                  aria-label="பெயர் தேடு"
                   [placeholder]="ui.language === 'ta' ? 'தமிழ் அல்லது ஆங்கில பெயர்...' : 'Search Tamil or English name...'"
                   class="search-control"
                 />
@@ -88,7 +88,7 @@
               *ngFor="let option of letterOptions"
               (click)="onLetter(option)"
               [class]="activeLetter === option.tamil ? 'filter-chip active' : 'filter-chip'"
-              [attr.aria-label]="'Filter Tamil names starting with ' + option.tamil"
+              [attr.aria-label]="'எழுத்து வடிகட்டி: ' + option.tamil"
             >
               {{ option.tamil }}
             </button>
@@ -117,9 +117,8 @@
       >
         <div class="flex items-baseline justify-between">
           <h2 class="text-2xl font-display font-black text-brand-50">{{ item.tamil }}</h2>
-          <span class="badge">Tamil</span>
+          <span class="badge">தமிழ்</span>
         </div>
-        <p class="mt-2 text-lg font-semibold text-slate-100">{{ item.english }}</p>
         <div class="mt-4 flex items-center gap-2 text-xs text-slate-300">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
           <span>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள, நவீன, பாரம்பரியம்' : 'Meaningful, modern, and rooted' }}</span>

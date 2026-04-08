@@ -7,6 +7,8 @@ interface HeroContent {
   searchPlaceholder: string;
   ctaPrimary: string;
   ctaSecondary: string;
+  visualBadge: string;
+  visuals: { title: string; subtitle: string; image: string }[];
 }
 
 @Component({

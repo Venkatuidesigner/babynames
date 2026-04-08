@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./ad-slot.component.scss']
 })
 export class AdSlotComponent {
-  @Input() label = 'Sponsored';
+  @Input() label = 'விளம்பரம்';
   @Input() slot = '0000000000';
 }
