@@ -1,22 +1,48 @@
 # BabyNamesSite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+A Tamil baby names website built with Angular. The app includes bilingual Tamil and English support, multiple visual themes, name exploration by letter, and static-hosting support for GitHub Pages.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Tamil and English language selection
+- Five theme options: Light, Pink, Blue, Yellow, and Midnight
+- Name browsing by category and starting letter
+- Privacy Policy, Cookie Policy, Terms, About, and Contact pages
+- GitHub Pages-friendly routing with Angular hash routes
 
-## Code scaffolding
+## Local development
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Start the development server:
+
+```bash
+ng serve
+```
+
+Then open:
+
+```txt
+http://localhost:4200/
+```
+
+The app reloads automatically when source files change.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Create a production build:
 
-## GitHub Pages Deploy
+```bash
+ng build
+```
 
-This project is configured for GitHub Pages using Angular hash routing, so page refreshes and direct links work on static hosting.
+Build output goes to:
+
+```txt
+dist/baby-names-site
+```
+
+## GitHub Pages deploy
+
+This project is configured for GitHub Pages using Angular hash routing, so direct links and browser refreshes work correctly on static hosting.
 
 Build for GitHub Pages with:
 
@@ -24,26 +50,26 @@ Build for GitHub Pages with:
 npm run build:github-pages
 ```
 
-Then publish the contents of:
+Then publish:
 
-```bash
+```txt
 dist/baby-names-site
 ```
 
 Important notes:
 
 - Routes will look like `/#/about`, `/#/privacy`, `/#/names/a`
-- This is expected for GitHub Pages and avoids 404 errors on refresh
-- If you use a custom domain with proper server rewrites later, you can switch back from hash routing
+- This is expected on GitHub Pages and prevents 404 errors on refresh
+- If you move to a host with rewrite support later, you can switch away from hash routing
 
-## Running unit tests
+## Testing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run unit tests with:
 
-## Running end-to-end tests
+```bash
+ng test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Angular CLI
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
