@@ -1,11 +1,11 @@
 <div class="page-shell">
   <app-header></app-header>
   <main class="page">
-    <h1>தொடர்பு</h1>
-    <p>பெயர் பரிந்துரை அல்லது திருத்தம் இருக்கிறதா? எங்களுக்கு தெரிவியுங்கள்.</p>
+    <h1>{{ ui.language === 'ta' ? 'தொடர்பு' : 'Contact' }}</h1>
+    <p>{{ ui.language === 'ta' ? 'பெயர் பரிந்துரை அல்லது திருத்தம் இருக்கிறதா? எங்களுக்கு தெரிவியுங்கள்.' : 'Have a name suggestion or correction? Let us know.' }}</p>
     <div class="card">
-      <p>மின்னஞ்சல்: hello@tamilbabynames.com</p>
-      <p>பதிலளிக்கும் நேரம்: 2 வேலை நாட்கள்</p>
+      <p>{{ ui.language === 'ta' ? 'மின்னஞ்சல்' : 'Email' }}: hello@tamilbabynames.com</p>
+      <p>{{ ui.language === 'ta' ? 'பதிலளிக்கும் நேரம்: 2 வேலை நாட்கள்' : 'Response time: 2 business days' }}</p>
     </div>
   </main>
   <app-site-footer></app-site-footer>

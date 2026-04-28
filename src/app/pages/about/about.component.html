@@ -1,15 +1,17 @@
 <div class="page-shell">
   <app-header></app-header>
   <main class="page">
-    <h1>அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள் பற்றி</h1>
+    <h1>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள் பற்றி' : 'About Meaningful Tamil Baby Names' }}</h1>
     <p>
-      கலாச்சாரப் பின்னணி, உச்சரிப்பு உதவிக்குறிப்பு, நவீன பயன்பாடு ஆகியவற்றை சேர்த்து அர்த்தமுள்ள தமிழ் பெயர்களை தொகுக்கிறோம்.
-      உண்மையான, காலத்தால் அழியாத, எளிதில் புரியும் பெயர்களை குடும்பங்கள் தேர்வு செய்ய உதவுவதே எங்கள் நோக்கம்.
+      {{ ui.language === 'ta'
+        ? 'கலாச்சாரப் பின்னணி, உச்சரிப்பு உதவிக்குறிப்பு, நவீன பயன்பாடு ஆகியவற்றை சேர்த்து அர்த்தமுள்ள தமிழ் பெயர்களை தொகுக்கிறோம். உண்மையான, காலத்தால் அழியாத, எளிதில் புரியும் பெயர்களை குடும்பங்கள் தேர்வு செய்ய உதவுவதே எங்கள் நோக்கம்.'
+        : 'We curate meaningful Tamil names with cultural context, pronunciation help, and modern usage notes. Our goal is to help families choose names that feel authentic, timeless, and easy to understand.' }}
     </p>
-    <h2>எப்படி தொகுக்கிறோம்</h2>
+    <h2>{{ ui.language === 'ta' ? 'எப்படி தொகுக்கிறோம்' : 'How we curate names' }}</h2>
     <p>
-      தமிழ் இலக்கியம், கலாச்சாரம், பயன்பாட்டு போக்குகள் ஆகியவற்றின் மூலங்களை எங்கள் தொகுப்பாளர்கள் ஆய்வு செய்து
-      பாரம்பரியமும் நவீனமும் சமநிலையுடன் இருக்கும் பட்டியலை உருவாக்குகின்றனர்.
+      {{ ui.language === 'ta'
+        ? 'தமிழ் இலக்கியம், கலாச்சாரம், பயன்பாட்டு போக்குகள் ஆகியவற்றின் மூலங்களை எங்கள் தொகுப்பாளர்கள் ஆய்வு செய்து பாரம்பரியமும் நவீனமும் சமநிலையுடன் இருக்கும் பட்டியலை உருவாக்குகின்றனர்.'
+        : 'Our editors study Tamil literature, culture, and naming trends to build lists that balance heritage with present-day appeal.' }}
     </p>
   </main>
   <app-site-footer></app-site-footer>

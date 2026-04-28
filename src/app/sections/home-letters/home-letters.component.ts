@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UiService } from '../../ui.service';
 
 interface LetterItem {
   tamil: string;
@@ -13,4 +14,5 @@ interface LetterItem {
 })
 export class HomeLettersComponent {
   @Input() letters: LetterItem[] = [];
+  constructor(public ui: UiService) {}
 }

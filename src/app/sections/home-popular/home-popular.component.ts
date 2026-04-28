@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UiService } from '../../ui.service';
 
 interface PopularName {
   name: string;
@@ -14,4 +15,5 @@ interface PopularName {
 })
 export class HomePopularComponent {
   @Input() names: PopularName[] = [];
+  constructor(public ui: UiService) {}
 }

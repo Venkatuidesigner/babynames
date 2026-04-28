@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UiService } from '../../ui.service';
 
 interface AffiliateItem {
   title: string;
@@ -15,4 +16,5 @@ interface AffiliateItem {
 })
 export class HomeAffiliateComponent {
   @Input() items: AffiliateItem[] = [];
+  constructor(public ui: UiService) {}
 }

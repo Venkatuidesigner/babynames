@@ -1,8 +1,8 @@
-<div class="ad-slot" aria-label="விளம்பரம்">
-  <p class="label">{{ label }}</p>
+<div class="ad-slot" [attr.aria-label]="ui.language === 'ta' ? 'விளம்பரம்' : 'Advertisement'">
+  <p class="label">{{ ui.language === 'ta' && label === 'Advertisement' ? 'விளம்பரம்' : label }}</p>
   <div class="ad-box">
-    <p>AdSense விளம்பர இடம்</p>
-    <p class="hint">(லைவ் விளம்பர அலகாக மாற்றவும்)</p>
+    <p>{{ ui.language === 'ta' ? 'AdSense விளம்பர இடம்' : 'AdSense ad placement' }}</p>
+    <p class="hint">{{ ui.language === 'ta' ? '(லைவ் விளம்பர அலகாக மாற்றவும்)' : '(replace with a live ad unit)' }}</p>
   </div>
   <!-- Example AdSense unit. Replace data-ad-client/slot in production.
   <ins class="adsbygoogle"

@@ -1,6 +1,6 @@
 <header class="site-header">
   <nav class="site-nav">
-    <span class="nav-pill">குழந்தை ரூட்ஸ்</span>
+    <span class="nav-pill">{{ ui.language === 'ta' ? 'குழந்தை ரூட்ஸ்' : 'Baby Roots' }}</span>
     <div class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
         {{ ui.language === 'ta' ? 'முகப்பு' : 'Home' }}

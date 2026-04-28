@@ -16,19 +16,19 @@
       <form class="add-form">
         <label>
           {{ ui.language === 'ta' ? 'தமிழ் பெயர்' : 'Tamil name' }}
-          <input type="text" placeholder="அகல்விழி" />
+          <input type="text" [placeholder]="ui.language === 'ta' ? 'அகல்விழி' : 'Akalvizhi'" />
         </label>
         <label>
           {{ ui.language === 'ta' ? 'ஆங்கில எழுத்துப்பெயர்' : 'English transliteration' }}
-          <input type="text" placeholder="அகல்விழி (ஆங்கில எழுத்து)" />
+          <input type="text" [placeholder]="ui.language === 'ta' ? 'அகல்விழி (ஆங்கில எழுத்து)' : 'Akalvizhi (English transliteration)'" />
         </label>
         <label>
           {{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning (optional)' }}
-          <input type="text" placeholder="உதா: அர்த்தம், நவீனம், மரபு" />
+          <input type="text" [placeholder]="ui.language === 'ta' ? 'உதா: அர்த்தம், நவீனம், மரபு' : 'Example: meaning, modern, traditional'" />
         </label>
         <label>
           {{ ui.language === 'ta' ? 'உங்கள் பெயர்' : 'Your name' }}
-          <input type="text" placeholder="பெற்றோர் பெயர்" />
+          <input type="text" [placeholder]="ui.language === 'ta' ? 'பெற்றோர் பெயர்' : 'Parent name'" />
         </label>
         <button type="button" class="primary-btn">{{ ui.language === 'ta' ? 'பெயரை அனுப்பவும்' : 'Submit name' }}</button>
       </form>

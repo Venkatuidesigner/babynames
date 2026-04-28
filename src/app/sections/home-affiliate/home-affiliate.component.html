@@ -1,7 +1,7 @@
 <section class="section">
   <div class="section-header">
-    <h2>பெற்றோருக்கான பயனுள்ள பொருட்கள்</h2>
-    <p>உண்மையில் உதவும் எளிய பரிந்துரைகள்.</p>
+    <h2>{{ ui.language === 'ta' ? 'பெற்றோருக்கான பயனுள்ள பொருட்கள்' : 'Helpful picks for parents' }}</h2>
+    <p>{{ ui.language === 'ta' ? 'உண்மையில் உதவும் எளிய பரிந்துரைகள்.' : 'Simple recommendations that are genuinely useful.' }}</p>
   </div>
   <div class="grid">
     <article *ngFor="let item of items" class="card">
@@ -12,9 +12,9 @@
       <div class="card-body">
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>
-        <a [href]="item.link" target="_blank" rel="sponsored noopener" class="link">அமேசானில் பார்க்க</a>
+        <a [href]="item.link" target="_blank" rel="sponsored noopener" class="link">{{ ui.language === 'ta' ? 'அமேசானில் பார்க்க' : 'View on Amazon' }}</a>
       </div>
     </article>
   </div>
-  <p class="disclosure">அறிவிப்பு: Amazon Associate திட்டத்தின் மூலம் தகுதியான வாங்குதல்களில் சிறிய கமிஷன் கிடைக்கலாம்.</p>
+  <p class="disclosure">{{ ui.language === 'ta' ? 'அறிவிப்பு: Amazon Associate திட்டத்தின் மூலம் தகுதியான வாங்குதல்களில் சிறிய கமிஷன் கிடைக்கலாம்.' : 'Disclosure: As an Amazon Associate, we may earn a small commission from qualifying purchases.' }}</p>
 </section>

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Title, Meta } from '@angular/platform-browser';
+import { UiService } from '../ui.service';
 
 type ParticleKind = 'bubble' | 'star' | 'spark' | 'ring';
 
@@ -35,6 +36,157 @@ interface HomeContent {
   cta: { title: string; subtitle: string; button: string };
 }
 
+const HOME_CONTENT_EN: HomeContent = {
+  hero: {
+    title: 'Meaningful Tamil Baby Names',
+    subtitle: 'Discover Tamil baby names with meaning, pronunciation, and cultural context. It brings clarity, tradition, and modern style together for families.',
+    searchPlaceholder: 'Search Tamil or English name...',
+    ctaPrimary: 'Explore names',
+    ctaSecondary: 'Browse by letter',
+    visualBadge: 'Baby growth moments',
+    visuals: [
+      {
+        title: 'Newborn sparkle',
+        subtitle: '1-4 weeks',
+        image: 'assets/baby-growth-1.svg'
+      },
+      {
+        title: 'Little explorer',
+        subtitle: 'Around 6 months',
+        image: 'assets/baby-growth-2.svg'
+      },
+      {
+        title: 'First steps',
+        subtitle: 'Around 12 months',
+        image: 'assets/baby-growth-3.svg'
+      }
+    ]
+  },
+  categories: [
+    {
+      title: 'Girl Names',
+      description: 'Meaningful Tamil girl names with cultural roots and graceful choices.',
+      slug: 'girl'
+    },
+    {
+      title: 'Boy Names',
+      description: 'Tamil boy names shaped by heritage, stories, and a modern touch.',
+      slug: 'boy'
+    },
+    {
+      title: 'Modern Names',
+      description: 'Short, stylish, and meaningful Tamil names for today.',
+      slug: 'modern'
+    },
+    {
+      title: 'Traditional Names',
+      description: 'Timeless Tamil names that honor family heritage.',
+      slug: 'traditional'
+    }
+  ],
+  letters: [
+    { tamil: 'அ', slug: 'a', label: 'A' },
+    { tamil: 'ஆ', slug: 'aa', label: 'Aa' },
+    { tamil: 'இ', slug: 'i', label: 'I' },
+    { tamil: 'ஈ', slug: 'ii', label: 'Ii' },
+    { tamil: 'உ', slug: 'u', label: 'U' },
+    { tamil: 'ஊ', slug: 'uu', label: 'Uu' },
+    { tamil: 'எ', slug: 'e', label: 'E' },
+    { tamil: 'ஏ', slug: 'ee', label: 'Ee' },
+    { tamil: 'ஐ', slug: 'ai', label: 'Ai' },
+    { tamil: 'ஒ', slug: 'o', label: 'O' },
+    { tamil: 'ஓ', slug: 'oo', label: 'Oo' },
+    { tamil: 'ஔ', slug: 'au', label: 'Au' },
+    { tamil: 'க', slug: 'ka', label: 'Ka' },
+    { tamil: 'ச', slug: 'sa', label: 'Sa' },
+    { tamil: 'த', slug: 'tha', label: 'Tha' },
+    { tamil: 'ந', slug: 'na', label: 'Na' },
+    { tamil: 'ம', slug: 'ma', label: 'Ma' },
+    { tamil: 'ர', slug: 'ra', label: 'Ra' },
+    { tamil: 'ல', slug: 'la', label: 'La' },
+    { tamil: 'வ', slug: 'va', label: 'Va' }
+  ],
+  popular: [
+    {
+      name: 'Aathira',
+      meaning: 'Moonlight',
+      description: 'Aathira is a gentle name associated with radiance and calm.',
+      gender: 'Girl'
+    },
+    {
+      name: 'Kavin',
+      meaning: 'Beauty / poet',
+      description: 'Kavin is a modern Tamil name that suggests creativity and confidence.',
+      gender: 'Boy'
+    },
+    {
+      name: 'Ananya',
+      meaning: 'Unique',
+      description: 'Ananya is a timeless name with a graceful sense of individuality.',
+      gender: 'Girl'
+    }
+  ],
+  blog: [
+    {
+      title: 'Meaningful Tamil Baby Names (2026 List)',
+      excerpt: 'A curated list of popular Tamil baby names with meanings and pronunciation notes.',
+      readTime: '6 min read'
+    },
+    {
+      title: 'How to choose a traditional Tamil name',
+      excerpt: 'A practical guide for parents who want to honor family heritage.',
+      readTime: '5 min read'
+    },
+    {
+      title: 'Modern Tamil names with traditional roots',
+      excerpt: 'Short, elegant names that still feel deeply Tamil.',
+      readTime: '4 min read'
+    }
+  ],
+  affiliate: [
+    {
+      title: 'Soft swaddle blanket',
+      description: 'A breathable cotton swaddle that helps newborns sleep more peacefully.',
+      link: 'https://www.amazon.com/?tag=yourtag-20',
+      image: 'assets/baby-product-swaddle.svg',
+      tag: 'Peaceful sleep'
+    },
+    {
+      title: 'Name journal',
+      description: 'A guided notebook for saving name ideas, meanings, and family notes.',
+      link: 'https://www.amazon.com/?tag=yourtag-20',
+      image: 'assets/baby-product-journal.svg',
+      tag: 'Save memories'
+    },
+    {
+      title: 'Night light',
+      description: 'A soft bedside glow that helps keep late-night routines calm.',
+      link: 'https://www.amazon.com/?tag=yourtag-20',
+      image: 'assets/baby-product-nightlight.svg',
+      tag: 'Soft glow'
+    }
+  ],
+  trust: [
+    {
+      title: 'Curated by Tamil speakers',
+      detail: 'Spelling, pronunciation, and authenticity are reviewed carefully.'
+    },
+    {
+      title: 'Meaning comes first',
+      detail: 'Each name is paired with meaning and cultural context.'
+    },
+    {
+      title: 'Updated monthly',
+      detail: 'Lists are refreshed to reflect new naming trends.'
+    }
+  ],
+  cta: {
+    title: 'Ready to choose the perfect Tamil baby name?',
+    subtitle: 'Browse by letter or explore curated collections.',
+    button: 'Start now'
+  }
+};
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -43,9 +195,16 @@ interface HomeContent {
 
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('heroCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
-  content: HomeContent | null = null;
+  tamilContent: HomeContent | null = null;
 
-  constructor(private http: HttpClient, private title: Title, private meta: Meta) {}
+  constructor(private http: HttpClient, private title: Title, private meta: Meta, public ui: UiService) {}
+
+  get content(): HomeContent | null {
+    if (this.ui.language === 'en') {
+      return HOME_CONTENT_EN;
+    }
+    return this.tamilContent;
+  }
 
   ngOnInit(): void {
     this.title.setTitle('Tamil Baby Names with Meaning | SEO-Friendly Name Finder');
@@ -55,9 +214,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     this.http.get<HomeContent>('assets/home-content.json').subscribe({
-      next: (data) => (this.content = data),
+      next: (data) => (this.tamilContent = data),
       error: () => {
-        this.content = null;
+        this.tamilContent = null;
       }
     });
   }

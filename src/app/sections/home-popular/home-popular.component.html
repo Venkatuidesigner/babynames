@@ -1,19 +1,19 @@
 <section class="section">
   <div class="section-header">
-    <h2>பிரபலமான தமிழ் குழந்தை பெயர்கள்</h2>
-    <p>ஒவ்வொரு பெயரிலும் அர்த்தமும் குறுகிய கலாச்சார விளக்கமும் உள்ளது.</p>
+    <h2>{{ ui.language === 'ta' ? 'பிரபலமான தமிழ் குழந்தை பெயர்கள்' : 'Popular Tamil baby names' }}</h2>
+    <p>{{ ui.language === 'ta' ? 'ஒவ்வொரு பெயரிலும் அர்த்தமும் குறுகிய கலாச்சார விளக்கமும் உள்ளது.' : 'Each name includes a meaning and a short cultural note.' }}</p>
   </div>
   <div class="grid">
     <article *ngFor="let item of names" class="card">
       <div class="card-top">
         <div>
           <h3>{{ item.name }}</h3>
-          <p class="meaning">அர்த்தம்: {{ item.meaning }}</p>
+          <p class="meaning">{{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning' }}: {{ item.meaning }}</p>
         </div>
         <span class="tag">{{ item.gender }}</span>
       </div>
       <p class="description">{{ item.description }}</p>
-      <a routerLink="/names" class="link">மேலும் பெயர்களை பார்க்க</a>
+      <a routerLink="/names" class="link">{{ ui.language === 'ta' ? 'மேலும் பெயர்களை பார்க்க' : 'See more names' }}</a>
     </article>
   </div>
 </section>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UiService } from '../../ui.service';
 
 interface TrustItem {
   title: string;
@@ -12,4 +13,5 @@ interface TrustItem {
 })
 export class HomeTrustComponent {
   @Input() items: TrustItem[] = [];
+  constructor(public ui: UiService) {}
 }

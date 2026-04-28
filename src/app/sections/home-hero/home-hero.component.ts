@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { UiService } from '../../ui.service';
 
 interface HeroContent {
   title: string;
@@ -20,7 +21,7 @@ export class HomeHeroComponent {
   @Input() content!: HeroContent;
   searchValue = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public ui: UiService) {}
 
   onSearch(): void {
     const query = this.searchValue.trim();

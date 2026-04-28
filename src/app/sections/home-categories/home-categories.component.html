@@ -1,14 +1,14 @@
 <section class="section">
   <div class="section-header">
-    <h2>வகைப்படி பார்க்க</h2>
-    <p>பிரபலமான தமிழ் குழந்தை பெயர் வகைகளுக்கான விரைவு வழிகள்.</p>
+    <h2>{{ ui.language === 'ta' ? 'வகைப்படி பார்க்க' : 'Browse by category' }}</h2>
+    <p>{{ ui.language === 'ta' ? 'பிரபலமான தமிழ் குழந்தை பெயர் வகைகளுக்கான விரைவு வழிகள்.' : 'Quick paths into popular Tamil baby name categories.' }}</p>
   </div>
   <div class="grid">
     <article *ngFor="let item of categories" class="card">
       <div class="icon">{{ item.icon }}</div>
       <h3>{{ item.title }}</h3>
       <p>{{ item.description }}</p>
-      <a [routerLink]="['/names']" [queryParams]="{ category: item.slug }">{{ item.title }} மேலும் காண்க</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: item.slug }">{{ item.title }} {{ ui.language === 'ta' ? 'மேலும் காண்க' : 'more' }}</a>
     </article>
   </div>
 </section>

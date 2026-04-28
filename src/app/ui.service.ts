@@ -15,7 +15,7 @@ interface UiState {
 export class UiService {
   private readonly storageKey = 'baby-names-ui';
   private state: UiState = {
-    language: 'ta',
+    language: 'en',
     theme: 'light'
   };
 
@@ -81,7 +81,7 @@ export class UiService {
       const parsed = JSON.parse(raw) as Partial<UiState>;
       const storedTheme = parsed.theme as ThemeMode | 'dark' | undefined;
       this.state = {
-        language: parsed.language === 'en' ? 'en' : 'ta',
+        language: parsed.language === 'ta' ? 'ta' : 'en',
         theme:
           storedTheme === 'pink' ||
           storedTheme === 'blue' ||

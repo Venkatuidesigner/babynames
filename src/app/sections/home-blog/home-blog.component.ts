@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { UiService } from '../../ui.service';
 
 interface BlogItem {
   title: string;
@@ -13,4 +14,5 @@ interface BlogItem {
 })
 export class HomeBlogComponent {
   @Input() posts: BlogItem[] = [];
+  constructor(public ui: UiService) {}
 }

@@ -2,24 +2,25 @@
   <app-header></app-header>
   <main class="page">
     <article>
-      <h1>அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள்</h1>
-      <p class="meta">புதுப்பிப்பு 2026 · 6 நிமிட வாசிப்பு · ஸ்லக்: {{ slug }}</p>
-      <h2>ஏன் தமிழ் குழந்தை பெயர்கள் பிரபலமாகின்றன</h2>
+      <h1>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள்' : 'Meaningful Tamil Baby Names' }}</h1>
+      <p class="meta">{{ ui.language === 'ta' ? 'புதுப்பிப்பு 2026 · 6 நிமிட வாசிப்பு · ஸ்லக்:' : 'Updated 2026 · 6 min read · Slug:' }} {{ slug }}</p>
+      <h2>{{ ui.language === 'ta' ? 'ஏன் தமிழ் குழந்தை பெயர்கள் பிரபலமாகின்றன' : 'Why Tamil baby names are becoming more popular' }}</h2>
       <p>
-        தமிழ் பெயர்கள் அர்த்தம், கலாச்சார ஆழம், ஒலியழகு ஆகியவற்றைக் கொண்டவை. பாரம்பரியத்தை காக்கும் போது
-        பெயர்கள் குறுகியதாகவும் நவீனமாகவும் உலகளவில் உச்சரிக்க எளிதாகவும் இருக்க வேண்டும் என்பதால்
-        பெற்றோர் அவற்றை தேர்வு செய்கிறார்கள்.
+        {{ ui.language === 'ta'
+          ? 'தமிழ் பெயர்கள் அர்த்தம், கலாச்சார ஆழம், ஒலியழகு ஆகியவற்றைக் கொண்டவை. பாரம்பரியத்தை காக்கும் போது பெயர்கள் குறுகியதாகவும் நவீனமாகவும் உலகளவில் உச்சரிக்க எளிதாகவும் இருக்க வேண்டும் என்பதால் பெற்றோர் அவற்றை தேர்வு செய்கிறார்கள்.'
+          : 'Tamil names carry meaning, cultural depth, and beautiful sound. Parents choose them because they preserve tradition while still feeling short, modern, and easy to pronounce globally.' }}
       </p>
-      <h2>எப்படி எங்கள் பட்டியலை உருவாக்குகிறோம்</h2>
+      <h2>{{ ui.language === 'ta' ? 'எப்படி எங்கள் பட்டியலை உருவாக்குகிறோம்' : 'How we build our lists' }}</h2>
       <p>
-        பாரம்பரியம், இலக்கியம், தற்போதைய பயன்பாடு ஆகியவற்றை இணைத்து உண்மையானவும் பயன்படுத்த எளிதானவும் பெயர்களை
-        தொகுக்கிறோம். ஒவ்வொரு பெயருக்கும் அர்த்தமும் சிறிய விளக்கமும் இருப்பதால் பெற்றோர் நம்பிக்கையுடன் தேர்வு
-        செய்ய முடிகிறது.
+        {{ ui.language === 'ta'
+          ? 'பாரம்பரியம், இலக்கியம், தற்போதைய பயன்பாடு ஆகியவற்றை இணைத்து உண்மையானவும் பயன்படுத்த எளிதானவும் பெயர்களை தொகுக்கிறோம். ஒவ்வொரு பெயருக்கும் அர்த்தமும் சிறிய விளக்கமும் இருப்பதால் பெற்றோர் நம்பிக்கையுடன் தேர்வு செய்ய முடிகிறது.'
+          : 'We combine heritage, literature, and current usage to curate names that feel authentic and practical. Each name includes meaning and a short note so parents can choose with confidence.' }}
       </p>
-      <h3>இந்த ஆண்டின் பிரபல பெயர்கள்</h3>
+      <h3>{{ ui.language === 'ta' ? 'இந்த ஆண்டின் பிரபல பெயர்கள்' : 'Popular names this year' }}</h3>
       <p>
-        ஆதிரா, கவின், அனன்யா ஆகியவை எங்கள் தளத்தில் அதிகமாக தேடப்படும் பெயர்களில் சில. இவை நவீன ஈர்ப்பும்
-        தமிழ் வேர்களும் இணைந்தவை.
+        {{ ui.language === 'ta'
+          ? 'ஆதிரா, கவின், அனன்யா ஆகியவை எங்கள் தளத்தில் அதிகமாக தேடப்படும் பெயர்களில் சில. இவை நவீன ஈர்ப்பும் தமிழ் வேர்களும் இணைந்தவை.'
+          : 'Aathira, Kavin, and Ananya are among the most searched names on our site. They combine modern appeal with strong Tamil roots.' }}
       </p>
     </article>
   </main>

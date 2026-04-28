@@ -1,7 +1,7 @@
 <section class="hero-section">
   <div class="hero-content">
     <div class="hero-copy">
-      <p class="eyebrow">எஸ்இஓ நட்பு தமிழ் பெயர்கள்</p>
+      <p class="eyebrow">{{ ui.language === 'ta' ? 'எஸ்இஓ நட்பு தமிழ் பெயர்கள்' : 'SEO-friendly Tamil names' }}</p>
       <h1>{{ content?.title }}</h1>
       <p class="subtitle">{{ content?.subtitle }}</p>
       <div class="hero-search">
@@ -9,25 +9,25 @@
           [(ngModel)]="searchValue"
           (keyup.enter)="onSearch()"
           [placeholder]="content?.searchPlaceholder"
-          aria-label="தமிழ் குழந்தை பெயர்கள் தேடல்"
+          [attr.aria-label]="ui.language === 'ta' ? 'தமிழ் குழந்தை பெயர்கள் தேடல்' : 'Tamil baby names search'"
         />
-        <button type="button" (click)="onSearch()">தேடல்</button>
+        <button type="button" (click)="onSearch()">{{ ui.language === 'ta' ? 'தேடல்' : 'Search' }}</button>
       </div>
       <div class="hero-actions">
         <a routerLink="/names" class="primary-btn">{{ content?.ctaPrimary }}</a>
         <a href="#browse-letters" class="secondary-btn">{{ content?.ctaSecondary }}</a>
       </div>
     <div class="hero-links">
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'girl' }">பெண் பெயர்கள்</a>
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'boy' }">ஆண் பெயர்கள்</a>
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'modern' }">நவீன பெயர்கள்</a>
-      <a [routerLink]="['/names']" [queryParams]="{ category: 'traditional' }">பாரம்பரிய பெயர்கள்</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'girl' }">{{ ui.language === 'ta' ? 'பெண் பெயர்கள்' : 'Girl names' }}</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'boy' }">{{ ui.language === 'ta' ? 'ஆண் பெயர்கள்' : 'Boy names' }}</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'modern' }">{{ ui.language === 'ta' ? 'நவீன பெயர்கள்' : 'Modern names' }}</a>
+      <a [routerLink]="['/names']" [queryParams]="{ category: 'traditional' }">{{ ui.language === 'ta' ? 'பாரம்பரிய பெயர்கள்' : 'Traditional names' }}</a>
     </div>
     </div>
-    <div class="hero-visuals" aria-label="குழந்தை வளர்ச்சி தருணங்கள்">
+    <div class="hero-visuals" [attr.aria-label]="ui.language === 'ta' ? 'குழந்தை வளர்ச்சி தருணங்கள்' : 'Baby growth moments'">
       <div class="visual-header">
         <span class="visual-badge">{{ content?.visualBadge }}</span>
-        <p>ஒவ்வொரு பெயரும் ஒரு கதை. இவை வளர்ச்சியுடன் இணையும் தருணங்கள்.</p>
+        <p>{{ ui.language === 'ta' ? 'ஒவ்வொரு பெயரும் ஒரு கதை. இவை வளர்ச்சியுடன் இணையும் தருணங்கள்.' : 'Every name carries a story. These visuals echo moments of growth.' }}</p>
       </div>
       <div class="visual-grid">
         <article *ngFor="let visual of content?.visuals" class="visual-card">

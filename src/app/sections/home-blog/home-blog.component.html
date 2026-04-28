@@ -1,14 +1,14 @@
 <section class="section">
   <div class="section-header">
-    <h2>பெயர் வழிகாட்டிகள் & குறிப்புகள்</h2>
-    <p>பெற்றோருக்கு உதவும் பயனுள்ள கட்டுரைகள்.</p>
+    <h2>{{ ui.language === 'ta' ? 'பெயர் வழிகாட்டிகள் & குறிப்புகள்' : 'Name guides and tips' }}</h2>
+    <p>{{ ui.language === 'ta' ? 'பெற்றோருக்கு உதவும் பயனுள்ள கட்டுரைகள்.' : 'Helpful articles for parents choosing names.' }}</p>
   </div>
   <div class="grid">
     <article *ngFor="let post of posts" class="card">
       <p class="read-time">{{ post.readTime }}</p>
       <h3>{{ post.title }}</h3>
       <p>{{ post.excerpt }}</p>
-      <a routerLink="/blog/top-tamil-baby-names" class="link">முழு வழிகாட்டியை வாசிக்க</a>
+      <a routerLink="/blog/top-tamil-baby-names" class="link">{{ ui.language === 'ta' ? 'முழு வழிகாட்டியை வாசிக்க' : 'Read the full guide' }}</a>
     </article>
   </div>
 </section>

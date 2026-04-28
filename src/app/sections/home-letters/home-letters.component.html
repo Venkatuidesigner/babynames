@@ -1,7 +1,7 @@
 <section id="browse-letters" class="section">
   <div class="section-header">
-    <h2>தமிழ் எழுத்து படி பார்க்க</h2>
-    <p>/names/a, /names/ka போன்ற எழுத்துப் பக்கங்களுக்கு நேரடியாக செல்லுங்கள்.</p>
+    <h2>{{ ui.language === 'ta' ? 'தமிழ் எழுத்து படி பார்க்க' : 'Browse by Tamil letter' }}</h2>
+    <p>{{ ui.language === 'ta' ? '/names/a, /names/ka போன்ற எழுத்துப் பக்கங்களுக்கு நேரடியாக செல்லுங்கள்.' : 'Jump straight to letter pages like /names/a and /names/ka.' }}</p>
   </div>
   <div class="letters">
     <a *ngFor="let letter of letters" [routerLink]="['/names', letter.slug]" class="letter-card">
