@@ -44,6 +44,12 @@ dist/baby-names-site
 
 This project is configured for GitHub Pages using Angular hash routing, so direct links and browser refreshes work correctly on static hosting.
 
+Automatic deploy is configured with GitHub Actions in:
+
+```txt
+.github/workflows/deploy-pages.yml
+```
+
 Build for GitHub Pages with:
 
 ```bash
@@ -61,6 +67,7 @@ Important notes:
 - Routes will look like `/#/about`, `/#/privacy`, `/#/names/a`
 - This is expected on GitHub Pages and prevents 404 errors on refresh
 - If you move to a host with rewrite support later, you can switch away from hash routing
+- In GitHub repository settings, set `Pages` source to `GitHub Actions`
 
 ## Testing
 
