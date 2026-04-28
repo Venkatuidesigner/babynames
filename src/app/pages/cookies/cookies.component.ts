@@ -3,20 +3,20 @@ import { Meta, Title } from '@angular/platform-browser';
 import { UiService } from '../../ui.service';
 
 @Component({
-  selector: 'app-privacy',
-  templateUrl: './privacy.component.html',
-  styleUrls: ['./privacy.component.scss']
+  selector: 'app-cookies',
+  templateUrl: './cookies.component.html',
+  styleUrls: ['./cookies.component.scss']
 })
-export class PrivacyComponent {
+export class CookiesComponent {
   constructor(
     private title: Title,
     private meta: Meta,
     public ui: UiService
   ) {
-    this.title.setTitle('Privacy Policy | Tamil Baby Names');
+    this.title.setTitle('Cookie Policy | Tamil Baby Names');
     this.meta.updateTag({
       name: 'description',
-      content: 'Read the privacy policy for Tamil Baby Names, including Google AdSense and cookie disclosures.'
+      content: 'Read how Tamil Baby Names uses cookies, advertising cookies, analytics, and consent-related settings.'
     });
   }
 }

@@ -1,16 +1,29 @@
 <div class="page-shell">
   <app-header></app-header>
   <main class="page">
-    <h1>தனியுரிமை கொள்கை</h1>
+    <h1>{{ ui.language === 'ta' ? 'தனியுரிமை கொள்கை' : 'Privacy Policy' }}</h1>
     <p>
-      உங்கள் தனியுரிமையை மதிக்கிறோம். இந்த தளம் பகுப்பாய்வு மற்றும் விளம்பர நோக்கங்களுக்காக குக்கீகளை
-      பயன்படுத்தக்கூடும் (Google AdSense உட்பட). உலாவல் நடத்தைக்கு ஏற்ப விளம்பரங்கள் தனிப்பயனாக்கப்படலாம்.
+      {{ ui.language === 'ta'
+        ? 'உங்கள் தனியுரிமையை மதிக்கிறோம். இந்த தளம் பகுப்பாய்வு மற்றும் விளம்பர நோக்கங்களுக்காக குக்கீகளை பயன்படுத்தக்கூடும் (Google AdSense உட்பட). உலாவல் நடத்தைக்கு ஏற்ப விளம்பரங்கள் தனிப்பயனாக்கப்படலாம்.'
+        : 'We respect your privacy. This site may use cookies for analytics and advertising purposes, including Google AdSense. Ads may be personalized based on browsing behavior.' }}
     </p>
-    <h2>விளம்பரங்கள் & AdSense</h2>
+    <h2>{{ ui.language === 'ta' ? 'விளம்பரங்கள் மற்றும் AdSense' : 'Advertising and AdSense' }}</h2>
     <p>
-      தளத்தை இலவசமாக வைத்திருக்க விளம்பரங்களை காட்டுகிறோம். Google AdSense தொடர்புடைய விளம்பரங்களை காட்ட
-      தனிப்பட்டதல்லாத தரவை சேகரிக்கக்கூடும். விளம்பர தனிப்பயனாக்கத்தை உங்கள் Google Ads அமைப்புகளில்
-      நிர்வகிக்கலாம்.
+      {{ ui.language === 'ta'
+        ? 'தளத்தை இலவசமாக வைத்திருக்க விளம்பரங்களை காட்டுகிறோம். Google AdSense தொடர்புடைய விளம்பரங்களை காட்ட தனிப்பட்டதல்லாத தரவை சேகரிக்கக்கூடும். விளம்பர தனிப்பயனாக்கத்தை உங்கள் Google Ads அமைப்புகளில் நிர்வகிக்கலாம்.'
+        : 'We may show ads to support the site. Google AdSense may collect non-personal data to deliver relevant advertising. Users can manage ad personalization in Google Ads Settings.' }}
+    </p>
+    <h2>{{ ui.language === 'ta' ? 'Google குக்கீ விளக்கம்' : 'Google Cookie Disclosure' }}</h2>
+    <p>
+      {{ ui.language === 'ta'
+        ? 'Google உட்பட மூன்றாம் தரப்பு வழங்குநர்கள், பயனரின் முந்தைய வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க குக்கீகளை பயன்படுத்தலாம். Google இன் advertising cookies, இந்த தளத்திலும் பிற தளங்களிலும் நடந்த வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க உதவும்.'
+        : 'Third-party vendors, including Google, may use cookies to serve ads based on a user’s prior visits to this site or other websites. Google advertising cookies help serve ads based on visits across the Internet.' }}
+    </p>
+    <p>
+      <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>
+      {{ ui.language === 'ta' ? ' மற்றும் ' : ' and ' }}
+      <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data</a>
+      {{ ui.language === 'ta' ? ' வழியாக கூடுதல் தகவலைப் பார்க்கலாம்.' : ' provide more details.' }}
     </p>
   </main>
   <app-site-footer></app-site-footer>

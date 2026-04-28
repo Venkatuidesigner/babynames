@@ -1,0 +1,49 @@
+<div class="page-shell">
+  <app-header></app-header>
+  <main class="page">
+    <h1>{{ ui.language === 'ta' ? 'குக்கீ கொள்கை' : 'Cookie Policy' }}</h1>
+    <p>
+      {{ ui.language === 'ta'
+        ? 'இந்த தளம் குக்கீகளை பயன்படுத்தக்கூடும். அவை தள செயல்பாடு, விருப்பங்கள், விளம்பரங்கள் மற்றும் செயல்திறன் அளவீட்டிற்கு உதவுகின்றன.'
+        : 'This website may use cookies to support site functionality, preferences, advertising, and performance measurement.' }}
+    </p>
+
+    <section class="card">
+      <h2>{{ ui.language === 'ta' ? 'கூகுள் விளம்பர குக்கீகள்' : 'Google Advertising Cookies' }}</h2>
+      <p>
+        {{ ui.language === 'ta'
+          ? 'மூன்றாம் தரப்பு வழங்குநர்களில் Google உட்பட, பயனரின் முந்தைய வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க குக்கீகளை பயன்படுத்தலாம்.'
+          : 'Third-party vendors, including Google, may use cookies to serve ads based on a user’s prior visits to this and other websites.' }}
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>{{ ui.language === 'ta' ? 'தனிப்பயன் விளம்பரங்கள்' : 'Personalized Advertising' }}</h2>
+      <p>
+        {{ ui.language === 'ta'
+          ? 'Google இன் விளம்பர குக்கீகள், எங்கள் தளம் மற்றும் இணையதளங்களில் நடந்த உங்கள் வருகைகளின் அடிப்படையில் பொருத்தமான விளம்பரங்களை காட்ட உதவலாம். பயனர்கள் Ads Settings மூலம் தனிப்பயன் விளம்பரங்களை நிர்வகிக்கலாம்.'
+          : 'Google’s advertising cookies can help show more relevant ads based on visits to our site and other sites on the Internet. Users can manage personalized advertising in Ads Settings.' }}
+      </p>
+      <p>
+        <a href="https://adssettings.google.com" target="_blank" rel="noopener">
+          {{ ui.language === 'ta' ? 'Google Ads Settings' : 'Google Ads Settings' }}
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>{{ ui.language === 'ta' ? 'மேலும் தகவல்' : 'Learn More' }}</h2>
+      <p>
+        {{ ui.language === 'ta'
+          ? 'Google எவ்வாறு தரவைப் பயன்படுத்துகிறது என்பதை கீழே உள்ள இணைப்பில் பார்க்கலாம்.'
+          : 'You can learn more about how Google uses data at the link below.' }}
+      </p>
+      <p>
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">
+          {{ ui.language === 'ta' ? 'Google எவ்வாறு தரவைப் பயன்படுத்துகிறது' : 'How Google uses information from sites or apps that use its services' }}
+        </a>
+      </p>
+    </section>
+  </main>
+  <app-site-footer></app-site-footer>
+</div>
