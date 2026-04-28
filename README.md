@@ -14,6 +14,28 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## GitHub Pages Deploy
+
+This project is configured for GitHub Pages using Angular hash routing, so page refreshes and direct links work on static hosting.
+
+Build for GitHub Pages with:
+
+```bash
+npm run build:github-pages
+```
+
+Then publish the contents of:
+
+```bash
+dist/baby-names-site
+```
+
+Important notes:
+
+- Routes will look like `/#/about`, `/#/privacy`, `/#/names/a`
+- This is expected for GitHub Pages and avoids 404 errors on refresh
+- If you use a custom domain with proper server rewrites later, you can switch back from hash routing
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
