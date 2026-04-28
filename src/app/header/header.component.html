@@ -21,9 +21,22 @@
           English
         </button>
       </div>
-      <button class="pill" (click)="ui.toggleTheme()">
-        {{ ui.theme === 'dark' ? (ui.language === 'ta' ? 'ஒளி' : 'Light') : (ui.language === 'ta' ? 'இருள்' : 'Dark') }}
-      </button>
+      <div class="theme-toggle">
+        <!-- <label class="theme-label" for="theme-select">
+          {{ ui.language === 'ta' ? 'தீம்' : 'Theme' }}
+        </label> -->
+        <select
+          id="theme-select"
+          class="theme-select"
+          [ngModel]="ui.theme"
+          (ngModelChange)="ui.setTheme($event)"
+          aria-label="Theme selector"
+        >
+          <option *ngFor="let option of themeOptions" [ngValue]="option.value">
+            {{ getThemeLabel(option) }}
+          </option>
+        </select>
+      </div>
     </div>
   </nav>
 </header>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 type Language = 'en' | 'ta';
-type ThemeMode = 'light' | 'dark';
+type ThemeMode = 'light' | 'pink' | 'blue' | 'yellow' | 'midnight';
 
 interface UiState {
   language: Language;
@@ -48,9 +48,16 @@ export class UiService {
   }
 
   toggleTheme(): void {
+    const themes: ThemeMode[] = ['light', 'pink', 'blue', 'yellow', 'midnight'];
+    const currentIndex = themes.indexOf(this.state.theme);
+    const nextTheme = themes[(currentIndex + 1) % themes.length];
+    this.setTheme(nextTheme);
+  }
+
+  setTheme(theme: ThemeMode): void {
     this.state = {
       ...this.state,
-      theme: this.state.theme === 'light' ? 'dark' : 'light'
+      theme
     };
     this.persist();
     this.applyTheme();
@@ -72,9 +79,19 @@ export class UiService {
         return;
       }
       const parsed = JSON.parse(raw) as Partial<UiState>;
+      const storedTheme = parsed.theme as ThemeMode | 'dark' | undefined;
       this.state = {
         language: parsed.language === 'en' ? 'en' : 'ta',
-        theme: parsed.theme === 'dark' ? 'dark' : 'light'
+        theme:
+          storedTheme === 'pink' ||
+          storedTheme === 'blue' ||
+          storedTheme === 'yellow' ||
+          storedTheme === 'midnight' ||
+          storedTheme === 'dark'
+            ? storedTheme === 'dark'
+              ? 'midnight'
+              : storedTheme
+            : 'light'
       };
       this.stateSubject.next(this.state);
     } catch {

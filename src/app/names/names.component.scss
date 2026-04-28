@@ -6,12 +6,8 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at top, rgba(255, 231, 220, 0.9), rgba(236, 240, 255, 0.9) 45%, var(--page-bg) 100%);
+  background: var(--page-shell-bg);
   color: var(--text-color);
-}
-
-:host-context([data-theme='dark']) .page-shell {
-  background: radial-gradient(circle at top, rgba(25, 31, 54, 0.95), rgba(12, 16, 28, 0.95));
 }
 
 .page-shell::before,
@@ -24,15 +20,13 @@
 }
 
 .page-shell::before {
-  background: radial-gradient(circle at 20% 20%, rgba(255, 214, 236, 0.55), transparent 55%),
-    radial-gradient(circle at 70% 30%, rgba(189, 214, 255, 0.45), transparent 60%),
-    radial-gradient(circle at 50% 80%, rgba(255, 236, 205, 0.5), transparent 60%);
+  background: var(--names-shell-before-bg);
   filter: blur(10px);
   animation: drift 18s ease-in-out infinite;
 }
 
 .page-shell::after {
-  background: radial-gradient(circle at 65% 35%, rgba(255, 200, 220, 0.35), transparent 45%);
+  background: var(--names-shell-after-bg);
   opacity: 0.7;
   filter: blur(6px);
 }
@@ -40,8 +34,8 @@
 .bg-grid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: linear-gradient(var(--names-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--names-grid-line) 1px, transparent 1px);
   background-size: 80px 80px;
   opacity: 0.2;
   pointer-events: none;
@@ -55,7 +49,7 @@
   border-radius: 50%;
   filter: blur(0px);
   opacity: 0.35;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.7) 0%, rgba(59, 130, 246, 0) 70%);
+  background: var(--names-orb-bg);
   animation: float 14s ease-in-out infinite;
   pointer-events: none;
 }
@@ -284,6 +278,28 @@
   background: linear-gradient(120deg, var(--accent-color), #fcd6b8);
   border-color: transparent;
   box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+:host-context([data-theme='midnight']) .glass-panel,
+:host-context([data-theme='midnight']) .filters-shell,
+:host-context([data-theme='midnight']) .info-bar,
+:host-context([data-theme='midnight']) .name-card,
+:host-context([data-theme='midnight']) .how-to,
+:host-context([data-theme='midnight']) .empty-state {
+  background: rgba(10, 19, 35, 0.84);
+  border-color: rgba(110, 145, 214, 0.2);
+}
+
+:host-context([data-theme='midnight']) .gender-btn.active,
+:host-context([data-theme='midnight']) .filter-chip.active {
+  background: linear-gradient(135deg, #12324a, #174b63 52%, #1f6b72);
+  color: #effbff;
+}
+
+:host-context([data-theme='midnight']) .badge {
+  background: rgba(111, 231, 216, 0.12);
+  color: #dffdfa;
+  border-color: rgba(110, 231, 216, 0.4);
 }
 
 .stat-card {

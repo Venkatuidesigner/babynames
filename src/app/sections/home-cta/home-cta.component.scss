@@ -29,6 +29,16 @@
   font-weight: 700;
 }
 
+:host-context([data-theme='midnight']) .cta {
+  background: linear-gradient(120deg, rgba(22, 45, 75, 0.86), rgba(14, 69, 73, 0.72));
+  border-color: rgba(110, 145, 214, 0.22);
+}
+
+:host-context([data-theme='midnight']) .cta-btn {
+  background: linear-gradient(135deg, #12324a, #174b63 52%, #1f6b72);
+  color: #effbff;
+}
+
 @media (max-width: 720px) {
   .cta {
     flex-direction: column;

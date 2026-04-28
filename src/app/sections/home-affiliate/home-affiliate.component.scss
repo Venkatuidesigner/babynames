@@ -41,8 +41,8 @@
   place-items: center;
   padding: 1rem;
   border-radius: 1rem;
-  background: radial-gradient(circle at top, rgba(255, 231, 220, 0.8), rgba(236, 240, 255, 0.9));
-  border: 1px solid rgba(219, 225, 255, 0.9);
+  background: var(--media-bg);
+  border: 1px solid var(--media-border);
 }
 
 .card-media img {

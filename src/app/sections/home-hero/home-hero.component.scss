@@ -165,6 +165,34 @@ h1 {
   font-size: 0.85rem;
 }
 
+:host-context([data-theme='midnight']) .hero-search button,
+:host-context([data-theme='midnight']) .primary-btn {
+  background: linear-gradient(135deg, #12324a, #174b63 52%, #1f6b72);
+  color: #effbff;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+}
+
+:host-context([data-theme='midnight']) .secondary-btn {
+  background: rgba(15, 28, 49, 0.88);
+  color: #d7e7ff;
+}
+
+:host-context([data-theme='midnight']) .hero-visuals {
+  background: linear-gradient(160deg, rgba(9, 22, 40, 0.94), rgba(14, 32, 56, 0.98));
+  border-color: rgba(110, 145, 214, 0.22);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.34);
+}
+
+:host-context([data-theme='midnight']) .visual-badge {
+  background: rgba(111, 231, 216, 0.12);
+  color: #9be7dd;
+}
+
+:host-context([data-theme='midnight']) .visual-card {
+  background: rgba(17, 31, 53, 0.88);
+  border-color: rgba(110, 145, 214, 0.18);
+}
+
 @media (max-width: 960px) {
   .hero-content {
     grid-template-columns: 1fr;

@@ -4,7 +4,7 @@
 
 .add-shell {
   min-height: 100vh;
-  background: linear-gradient(140deg, rgba(245, 247, 255, 0.95), rgba(255, 244, 244, 0.95));
+  background: var(--page-shell-bg-alt);
   color: var(--text-color);
   padding: 0 0 4rem;
 }
@@ -76,6 +76,8 @@
   box-shadow: 0 12px 24px rgba(244, 167, 185, 0.35);
 }
 
-:host-context([data-theme='dark']) .add-shell {
-  background: radial-gradient(circle at top, rgba(25, 31, 54, 0.95), rgba(12, 16, 28, 0.95));
+:host-context([data-theme='midnight']) .primary-btn {
+  background: linear-gradient(135deg, #12324a, #174b63 52%, #1f6b72);
+  color: #effbff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32);
 }

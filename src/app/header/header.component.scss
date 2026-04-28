@@ -69,6 +69,20 @@
   background: var(--card-bg);
 }
 
+.theme-toggle {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.theme-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--accent-strong);
+  padding-left: 0.2rem;
+}
+
 .pill {
   border-radius: 999px;
   padding: 0.4rem 0.9rem;
@@ -82,10 +96,53 @@
   transition: all 0.2s ease;
 }
 
+.theme-select {
+  min-width: 150px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--card-strong);
+  color: var(--heading-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.72rem 2.4rem 0.72rem 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--accent-cool) 50%),
+    linear-gradient(135deg, var(--accent-cool) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.theme-select:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .pill.active {
   background: linear-gradient(120deg, var(--accent-color), #fcd6b8);
   color: var(--heading-color);
   box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+:host-context([data-theme='midnight']) .nav-pill {
+  background: rgba(12, 25, 47, 0.78);
+  border-color: rgba(110, 145, 214, 0.24);
+}
+
+:host-context([data-theme='midnight']) .pill.active {
+  background: linear-gradient(135deg, #12324a, #174b63 52%, #1f6b72);
+  color: #effbff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.34);
+}
+
+:host-context([data-theme='midnight']) .theme-select {
+  background-color: rgba(9, 20, 38, 0.96);
 }
 
 @media (max-width: 860px) {
