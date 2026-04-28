@@ -13,6 +13,14 @@
       </a>
     </div>
     <div class="nav-actions">
+      <div class="language-toggle" aria-label="Language selector">
+        <button class="pill" [class.active]="ui.language === 'ta'" type="button" (click)="ui.setLanguage('ta')">
+          தமிழ்
+        </button>
+        <button class="pill" [class.active]="ui.language === 'en'" type="button" (click)="ui.setLanguage('en')">
+          English
+        </button>
+      </div>
       <button class="pill" (click)="ui.toggleTheme()">
         {{ ui.theme === 'dark' ? (ui.language === 'ta' ? 'ஒளி' : 'Light') : (ui.language === 'ta' ? 'இருள்' : 'Dark') }}
       </button>

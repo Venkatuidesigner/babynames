@@ -36,9 +36,13 @@ export class UiService {
   }
 
   toggleLanguage(): void {
+    this.setLanguage(this.state.language === 'ta' ? 'en' : 'ta');
+  }
+
+  setLanguage(language: Language): void {
     this.state = {
       ...this.state,
-      language: 'ta'
+      language
     };
     this.persist();
   }
@@ -69,7 +73,7 @@ export class UiService {
       }
       const parsed = JSON.parse(raw) as Partial<UiState>;
       this.state = {
-        language: 'ta',
+        language: parsed.language === 'en' ? 'en' : 'ta',
         theme: parsed.theme === 'dark' ? 'dark' : 'light'
       };
       this.stateSubject.next(this.state);

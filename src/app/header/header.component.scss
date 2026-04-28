@@ -55,6 +55,18 @@
 .nav-actions {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.language-toggle {
+  display: inline-flex;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
 }
 
 .pill {
@@ -67,6 +79,13 @@
   letter-spacing: 0.2em;
   font-weight: 700;
   color: var(--accent-cool);
+  transition: all 0.2s ease;
+}
+
+.pill.active {
+  background: linear-gradient(120deg, var(--accent-color), #fcd6b8);
+  color: var(--heading-color);
+  box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 @media (max-width: 860px) {

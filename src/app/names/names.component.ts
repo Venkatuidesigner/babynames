@@ -11,6 +11,7 @@ interface NameItem {
 
 interface LetterOption {
   tamil: string;
+  english: string;
   slug: string;
 }
 
@@ -27,31 +28,31 @@ export class NamesComponent implements OnInit {
   activeGender: 'girl' | 'boy' = 'girl';
 
   letterOptions: LetterOption[] = [
-    { tamil: 'அனைத்தும்', slug: 'all' },
-    { tamil: 'அ', slug: 'a' },
-    { tamil: 'ஆ', slug: 'aa' },
-    { tamil: 'இ', slug: 'i' },
-    { tamil: 'ஈ', slug: 'ii' },
-    { tamil: 'உ', slug: 'u' },
-    { tamil: 'ஊ', slug: 'uu' },
-    { tamil: 'எ', slug: 'e' },
-    { tamil: 'ஏ', slug: 'ee' },
-    { tamil: 'ஐ', slug: 'ai' },
-    { tamil: 'ஒ', slug: 'o' },
-    { tamil: 'ஓ', slug: 'oo' },
-    { tamil: 'ஒள', slug: 'au' },
-    { tamil: 'க', slug: 'ka' },
-    { tamil: 'ச', slug: 'sa' },
-    { tamil: 'ஞ', slug: 'nya' },
-    { tamil: 'த', slug: 'tha' },
-    { tamil: 'ந', slug: 'na' },
-    { tamil: 'ப', slug: 'pa' },
-    { tamil: 'ம', slug: 'ma' },
-    { tamil: 'ய', slug: 'ya' },
-    { tamil: 'ர', slug: 'ra' },
-    { tamil: 'ல', slug: 'la' },
-    { tamil: 'வ', slug: 'va' },
-    { tamil: 'ஔ', slug: 'auu' }
+    { tamil: 'அனைத்தும்', english: 'All', slug: 'All' },
+    { tamil: 'அ', english: 'A', slug: 'a' },
+    { tamil: 'ஆ', english: 'Aa', slug: 'aa' },
+    { tamil: 'இ', english: 'I', slug: 'i' },
+    { tamil: 'ஈ', english: 'Ii', slug: 'ii' },
+    { tamil: 'உ', english: 'U', slug: 'u' },
+    { tamil: 'ஊ', english: 'Uu', slug: 'uu' },
+    { tamil: 'எ', english: 'E', slug: 'e' },
+    { tamil: 'ஏ', english: 'Ee', slug: 'ee' },
+    { tamil: 'ஐ', english: 'Ai', slug: 'ai' },
+    { tamil: 'ஒ', english: 'O', slug: 'o' },
+    { tamil: 'ஓ', english: 'Oo', slug: 'oo' },
+    { tamil: 'ஒள', english: 'Au', slug: 'au' },
+    { tamil: 'க', english: 'Ka', slug: 'ka' },
+    { tamil: 'ச', english: 'Sa', slug: 'sa' },
+    { tamil: 'ஞ', english: 'Nya', slug: 'nya' },
+    { tamil: 'த', english: 'Tha', slug: 'tha' },
+    { tamil: 'ந', english: 'Na', slug: 'na' },
+    { tamil: 'ப', english: 'Pa', slug: 'pa' },
+    { tamil: 'ம', english: 'Ma', slug: 'ma' },
+    { tamil: 'ய', english: 'Ya', slug: 'ya' },
+    { tamil: 'ர', english: 'Ra', slug: 'ra' },
+    { tamil: 'ல', english: 'La', slug: 'la' },
+    { tamil: 'வ', english: 'Va', slug: 'va' },
+    { tamil: 'ஔ', english: 'Auu', slug: 'auu' }
   ];
 
   constructor(
@@ -121,6 +122,18 @@ export class NamesComponent implements OnInit {
 
   get currentTotal(): number {
     return this.activeGender === 'boy' ? this.boyNames.length : this.allNames.length;
+  }
+
+  get activeLetterLabel(): string {
+    const option = this.letterOptions.find((item) => item.tamil === this.activeLetter);
+    if (!option) {
+      return this.activeLetter;
+    }
+    return this.ui.language === 'ta' ? option.tamil : option.english;
+  }
+
+  getLetterLabel(option: LetterOption): string {
+    return this.ui.language === 'ta' ? option.tamil : option.english;
   }
 
   onLetter(option: LetterOption): void {
