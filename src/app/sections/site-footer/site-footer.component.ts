@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UiService } from '../../ui.service';
 
 @Component({
   selector: 'app-site-footer',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class SiteFooterComponent {
   year = new Date().getFullYear();
+
+  constructor(public ui: UiService) {}
 }

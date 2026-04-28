@@ -7,6 +7,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { BlogArticleComponent } from './pages/blog-article/blog-article.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'terms', component: TermsComponent },
   { path: 'blog/:slug', component: BlogArticleComponent },
   { path: '**', redirectTo: '' }
 ];
