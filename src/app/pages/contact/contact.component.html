@@ -1,11 +1,44 @@
 <div class="page-shell">
   <app-header></app-header>
   <main class="page">
-    <h1>{{ ui.language === 'ta' ? 'தொடர்பு' : 'Contact' }}</h1>
-    <p>{{ ui.language === 'ta' ? 'பெயர் பரிந்துரை அல்லது திருத்தம் இருக்கிறதா? எங்களுக்கு தெரிவியுங்கள்.' : 'Have a name suggestion or correction? Let us know.' }}</p>
-    <div class="card">
-      <p>{{ ui.language === 'ta' ? 'மின்னஞ்சல்' : 'Email' }}: hello@tamilbabynames.com</p>
-      <p>{{ ui.language === 'ta' ? 'பதிலளிக்கும் நேரம்: 2 வேலை நாட்கள்' : 'Response time: 2 business days' }}</p>
+    <section class="page-hero">
+      <span class="page-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16v16H4z" />
+          <path d="m22 6-10 7L2 6" />
+        </svg>
+      </span>
+      <p class="eyebrow">{{ ui.language === 'ta' ? 'உதவி மற்றும் பரிந்துரைகள்' : 'Help and Suggestions' }}</p>
+      <h1>{{ ui.language === 'ta' ? 'தொடர்பு' : 'Contact' }}</h1>
+      <p class="lead">{{ ui.language === 'ta' ? 'பெயர் பரிந்துரை அல்லது திருத்தம் இருக்கிறதா? எங்களுக்கு தெரிவியுங்கள்.' : 'Have a name suggestion or correction? Let us know.' }}</p>
+    </section>
+
+    <div class="content-grid two-column">
+      <section class="card">
+        <span class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 6 12 13 2 6" />
+            <path d="M2 6h20v12H2z" />
+          </svg>
+        </span>
+        <div class="card-body">
+          <h2>{{ ui.language === 'ta' ? 'மின்னஞ்சல்' : 'Email' }}</h2>
+          <p><a href="mailto:hello@tamilbabynames.com">hello@tamilbabynames.com</a></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <span class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+          </svg>
+        </span>
+        <div class="card-body">
+          <h2>{{ ui.language === 'ta' ? 'பதிலளிக்கும் நேரம்' : 'Response Time' }}</h2>
+          <p>{{ ui.language === 'ta' ? '2 வேலை நாட்கள்' : '2 business days' }}</p>
+        </div>
+      </section>
     </div>
   </main>
   <app-site-footer></app-site-footer>

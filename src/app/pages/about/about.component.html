@@ -1,18 +1,41 @@
 <div class="page-shell">
   <app-header></app-header>
   <main class="page">
-    <h1>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள் பற்றி' : 'About Meaningful Tamil Baby Names' }}</h1>
-    <p>
-      {{ ui.language === 'ta'
-        ? 'கலாச்சாரப் பின்னணி, உச்சரிப்பு உதவிக்குறிப்பு, நவீன பயன்பாடு ஆகியவற்றை சேர்த்து அர்த்தமுள்ள தமிழ் பெயர்களை தொகுக்கிறோம். உண்மையான, காலத்தால் அழியாத, எளிதில் புரியும் பெயர்களை குடும்பங்கள் தேர்வு செய்ய உதவுவதே எங்கள் நோக்கம்.'
-        : 'We curate meaningful Tamil names with cultural context, pronunciation help, and modern usage notes. Our goal is to help families choose names that feel authentic, timeless, and easy to understand.' }}
-    </p>
-    <h2>{{ ui.language === 'ta' ? 'எப்படி தொகுக்கிறோம்' : 'How we curate names' }}</h2>
-    <p>
-      {{ ui.language === 'ta'
-        ? 'தமிழ் இலக்கியம், கலாச்சாரம், பயன்பாட்டு போக்குகள் ஆகியவற்றின் மூலங்களை எங்கள் தொகுப்பாளர்கள் ஆய்வு செய்து பாரம்பரியமும் நவீனமும் சமநிலையுடன் இருக்கும் பட்டியலை உருவாக்குகின்றனர்.'
-        : 'Our editors study Tamil literature, culture, and naming trends to build lists that balance heritage with present-day appeal.' }}
-    </p>
+    <section class="page-hero">
+      <span class="page-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          <path d="M8 7h8" />
+          <path d="M8 11h6" />
+        </svg>
+      </span>
+      <p class="eyebrow">{{ ui.language === 'ta' ? 'எங்கள் கதை' : 'Our Story' }}</p>
+      <h1>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள் பற்றி' : 'About Meaningful Tamil Baby Names' }}</h1>
+      <p class="lead">
+        {{ ui.language === 'ta'
+          ? 'கலாச்சாரப் பின்னணி, உச்சரிப்பு உதவிக்குறிப்பு, நவீன பயன்பாடு ஆகியவற்றை சேர்த்து அர்த்தமுள்ள தமிழ் பெயர்களை தொகுக்கிறோம். உண்மையான, காலத்தால் அழியாத, எளிதில் புரியும் பெயர்களை குடும்பங்கள் தேர்வு செய்ய உதவுவதே எங்கள் நோக்கம்.'
+          : 'We curate meaningful Tamil names with cultural context, pronunciation help, and modern usage notes. Our goal is to help families choose names that feel authentic, timeless, and easy to understand.' }}
+      </p>
+    </section>
+
+    <div class="content-grid">
+      <section class="card">
+        <span class="section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9L12 3z" />
+          </svg>
+        </span>
+        <div class="card-body">
+          <h2>{{ ui.language === 'ta' ? 'எப்படி தொகுக்கிறோம்' : 'How we curate names' }}</h2>
+          <p>
+            {{ ui.language === 'ta'
+              ? 'தமிழ் இலக்கியம், கலாச்சாரம், பயன்பாட்டு போக்குகள் ஆகியவற்றின் மூலங்களை எங்கள் தொகுப்பாளர்கள் ஆய்வு செய்து பாரம்பரியமும் நவீனமும் சமநிலையுடன் இருக்கும் பட்டியலை உருவாக்குகின்றனர்.'
+              : 'Our editors study Tamil literature, culture, and naming trends to build lists that balance heritage with present-day appeal.' }}
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
   <app-site-footer></app-site-footer>
 </div>
