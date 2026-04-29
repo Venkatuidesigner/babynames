@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Title, Meta } from '@angular/platform-browser';
 import { UiService } from '../ui.service';
 
 type ParticleKind = 'bubble' | 'star' | 'spark' | 'ring';
@@ -197,7 +196,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('heroCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
   tamilContent: HomeContent | null = null;
 
-  constructor(private http: HttpClient, private title: Title, private meta: Meta, public ui: UiService) {}
+  constructor(private http: HttpClient, public ui: UiService) {}
 
   get content(): HomeContent | null {
     if (this.ui.language === 'en') {
@@ -207,12 +206,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.title.setTitle('Tamil Baby Names with Meaning | SEO-Friendly Name Finder');
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Find Tamil baby names with meaning, pronunciation, and cultural insights. Browse by letter, category, and popular lists.'
-    });
-
     this.http.get<HomeContent>('assets/home-content.json').subscribe({
       next: (data) => (this.tamilContent = data),
       error: () => {

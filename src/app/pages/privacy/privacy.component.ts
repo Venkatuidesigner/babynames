@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { UiService } from '../../ui.service';
 
 @Component({
@@ -8,15 +7,5 @@ import { UiService } from '../../ui.service';
   styleUrls: ['./privacy.component.scss']
 })
 export class PrivacyComponent {
-  constructor(
-    private title: Title,
-    private meta: Meta,
-    public ui: UiService
-  ) {
-    this.title.setTitle('Privacy Policy | Tamil Baby Names');
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Read the privacy policy for Tamil Baby Names, including Google AdSense and cookie disclosures.'
-    });
-  }
+  constructor(public ui: UiService) {}
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 import { UiService } from '../ui.service';
+import { SeoService } from '../seo.service';
 
 interface NameItem {
   tamil: string;
@@ -59,8 +59,7 @@ export class NamesComponent implements OnInit {
     private http: HttpClient,
     private route: ActivatedRoute,
     private router: Router,
-    private title: Title,
-    private meta: Meta,
+    private seo: SeoService,
     public ui: UiService
   ) {}
 
@@ -96,11 +95,25 @@ export class NamesComponent implements OnInit {
   }
 
   private updateMeta(): void {
-    const letter = this.activeLetter === 'அனைத்தும்' ? 'All letters' : this.activeLetter;
-    this.title.setTitle(`Tamil Baby Names with Meaning | ${letter}`);
-    this.meta.updateTag({
-      name: 'description',
-      content: `Browse Tamil baby names with meaning for ${letter}. Search, filter by letter, and find cultural insights.`
+    const letterOption = this.letterOptions.find((option) => option.tamil === this.activeLetter);
+    const letterName = this.activeLetter === 'அனைத்தும்' ? 'All Letters' : letterOption?.english || this.activeLetter;
+    const genderLabel = this.activeGender === 'boy' ? 'Boy' : 'Girl';
+    const letterPath = letterOption && letterOption.slug !== 'All' ? `/${letterOption.slug}` : '';
+    const categoryQuery = this.activeGender === 'boy' ? '?category=boy' : '';
+    const hasSearchQuery = this.searchValue.trim().length > 0;
+
+    this.seo.update({
+      title: `${genderLabel} Tamil Baby Names with Meaning${letterName === 'All Letters' ? '' : ` Starting with ${letterName}`}`,
+      description: `Browse ${genderLabel.toLowerCase()} Tamil baby names with meaning${letterName === 'All Letters' ? '' : ` starting with ${letterName}`}. Search by Tamil or English spelling and explore culturally rooted names.`,
+      path: `/names${letterPath}${categoryQuery}`,
+      keywords: `${genderLabel.toLowerCase()} Tamil baby names, Tamil names ${letterName}, baby names with meaning, Tamil name list`,
+      robots: hasSearchQuery ? 'noindex, follow' : 'index, follow, max-image-preview:large',
+      structuredData: {
+        '@type': 'CollectionPage',
+        name: `${genderLabel} Tamil Baby Names${letterName === 'All Letters' ? '' : ` - ${letterName}`}`,
+        description: `A browsable collection of ${genderLabel.toLowerCase()} Tamil baby names with English pronunciation.`,
+        url: this.seo.absoluteUrl(`/names${letterPath}${categoryQuery}`)
+      }
     });
   }
 

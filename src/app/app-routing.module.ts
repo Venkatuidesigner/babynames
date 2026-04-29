@@ -11,15 +11,88 @@ import { TermsComponent } from './pages/terms/terms.component';
 import { CookiesComponent } from './pages/cookies/cookies.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    data: {
+      seo: {
+        title: 'Tamil Baby Names with Meaning | Baby Name Finder',
+        description: 'Discover meaningful Tamil baby names for boys and girls with pronunciation, cultural context, popular picks, and browsing by Tamil letter.',
+        path: '/'
+      }
+    }
+  },
   { path: 'names', component: NamesComponent },
   { path: 'names/:letter', component: NamesComponent },
-  { path: 'add-name', component: AddNameComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'privacy', component: PrivacyComponent },
-  { path: 'cookies', component: CookiesComponent },
-  { path: 'terms', component: TermsComponent },
+  {
+    path: 'add-name',
+    component: AddNameComponent,
+    data: {
+      seo: {
+        title: 'Suggest a Tamil Baby Name',
+        description: 'Share a meaningful Tamil baby name suggestion for review and help families discover culturally rooted names.',
+        path: '/add-name'
+      }
+    }
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: {
+      seo: {
+        title: 'About Tamil Baby Names',
+        description: 'Learn how Tamil Baby Names curates meaningful names with pronunciation, cultural roots, and modern usage notes for families.',
+        path: '/about'
+      }
+    }
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: {
+      seo: {
+        title: 'Contact Tamil Baby Names',
+        description: 'Contact Tamil Baby Names for questions, corrections, name suggestions, advertising, or content feedback.',
+        path: '/contact'
+      }
+    }
+  },
+  {
+    path: 'privacy',
+    component: PrivacyComponent,
+    data: {
+      seo: {
+        title: 'Privacy Policy | Tamil Baby Names',
+        description: 'Read the privacy policy for Tamil Baby Names, including Google AdSense, analytics, cookies, and data handling disclosures.',
+        path: '/privacy',
+        robots: 'noindex, follow'
+      }
+    }
+  },
+  {
+    path: 'cookies',
+    component: CookiesComponent,
+    data: {
+      seo: {
+        title: 'Cookie Policy | Tamil Baby Names',
+        description: 'Read how Tamil Baby Names uses cookies, advertising cookies, analytics, consent choices, and browser settings.',
+        path: '/cookies',
+        robots: 'noindex, follow'
+      }
+    }
+  },
+  {
+    path: 'terms',
+    component: TermsComponent,
+    data: {
+      seo: {
+        title: 'Terms and Conditions | Tamil Baby Names',
+        description: 'Read the terms and conditions for using the Tamil Baby Names website, name content, recommendations, and suggestions.',
+        path: '/terms',
+        robots: 'noindex, follow'
+      }
+    }
+  },
   { path: 'blog/:slug', component: BlogArticleComponent },
   { path: '**', redirectTo: '' }
 ];
