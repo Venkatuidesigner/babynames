@@ -28,6 +28,7 @@
               <div class="search-field">
                 <input
                   [(ngModel)]="searchValue"
+                  (ngModelChange)="onSearchChange()"
                   aria-label="பெயர் தேடு"
                   [placeholder]="ui.language === 'ta' ? 'தமிழ் அல்லது ஆங்கில பெயர்...' : 'Search Tamil or English name...'"
                   class="search-control"
@@ -69,14 +70,14 @@
           <button
             class="gender-btn"
             [class.active]="activeGender === 'girl'"
-            (click)="activeGender = 'girl'"
+            (click)="setGender('girl')"
           >
             {{ ui.language === 'ta' ? 'பெண் பெயர்கள்' : 'Girl Names' }}
           </button>
           <button
             class="gender-btn"
             [class.active]="activeGender === 'boy'"
-            (click)="activeGender = 'boy'"
+            (click)="setGender('boy')"
           >
             {{ ui.language === 'ta' ? 'ஆண் பெயர்கள்' : 'Boy Names' }}
           </button>
@@ -112,14 +113,16 @@
 
     <section class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <article
-        *ngFor="let item of filteredNames"
+        *ngFor="let item of pagedNames"
         class="name-card"
       >
         <div class="flex items-baseline justify-between">
-          <h2 class="text-2xl font-display font-black text-brand-50">{{ ui.language === 'ta' ? item.tamil : item.english }}</h2>
+          <h2 class="text-2xl font-display font-black text-brand-50">{{ ui.language === 'ta' ? item.name || item.tamil : item.english }}</h2>
           <span class="badge">{{ ui.language === 'ta' ? 'தமிழ்' : 'Tamil' }}</span>
         </div>
         <p class="name-subtitle">{{ ui.language === 'ta' ? item.english : item.tamil }}</p>
+        <p *ngIf="item.meaning" class="name-meaning">{{ item.meaning }}</p>
+        <p *ngIf="item.description" class="name-description">{{ item.description }}</p>
         <div class="mt-4 flex items-center gap-2 text-xs text-slate-300">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
           <span>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள, நவீன, பாரம்பரியம்' : 'Meaningful, modern, and rooted' }}</span>
@@ -130,6 +133,28 @@
         <h3 class="text-xl font-display font-semibold text-black">{{ ui.language === 'ta' ? 'பெயர்கள் இல்லை' : 'No matches found' }}</h3>
         <p class="mt-2 text-sm text-slate-300">{{ ui.language === 'ta' ? 'வேறு எழுத்தை தேர்வு செய்யுங்கள்.' : 'Try a different letter or clear the search to explore more names.' }}</p>
       </article>
+    </section>
+
+    <section *ngIf="filteredNames.length > pageSize" class="pagination mt-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 p-4 text-sm text-slate-300 shadow-sm">
+      <div>
+        {{ pageStart }} - {{ pageEnd }} {{ ui.language === 'ta' ? 'of' : 'of' }} {{ filteredNames.length }}
+      </div>
+      <div class="pagination-buttons flex items-center gap-2">
+        <button
+          class="page-btn"
+          [disabled]="currentPage === 1"
+          (click)="currentPage = currentPage - 1"
+        >
+          {{ ui.language === 'ta' ? 'முந்தைய 20' : 'Previous 20' }}
+        </button>
+        <button
+          class="page-btn"
+          [disabled]="currentPage === pageCount"
+          (click)="currentPage = currentPage + 1"
+        >
+          {{ ui.language === 'ta' ? 'அடுத்த 20' : 'Next 20' }}
+        </button>
+      </div>
     </section>
 
     <section class="how-to"> 

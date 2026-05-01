@@ -5,8 +5,21 @@ import { UiService } from '../ui.service';
 import { SeoService } from '../seo.service';
 
 interface NameItem {
+  id?: number;
+  name?: string;
   tamil: string;
   english: string;
+  meaning?: string;
+  description?: string;
+  category?: string[];
+  tags?: string[];
+  language?: string;
+  religion?: string;
+  gender?: 'boy' | 'girl' | 'unisex' | string;
+  isPureTamil?: boolean;
+  length?: string;
+  startsWith?: string;
+  slug?: string;
 }
 
 interface LetterOption {
@@ -26,6 +39,8 @@ export class NamesComponent implements OnInit {
   searchValue = '';
   activeLetter = 'அனைத்தும்';
   activeGender: 'girl' | 'boy' = 'girl';
+  currentPage = 1;
+  readonly pageSize = 20;
 
   letterOptions: LetterOption[] = [
     { tamil: 'அனைத்தும்', english: 'All', slug: 'All' },
@@ -123,14 +138,44 @@ export class NamesComponent implements OnInit {
     const source = this.activeGender === 'boy' ? this.boyNames : this.allNames;
     return source
       .filter((item) => {
-        const matchesLetter = this.activeLetter === 'அனைத்தும்' || hasLatin || item.tamil.startsWith(this.activeLetter);
-        const matchesSearch =
-          !search ||
-          item.tamil.includes(search) ||
-          item.english.toLowerCase().includes(search);
+        const matchesLetter =
+          this.activeLetter === 'அனைத்தும்' ||
+          hasLatin ||
+          item.tamil?.startsWith(this.activeLetter);
+        const searchFields = [
+          item.name,
+          item.tamil,
+          item.english,
+          item.meaning,
+          item.description,
+          ...(item.category || []),
+          ...(item.tags || []),
+          item.slug
+        ]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
+        const matchesSearch = !search || searchFields.includes(search);
         return matchesLetter && matchesSearch;
       })
       .sort((a, b) => a.tamil.localeCompare(b.tamil, 'ta'));
+  }
+
+  get pagedNames(): NameItem[] {
+    const start = (this.currentPage - 1) * this.pageSize;
+    return this.filteredNames.slice(start, start + this.pageSize);
+  }
+
+  get pageCount(): number {
+    return Math.max(1, Math.ceil(this.filteredNames.length / this.pageSize));
+  }
+
+  get pageStart(): number {
+    return this.filteredNames.length === 0 ? 0 : (this.currentPage - 1) * this.pageSize + 1;
+  }
+
+  get pageEnd(): number {
+    return Math.min(this.currentPage * this.pageSize, this.filteredNames.length);
   }
 
   get currentTotal(): number {
@@ -150,6 +195,7 @@ export class NamesComponent implements OnInit {
   }
 
   onLetter(option: LetterOption): void {
+    this.currentPage = 1;
     this.activeLetter = option.tamil;
     if (option.slug === 'all') {
       this.router.navigate(['/names']);
@@ -160,32 +206,92 @@ export class NamesComponent implements OnInit {
 
   async loadTamilNames(): Promise<void> {
     try {
-      const rawNames = await this.http.get<string[]>('assets/names.json').toPromise();
-      this.allNames = (rawNames || []).map((tamilName) => ({
-        tamil: tamilName,
-        english: this.transliterateTamil(tamilName)
-      }));
+      const rawNames = await this.http.get<any[]>('assets/names.json').toPromise();
+      this.allNames = (rawNames || []).map((entry, index) =>
+        typeof entry === 'string'
+          ? this.normalizeNameItem({ tamil: entry }, index, 'girl')
+          : this.normalizeNameItem(entry, index, 'girl')
+      );
     } catch (err) {
       console.error('Failed to load names.json from assets:', err);
       this.allNames = [
-        { tamil: 'அகல்விழி', english: 'Akalvizhi' },
-        { tamil: 'அருள்மொழிதேவி', english: 'Arulmothadevi' },
-        { tamil: 'ஆராதனா', english: 'Aaradhana' }
+        this.normalizeNameItem({ tamil: 'அகல்விழி' }, 0, 'girl'),
+        this.normalizeNameItem({ tamil: 'அருள்மொழிதேவி' }, 1, 'girl'),
+        this.normalizeNameItem({ tamil: 'ஆராதனா' }, 2, 'girl')
       ];
     }
   }
 
   async loadBoyNames(): Promise<void> {
     try {
-      const rawNames = await this.http.get<string[]>('assets/boy-names.json').toPromise();
-      this.boyNames = (rawNames || []).map((tamilName) => ({
-        tamil: tamilName,
-        english: this.transliterateTamil(tamilName)
-      }));
+      const rawNames = await this.http.get<any[]>('assets/boy-names.json').toPromise();
+      this.boyNames = (rawNames || []).map((entry, index) =>
+        typeof entry === 'string'
+          ? this.normalizeNameItem({ tamil: entry }, index, 'boy')
+          : this.normalizeNameItem(entry, index, 'boy')
+      );
     } catch (err) {
       console.error('Failed to load boy-names.json from assets:', err);
       this.boyNames = [];
     }
+  }
+
+  onSearchChange(): void {
+    this.currentPage = 1;
+  }
+
+  setGender(gender: 'girl' | 'boy'): void {
+    this.activeGender = gender;
+    this.currentPage = 1;
+  }
+
+  private normalizeNameItem(entry: any, index: number, defaultGender: 'girl' | 'boy'): NameItem {
+    const tamil = entry?.tamil || entry?.name || '';
+    const english = entry?.english || this.transliterateTamil(tamil);
+    const name = entry?.name || tamil;
+    const slug = entry?.slug || this.createSlug(english || tamil);
+    const startsWith = entry?.startsWith || tamil.charAt(0) || '';
+    const length = entry?.length || this.getLengthCategory(english || tamil);
+
+    return {
+      id: entry?.id ?? index + 1,
+      name,
+      tamil,
+      english,
+      meaning: entry?.meaning || '',
+      description: entry?.description || '',
+      category: Array.isArray(entry?.category) ? entry.category : [],
+      tags: Array.isArray(entry?.tags) ? entry.tags : [],
+      language: entry?.language || 'tamil',
+      religion: entry?.religion || 'hindu',
+      gender: entry?.gender || defaultGender,
+      isPureTamil: entry?.isPureTamil ?? false,
+      length,
+      startsWith,
+      slug
+    };
+  }
+
+  private createSlug(value: string): string {
+    return value
+      .toString()
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  private getLengthCategory(value: string): string {
+    const length = value.replace(/\s+/g, '').length;
+    if (length <= 4) {
+      return 'short';
+    }
+    if (length <= 8) {
+      return 'medium';
+    }
+    return 'long';
   }
 
   transliterateTamil(name: string): string {

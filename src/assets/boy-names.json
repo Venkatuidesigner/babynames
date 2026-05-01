@@ -1,99 +1,2028 @@
 [
-"சக்திபாலன்",
-"சரவணன்",
-"சுப்பிரமணியன்",
-"குருபரன்",
-"கார்த்திகேயன்",
-"சுவாமிநாதன்",
-"தண்டபாணி",
-"பாலசுப்பிரமணியம்",
-"நிமலன்",
-"உதயகுமாரன்",
-"பரமகுரு",
-"உமையபாலன்",
-"தமிழ்செல்வன்",
-"சதாசிவன்",
-"சத்குணசீலன்",
-"சந்திரமுகன்",
-"அமரேசன்",
-"மயூரவாஹனன்",
-"செந்தில்குமார்",
-"வேலன்",
-"குகாநந்தன்",
-"பழனிநாதன்",
-"தேவசேனாபதி",
-"தீபிதன்",
-"கிருபாகரன்",
-"பூபாலன்",
-"சண்முகம்",
-"உத்தமசீலன்",
-"குருசாமி",
-"திருச்செல்வம்",
-"ஜெயபாலன்",
-"சந்திரகாந்தன்",
-"பிரபாகரன்",
-"செளந்தரிகன்",
-"வேல்முருகன்",
-"பரமன்",
-"வேலையா",
-"கனபாலன்",
-"படையப்பன்",
-"கருணாகரன்",
-"சேனாபதி",
-"குகன்",
-"சித்தன்",
-"கதிர்வேலன்",
-"கருணாலயன்",
-"திரிபுரவன்",
-"பேரழகன்",
-"கந்தவேல்",
-"முத்துக்குமரன்",
-"சிவகுமார்",
-"ரத்தினதீபன்",
-"லோகநாதன்",
-"தீனேசன்",
-"சண்முகலிங்கம்",
-"குமரகுரு",
-"அழகப்பன்",
-"தமிழ்வேல்",
-"மருதமலை",
-"சுசிதரன்",
-"கிரிராஜன்",
-"குமரன்",
-"ஞானவேல்",
-"சிவகார்த்திக்",
-"சுப்பையா",
-"முருகவேல்",
-"குணாதரன்",
-"அமுதன்",
-"செங்கதிர்செல்வன்",
-"பவன்கந்தன்",
-"திருமுகம்",
-"கதிர்காமன்",
-"வெற்றிவேல்",
-"ஸ்கந்தகுரு",
-"பாலமுருகன்",
-"மனோஹரன்",
-"குமரேசன்",
-"இந்திரமுருகன்",
-"செல்வவேல்",
-"மயில்வீரா",
-"குருநாதன்",
-"பழனிச்சாமி",
-"திருச்செந்தில்",
-"சங்கர்குமார்",
-"குருவேல்",
-"குருமூர்த்தி",
-"சுகிர்தன்",
-"பவன்",
-"கந்தசாமி",
-"ஆறுமுகம்",
-"வைரவெல்",
-"அன்பழகன்",
-"முத்தப்பன்",
-"சரவணபவன்",
-"கிரிசன்",
-"கந்தன்",
-"அழகன்",
-"கதிர்வேல்"
+    {
+        "id": 1,
+        "name": "சக்திபாலன்",
+        "meaning": "சக்தியின் மகன்",
+        "description": "முருகன் பார்வதி தேவியின் மகனாக இருப்பதால் சக்தி மற்றும் தைரியத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "murugan",
+            "power"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "sakthibalan"
+    },
+    {
+        "id": 2,
+        "name": "சரவணன்",
+        "meaning": "சரவணப் பொய்கையில் பிறந்தவர்",
+        "description": "முருகன் தோன்றிய தெய்வீக இடத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "murugan",
+            "birth"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "saravanan"
+    },
+    {
+        "id": 3,
+        "name": "சுப்பிரமணியன்",
+        "meaning": "உயர்ந்த ஞானம் உடையவன்",
+        "description": "முருகனின் முக்கியமான பெயர், ஞானத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "wisdom"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "subramanian"
+    },
+    {
+        "id": 4,
+        "name": "குருபரன்",
+        "meaning": "உயர்ந்த குரு",
+        "description": "முருகன் குருவாக விளங்குவதை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "guru"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "guruparan"
+    },
+    {
+        "id": 5,
+        "name": "கார்த்திகேயன்",
+        "meaning": "கார்த்திகை பெண்களால் வளர்க்கப்பட்டவர்",
+        "description": "முருகன் வளர்ப்பு கதையை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "karthigai"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "க",
+        "slug": "karthikeyan"
+    },
+    {
+        "id": 6,
+        "name": "சுவாமிநாதன்",
+        "meaning": "இறைவனுக்கே குருவானவர்",
+        "description": "சிவனுக்கே குருவான முருகனை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "guru",
+            "divine"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "swaminathan"
+    },
+    {
+        "id": 7,
+        "name": "தண்டபாணி",
+        "meaning": "தண்டம் ஏந்தியவர்",
+        "description": "பழனி முருகன் வடிவம்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "palani"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "dhandapani"
+    },
+    {
+        "id": 8,
+        "name": "குகன்",
+        "meaning": "உள்ளார்ந்தவன்",
+        "description": "இதயத்தின் ஆழத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "spiritual"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "க",
+        "slug": "kugan"
+    },
+    {
+        "id": 9,
+        "name": "பாலசுப்பிரமணியம்",
+        "meaning": "குழந்தை முருகன்",
+        "description": "இளம் முருகன் வடிவம்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "child"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ப",
+        "slug": "balasubramaniam"
+    },
+    {
+        "id": 10,
+        "name": "நிமலன்",
+        "meaning": "தூய்மையானவன்",
+        "description": "சுத்தம் மற்றும் நல்ல மனதை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "pure"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "ந",
+        "slug": "nimalan"
+    },
+    {
+        "id": 11,
+        "name": "உதயகுமாரன்",
+        "meaning": "உதயமான இளவரசன்",
+        "description": "சூரியன் உதயமாகும் போல் ஒளி மற்றும் புதிய தொடக்கத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "light",
+            "new beginning"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "உ",
+        "slug": "udhayakumaran"
+    },
+    {
+        "id": 12,
+        "name": "பரமகுரு",
+        "meaning": "உயர்ந்த குரு",
+        "description": "ஆன்மீகத்தில் உச்சநிலை பெற்ற குருவை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "guru",
+            "spiritual"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "paramaguru"
+    },
+    {
+        "id": 13,
+        "name": "உமையபாலன்",
+        "meaning": "உமையின் மகன்",
+        "description": "பார்வதி தேவியின் மகனாக முருகனை குறிக்கும் பெயர்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "mother"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "உ",
+        "slug": "umayapalan"
+    },
+    {
+        "id": 14,
+        "name": "தமிழ்செல்வன்",
+        "meaning": "தமிழின் செல்வம்",
+        "description": "தமிழ் கலாச்சாரம் மற்றும் முருகனுடன் தொடர்புடைய பெருமையை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "tamil",
+            "culture"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "tamilselvan"
+    },
+    {
+        "id": 15,
+        "name": "சதாசிவன்",
+        "meaning": "எப்போதும் நல்லவர்",
+        "description": "நிலையான நன்மை மற்றும் அமைதியை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "peace",
+            "goodness"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "sadasivan"
+    },
+    {
+        "id": 16,
+        "name": "சத்குணசீலன்",
+        "meaning": "நல்ல குணங்கள் உடையவன்",
+        "description": "நல்ல பண்புகள் மற்றும் ஒழுக்கத்தை கொண்டவரை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "character",
+            "virtue"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "satgunaseelan"
+    },
+    {
+        "id": 17,
+        "name": "சந்திரமுகன்",
+        "meaning": "நிலவைப் போன்ற முகம்",
+        "description": "அழகு, அமைதி மற்றும் மென்மையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "beauty",
+            "calm"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "chandramugan"
+    },
+    {
+        "id": 18,
+        "name": "அமரேசன்",
+        "meaning": "தேவர்களின் தலைவர்",
+        "description": "வீரம் மற்றும் தலைமைத் திறனை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "leader",
+            "divine"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "அ",
+        "slug": "amaraesan"
+    },
+    {
+        "id": 19,
+        "name": "மயூரவாஹனன்",
+        "meaning": "மயிலை வாகனமாகக் கொண்டவன்",
+        "description": "முருகனின் வாகனம் மயில்; பெருமை மற்றும் வெற்றி.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "peacock",
+            "victory"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ம",
+        "slug": "mayuravahanan"
+    },
+    {
+        "id": 20,
+        "name": "செந்தில்குமார்",
+        "meaning": "செந்தில் தலத்தின் இளவன்",
+        "description": "திருச்செந்தூர் முருகனை குறிக்கும்; பக்தி மற்றும் தெய்வீகத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "temple",
+            "devotion"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "senthilkumar"
+    },
+    {
+        "id": 21,
+        "name": "வேலன்",
+        "meaning": "வேல் ஏந்தியவன்",
+        "description": "முருகனின் ஆயுதமான வேல்; தீமைக்கு எதிரான வெற்றி மற்றும் பாதுகாப்பை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "vel",
+            "victory"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "வ",
+        "slug": "velan"
+    },
+    {
+        "id": 22,
+        "name": "குகாநந்தன்",
+        "meaning": "குகனின் ஆனந்தம்",
+        "description": "உள்ளார்ந்த ஆனந்தம் மற்றும் ஆன்மீக மகிழ்ச்சியை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "joy",
+            "spiritual"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kuganandhan"
+    },
+    {
+        "id": 23,
+        "name": "பழனிநாதன்",
+        "meaning": "பழனி மலை நாதன்",
+        "description": "பழனி முருகனை குறிக்கும்; தவம் மற்றும் எளிமையை சுட்டிக்காட்டும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "palani",
+            "devotion"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "palaninathan"
+    },
+    {
+        "id": 24,
+        "name": "தேவசேனாபதி",
+        "meaning": "தேவர்களின் படைத்தலைவன்",
+        "description": "முருகன் தேவர்களின் படைத்தலைவனாக இருப்பதால் வீரமும் பாதுகாப்பையும் குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "army",
+            "leader"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "த",
+        "slug": "devasenapathi"
+    },
+    {
+        "id": 25,
+        "name": "தீபிதன்",
+        "meaning": "ஒளி தருபவன்",
+        "description": "அறிவு, வெளிச்சம் மற்றும் வழிகாட்டுதலை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "light",
+            "knowledge"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "த",
+        "slug": "dheepidhan"
+    },
+    {
+        "id": 26,
+        "name": "கிருபாகரன்",
+        "meaning": "கருணை கொண்டவன்",
+        "description": "அன்பு, கருணை மற்றும் உதவி மனப்பான்மையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "kindness",
+            "grace"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "krubakaran"
+    },
+    {
+        "id": 27,
+        "name": "பூபாலன்",
+        "meaning": "பூமியின் பாதுகாவலன்",
+        "description": "பாதுகாப்பு மற்றும் பொறுப்பை குறிக்கும் பெயர்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "earth",
+            "protector"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "bhoopalan"
+    },
+    {
+        "id": 28,
+        "name": "சண்முகம்",
+        "meaning": "ஆறு முகம் கொண்டவன்",
+        "description": "முருகனின் ஆறு முகங்களைக் குறிக்கும்; சக்தி மற்றும் அறிவின் சின்னம்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "six faces",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "shanmugam"
+    },
+    {
+        "id": 29,
+        "name": "உத்தமசீலன்",
+        "meaning": "உயர்ந்த குணம் கொண்டவன்",
+        "description": "நல்ல பண்பு, ஒழுக்கம் மற்றும் உயர்ந்த வாழ்க்கை மதிப்புகளை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "character",
+            "virtue"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "உ",
+        "slug": "uthamaseelan"
+    },
+    {
+        "id": 30,
+        "name": "குருசாமி",
+        "meaning": "குருவும் இறைவனும்",
+        "description": "ஆன்மீக வழிகாட்டி மற்றும் தெய்வீக சக்தியை குறிக்கும் பெயர்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "guru",
+            "divine"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "gurusamy"
+    },
+    {
+        "id": 31,
+        "name": "திருச்செல்வம்",
+        "meaning": "புனித செல்வம்",
+        "description": "தெய்வீக அருள் மற்றும் ஆன்மீக செல்வத்தை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "divine",
+            "wealth"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "thiruchelvam"
+    },
+    {
+        "id": 32,
+        "name": "ஜெயபாலன்",
+        "meaning": "வெற்றியின் மகன்",
+        "description": "வெற்றி, சாதனை மற்றும் முன்னேற்றத்தை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "victory",
+            "success"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ஜ",
+        "slug": "jayabalan"
+    },
+    {
+        "id": 33,
+        "name": "சந்திரகாந்தன்",
+        "meaning": "நிலவின் ஒளி உடையவன்",
+        "description": "அழகு, அமைதி மற்றும் மென்மையான குணத்தை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "moon",
+            "calm"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "chandrakandan"
+    },
+    {
+        "id": 34,
+        "name": "பிரபாகரன்",
+        "meaning": "ஒளி தருபவன்",
+        "description": "சூரியனைப் போல ஒளி மற்றும் வழிகாட்டுதலை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "light",
+            "leader"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "prabhakaran"
+    },
+    {
+        "id": 35,
+        "name": "செளந்தரிகன்",
+        "meaning": "அழகுடையவன்",
+        "description": "உடல் மற்றும் மன அழகை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "beauty"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "soundarigan"
+    },
+    {
+        "id": 36,
+        "name": "வேல்முருகன்",
+        "meaning": "வேல் உடைய முருகன்",
+        "description": "முருகனின் சக்தி மற்றும் பாதுகாப்பை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "vel",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "வ",
+        "slug": "velmurugan"
+    },
+    {
+        "id": 37,
+        "name": "பரமன்",
+        "meaning": "உயர்ந்தவன்",
+        "description": "தெய்வீக உயர்வு மற்றும் பரம நிலையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "supreme"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "short",
+        "startsWith": "ப",
+        "slug": "paraman"
+    },
+    {
+        "id": 38,
+        "name": "வேலையா",
+        "meaning": "வேல் உடையவன்",
+        "description": "முருகனின் வேல் சக்தியை குறிக்கும் பெயர்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "வ",
+        "slug": "velaiya"
+    },
+    {
+        "id": 39,
+        "name": "கனபாலன்",
+        "meaning": "அன்பான மகன்",
+        "description": "பாசம் மற்றும் குடும்ப பிணைப்பை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "love",
+            "family"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kanabalan"
+    },
+    {
+        "id": 40,
+        "name": "படையப்பன்",
+        "meaning": "படைத் தலைவர்",
+        "description": "வீரம், தலைமை மற்றும் பாதுகாப்பை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "leader",
+            "army"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "padayappan"
+    },
+    {
+        "id": 41,
+        "name": "கருணாகரன்",
+        "meaning": "கருணை உடையவன்",
+        "description": "அன்பு, இரக்கம் மற்றும் உதவும் மனப்பான்மையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "kindness",
+            "compassion"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "karunakaran"
+    },
+    {
+        "id": 42,
+        "name": "சேனாபதி",
+        "meaning": "படைத் தலைவர்",
+        "description": "முருகன் தேவர்களின் சேனாதிபதியாக இருப்பதால் வீரத்தையும் தலைமைத்திறனையும் குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "leader",
+            "army"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "senapathi"
+    },
+    {
+        "id": 43,
+        "name": "குகன்",
+        "meaning": "உள்ளார்ந்தவன்",
+        "description": "இதயத்தின் ஆழத்தை மற்றும் ஆன்மீகத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "spiritual"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "க",
+        "slug": "kugan"
+    },
+    {
+        "id": 44,
+        "name": "சித்தன்",
+        "meaning": "ஞானம் பெற்றவர்",
+        "description": "ஆன்மீக ஞானம் மற்றும் சித்தியை அடைந்தவரை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "wisdom",
+            "spiritual"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "ச",
+        "slug": "sithan"
+    },
+    {
+        "id": 45,
+        "name": "கதிர்வேலன்",
+        "meaning": "ஒளி தரும் வேல் உடையவன்",
+        "description": "முருகனின் வேல் மற்றும் ஒளியை இணைக்கும் சக்தி மற்றும் அறிவை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "vel",
+            "light"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kathirvelan"
+    },
+    {
+        "id": 46,
+        "name": "கருணாலயன்",
+        "meaning": "கருணையின் இல்லம்",
+        "description": "அன்பு மற்றும் கருணை நிறைந்த நபரை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "compassion"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "karunalayan"
+    },
+    {
+        "id": 47,
+        "name": "திரிபுரவன்",
+        "meaning": "மூன்று உலகங்களையும் வென்றவன்",
+        "description": "வீரம், சக்தி மற்றும் வெற்றியை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "victory",
+            "power"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "tripuravan"
+    },
+    {
+        "id": 48,
+        "name": "பேரழகன்",
+        "meaning": "மிகுந்த அழகு உடையவன்",
+        "description": "உடல் மற்றும் உள்ளார்ந்த அழகை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "beauty"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "perazhagan"
+    },
+    {
+        "id": 49,
+        "name": "கந்தவேல்",
+        "meaning": "முருகன் (வேல் உடையவன்)",
+        "description": "முருகனின் சக்தி மற்றும் பாதுகாப்பை குறிக்கும் பெயர்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kandhavel"
+    },
+    {
+        "id": 50,
+        "name": "முத்துக்குமரன்",
+        "meaning": "முத்துப் போன்ற இளவன்",
+        "description": "அழகு, மதிப்பு மற்றும் தெய்வீகத்தை குறிக்கும் முருகன் பெயர்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "precious"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "muthukumaran"
+    },
+    {
+        "id": 51,
+        "name": "சிவகுமார்",
+        "meaning": "சிவனின் மகன்",
+        "description": "முருகன் சிவபெருமானின் மகனாக இருப்பதால், தெய்வீக வம்சத்தையும் சக்தியையும் குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "shiva",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "shivakumar"
+    },
+    {
+        "id": 52,
+        "name": "ரத்தினதீபன்",
+        "meaning": "மாணிக்க ஒளி",
+        "description": "மதிப்பும் ஒளியும் கொண்டவரை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "light",
+            "precious"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ர",
+        "slug": "rathinadeepan"
+    },
+    {
+        "id": 53,
+        "name": "லோகநாதன்",
+        "meaning": "உலகத்தின் தலைவர்",
+        "description": "உலகை வழிநடத்தும் தலைமைத்திறனை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "leader",
+            "world"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ல",
+        "slug": "loganathan"
+    },
+    {
+        "id": 54,
+        "name": "தீனேசன்",
+        "meaning": "நாளின் தலைவர் (சூரியன்)",
+        "description": "ஒளி, சக்தி மற்றும் தலைமைத்திறனை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "sun",
+            "leader"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "dheenaesan"
+    },
+    {
+        "id": 55,
+        "name": "சண்முகலிங்கம்",
+        "meaning": "ஆறு முகம் கொண்ட சிவ வடிவு",
+        "description": "முருகன் மற்றும் சிவ தத்துவத்தை இணைக்கும் பெயர்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "shanmugam",
+            "shiva"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "shanmugalingam"
+    },
+    {
+        "id": 56,
+        "name": "குமரகுரு",
+        "meaning": "இளவன் குரு",
+        "description": "முருகன் குருவாக விளங்குவதை குறிக்கும் பெயர்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "guru",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kumaraguru"
+    },
+    {
+        "id": 57,
+        "name": "முத்துக்குமரன்",
+        "meaning": "முத்துப் போன்ற இளவன்",
+        "description": "மதிப்பு, அழகு மற்றும் தெய்வீகத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "precious"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "muthukumaran"
+    },
+    {
+        "id": 58,
+        "name": "அழகப்பன்",
+        "meaning": "அழகானவர்",
+        "description": "உடல் மற்றும் உள்ளார்ந்த அழகை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "beauty"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "அ",
+        "slug": "azhagappan"
+    },
+    {
+        "id": 59,
+        "name": "தமிழ்வேல்",
+        "meaning": "தமிழின் வேல்",
+        "description": "தமிழ் கலாச்சாரம் மற்றும் முருகனின் வேல் சக்தியை இணைக்கும் பெயர்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "tamil",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "tamilvel"
+    },
+    {
+        "id": 60,
+        "name": "மருதமலை",
+        "meaning": "முருகன் இருப்பிட மலை",
+        "description": "மருதமலை முருகன் கோவிலை குறிக்கும்; பக்தி மற்றும் ஆன்மிகத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "temple",
+            "devotion"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "marudhamalai"
+    },
+    {
+        "id": 61,
+        "name": "சுசிதரன்",
+        "meaning": "தூய்மையானவன்",
+        "description": "சுத்தம், நற்பண்பு மற்றும் நல்ல மனதை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "pure",
+            "goodness"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "suchidharan"
+    },
+    {
+        "id": 62,
+        "name": "கிரிராஜன்",
+        "meaning": "மலைகளின் ராஜா",
+        "description": "உயர்வு, வலிமை மற்றும் தலைமைத்திறனை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "mountain",
+            "leader"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "girirajan"
+    },
+    {
+        "id": 63,
+        "name": "குமரன்",
+        "meaning": "இளவன் / முருகன்",
+        "description": "முருகனை குறிக்கும் பொதுவான பெயர்; இளமை மற்றும் வீரத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "youth"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "க",
+        "slug": "kumaran"
+    },
+    {
+        "id": 64,
+        "name": "ஞானவேல்",
+        "meaning": "ஞானத்தின் வேல்",
+        "description": "அறிவு மற்றும் முருகனின் வேல் சக்தியை இணைக்கும் பெயர்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "knowledge",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ஞ",
+        "slug": "gnanavel"
+    },
+    {
+        "id": 65,
+        "name": "சிவகார்த்திக்",
+        "meaning": "சிவன் மற்றும் கார்த்திகேயன் இணைப்பு",
+        "description": "சிவனும் முருகனும் இணைந்த தெய்வீகத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "shiva",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "shivakarthik"
+    },
+    {
+        "id": 66,
+        "name": "சுப்பையா",
+        "meaning": "முருகனின் பெயர்",
+        "description": "சுப்பிரமணியன் என்ற பெயரின் எளிய வடிவம்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "ச",
+        "slug": "suppaiah"
+    },
+    {
+        "id": 67,
+        "name": "முருகவேல்",
+        "meaning": "முருகனின் வேல்",
+        "description": "முருகனின் சக்தி மற்றும் பாதுகாப்பை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "murugan",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "murugavel"
+    },
+    {
+        "id": 68,
+        "name": "குணாதரன்",
+        "meaning": "நல்ல குணங்கள் உடையவன்",
+        "description": "ஒழுக்கம் மற்றும் நல்ல பண்புகளை கொண்டவரை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "virtue",
+            "character"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "gunadharan"
+    },
+    {
+        "id": 69,
+        "name": "அமுதன்",
+        "meaning": "அமிர்தம் போன்றவன்",
+        "description": "இனிமை, மதிப்பு மற்றும் அன்பை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "sweet",
+            "precious"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "அ",
+        "slug": "amudhan"
+    },
+    {
+        "id": 70,
+        "name": "செங்கதிர்செல்வன்",
+        "meaning": "சூரிய ஒளி போன்ற செல்வம்",
+        "description": "ஒளி, வெற்றி மற்றும் வளர்ச்சியை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "sun",
+            "success"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "sengathirselvan"
+    },
+    {
+        "id": 71,
+        "name": "பவன்கந்தன்",
+        "meaning": "புனித கந்தன்",
+        "description": "முருகனின் தெய்வீக மற்றும் புனித வடிவத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "divine"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "pavankandan"
+    },
+    {
+        "id": 72,
+        "name": "திருமுகம்",
+        "meaning": "புனித முகம்",
+        "description": "அழகு மற்றும் தெய்வீக அமைதியை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "divine",
+            "beauty"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "thirumugam"
+    },
+    {
+        "id": 73,
+        "name": "கதிர்காமன்",
+        "meaning": "கதிர்காமம் முருகன்",
+        "description": "இலங்கையில் உள்ள கதிர்காமம் முருகன் தலத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "temple",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kathirkaman"
+    },
+    {
+        "id": 74,
+        "name": "வெற்றிவேல்",
+        "meaning": "வெற்றி தரும் வேல்",
+        "description": "முருகனின் வேல் வெற்றியின் சின்னம்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "victory",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "வ",
+        "slug": "vetrivel"
+    },
+    {
+        "id": 75,
+        "name": "ஸ்கந்தகுரு",
+        "meaning": "ஸ்கந்தன் குரு",
+        "description": "முருகன் குருவாக இருப்பதை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "skanda",
+            "guru"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ஸ",
+        "slug": "skandaguru"
+    },
+    {
+        "id": 76,
+        "name": "பாலமுருகன்",
+        "meaning": "குழந்தை முருகன்",
+        "description": "இளம் முருகன் வடிவம்; இனிமை மற்றும் நிர்ப்பாவம்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "child",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "balamurugan"
+    },
+    {
+        "id": 77,
+        "name": "மனோஹரன்",
+        "meaning": "மனதை கவர்பவன்",
+        "description": "அழகு, ஈர்ப்பு மற்றும் இனிமையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "attractive",
+            "charm"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "manoharan"
+    },
+    {
+        "id": 78,
+        "name": "குமரேசன்",
+        "meaning": "முருகன்",
+        "description": "முருகனின் மற்றொரு பெயர்; தெய்வீக சக்தி மற்றும் இளமை.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kumaraesan"
+    },
+    {
+        "id": 79,
+        "name": "இந்திரமுருகன்",
+        "meaning": "இந்திரனை வென்ற முருகன்",
+        "description": "வீரம் மற்றும் தெய்வீக வெற்றியை குறிக்கும்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "victory",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "இ",
+        "slug": "indiramurugan"
+    },
+    {
+        "id": 80,
+        "name": "செல்வவேல்",
+        "meaning": "செல்வத்தை தரும் வேல்",
+        "description": "வெற்றி, வளம் மற்றும் பாதுகாப்பை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "wealth",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "selvavel"
+    },
+    {
+        "id": 81,
+        "name": "மயில்வீரா",
+        "meaning": "மயிலில் சவாரி செய்யும் வீரன்",
+        "description": "முருகனின் மயில் வாகனத்தையும் வீரத்தையும் குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "peacock",
+            "bravery"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "mayilveera"
+    },
+    {
+        "id": 82,
+        "name": "குருநாதன்",
+        "meaning": "உயர்ந்த குரு",
+        "description": "ஆன்மீக வழிகாட்டி மற்றும் அறிவை வழங்குபவரை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள",
+            "god murugan name"
+        ],
+        "tags": [
+            "guru",
+            "leader"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "gurunathan"
+    },
+    {
+        "id": 83,
+        "name": "பழனிச்சாமி",
+        "meaning": "பழனி முருகன்",
+        "description": "பழனி தலத்தின் முருகனை குறிக்கும் பக்தி பெயர்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "palani",
+            "devotion"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ப",
+        "slug": "palanisamy"
+    },
+    {
+        "id": 84,
+        "name": "திருச்செந்தில்",
+        "meaning": "திருச்செந்தூர் முருகன்",
+        "description": "திருச்செந்தூர் தலத்தை குறிக்கும் தெய்வீக பெயர்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "temple",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "த",
+        "slug": "thiruchendhil"
+    },
+    {
+        "id": 85,
+        "name": "சங்கர்குமார்",
+        "meaning": "சிவனின் மகன்",
+        "description": "சங்கரன் (சிவன்) மற்றும் குமரன் இணைந்த பெயர்.",
+        "category": [
+            "god murugan name"
+        ],
+        "tags": [
+            "shiva",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "sankarkumar"
+    },
+    {
+        "id": 86,
+        "name": "குருவேல்",
+        "meaning": "குருவான வேல்",
+        "description": "அறிவு மற்றும் முருகனின் வேல் சக்தியை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "guru",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "guruvel"
+    },
+    {
+        "id": 87,
+        "name": "குருமூர்த்தி",
+        "meaning": "குரு வடிவம் கொண்டவன்",
+        "description": "ஆன்மீக குருவின் உருவத்தை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "guru",
+            "spiritual"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "gurumoorthy"
+    },
+    {
+        "id": 88,
+        "name": "சுகிர்தன்",
+        "meaning": "நல்ல செயல் உடையவன்",
+        "description": "நல்ல செயல்கள் மற்றும் நல்ல வாழ்க்கையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "good deeds"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "sugirthan"
+    },
+    {
+        "id": 89,
+        "name": "பவன்",
+        "meaning": "புனிதம் / காற்று",
+        "description": "தூய்மை மற்றும் இயற்கையை குறிக்கும் பெயர்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "pure",
+            "nature"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "short",
+        "startsWith": "ப",
+        "slug": "pavan"
+    },
+    {
+        "id": 90,
+        "name": "கந்தசாமி",
+        "meaning": "முருகன்",
+        "description": "கந்தன் என்ற முருகன் பெயரின் மரியாதை வடிவம்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kandasamy"
+    },
+    {
+        "id": 91,
+        "name": "ஆறுமுகம்",
+        "meaning": "ஆறு முகம் கொண்டவன்",
+        "description": "முருகனின் ஆறு முகங்களை குறிக்கும்; அறிவும் சக்தியும் நிறைந்த வடிவு.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "six faces",
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ஆ",
+        "slug": "aarumugam"
+    },
+    {
+        "id": 92,
+        "name": "வைரவெல்",
+        "meaning": "வீரமான வேல்",
+        "description": "முருகனின் வேல் சக்தி மற்றும் வீரத்தை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "vel",
+            "bravery"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "வ",
+        "slug": "vairavel"
+    },
+    {
+        "id": 93,
+        "name": "அன்பழகன்",
+        "meaning": "அன்பும் அழகும் கொண்டவன்",
+        "description": "அன்பும் அழகும் சேர்ந்த நல்ல குணநலன்களை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "love",
+            "beauty"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "அ",
+        "slug": "anbazhagan"
+    },
+    {
+        "id": 94,
+        "name": "முத்தப்பன்",
+        "meaning": "மதிப்புள்ளவர்",
+        "description": "மதிப்பு மற்றும் மரியாதையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "respect",
+            "value"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ம",
+        "slug": "muthappan"
+    },
+    {
+        "id": 95,
+        "name": "சரவணபவன்",
+        "meaning": "சரவணத்தில் பிறந்தவன்",
+        "description": "முருகனின் பிறப்பு இடத்தை குறிக்கும் மற்றொரு பெயர்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan",
+            "birth"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "long",
+        "startsWith": "ச",
+        "slug": "saravanabhavan"
+    },
+    {
+        "id": 96,
+        "name": "செல்வவேல்",
+        "meaning": "செல்வத்தை தரும் வேல்",
+        "description": "வளம், வெற்றி மற்றும் பாதுகாப்பை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "wealth",
+            "vel"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "ச",
+        "slug": "selvavel"
+    },
+    {
+        "id": 97,
+        "name": "கிரிசன்",
+        "meaning": "மலை சார்ந்தவன்",
+        "description": "மலை, உயர்வு மற்றும் இயற்கையை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "mountain"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": false,
+        "length": "short",
+        "startsWith": "க",
+        "slug": "girishan"
+    },
+    {
+        "id": 98,
+        "name": "கந்தன்",
+        "meaning": "முருகன்",
+        "description": "முருகனின் பொதுவான பெயர்; தெய்வீக சக்தியை குறிக்கும்.",
+        "category": [
+            "god murugan name",
+            "பாரம்பரியம்"
+        ],
+        "tags": [
+            "murugan"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "க",
+        "slug": "kandan"
+    },
+    {
+        "id": 99,
+        "name": "அழகன்",
+        "meaning": "அழகானவன்",
+        "description": "உடல் மற்றும் மன அழகை குறிக்கும்.",
+        "category": [
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "beauty"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "short",
+        "startsWith": "அ",
+        "slug": "azhagan"
+    },
+    {
+        "id": 100,
+        "name": "கதிர்வேல்",
+        "meaning": "ஒளி தரும் வேல்",
+        "description": "முருகனின் வேல் மற்றும் ஒளியை குறிக்கும் சக்திவாய்ந்த பெயர்.",
+        "category": [
+            "god murugan name",
+            "அர்த்தமுள்ள"
+        ],
+        "tags": [
+            "vel",
+            "light"
+        ],
+        "language": "tamil",
+        "religion": "hindu",
+        "gender": "boy",
+        "isPureTamil": true,
+        "length": "medium",
+        "startsWith": "க",
+        "slug": "kathirvel"
+    }
 ]
