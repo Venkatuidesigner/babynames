@@ -18,7 +18,48 @@ const routes: Routes = [
       seo: {
         title: 'Tamil Baby Names with Meaning | Baby Name Finder',
         description: 'Discover meaningful Tamil baby names for boys and girls with pronunciation, cultural context, popular picks, and browsing by Tamil letter.',
-        path: '/'
+        path: '/',
+        keywords: 'Tamil baby names, Tamil names with meaning, Tamil baby girl names, Tamil baby boy names, modern Tamil names, Tamil names by letter',
+        structuredData: [
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How do I choose a Tamil baby name?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Start with meaning, pronunciation, family tradition, starting letter, and how the name sounds in both Tamil and English.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Can I search Tamil baby names by letter?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Tamil Baby Names lets families browse names by Tamil starting letters and sounds.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Are modern Tamil baby names included?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. The collection includes traditional, modern, rare, short, and culturally rooted Tamil baby names.'
+                }
+              }
+            ]
+          },
+          {
+            '@type': 'ItemList',
+            name: 'Popular Tamil baby name categories',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Tamil girl names', url: 'https://tamilbabynames.com/names?category=girl' },
+              { '@type': 'ListItem', position: 2, name: 'Tamil boy names', url: 'https://tamilbabynames.com/names?category=boy' },
+              { '@type': 'ListItem', position: 3, name: 'Modern Tamil names', url: 'https://tamilbabynames.com/names?category=modern' }
+            ]
+          }
+        ]
       }
     }
   },

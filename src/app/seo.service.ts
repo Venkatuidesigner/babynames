@@ -24,11 +24,13 @@ export class SeoService {
     this.title.setTitle(pageTitle);
     this.setHtmlLang('en-IN');
     this.setCanonical(canonicalUrl);
+    this.setAlternateLinks(canonicalUrl);
     this.setTag('name', 'description', seo.description);
     this.setTag('name', 'keywords', seo.keywords || DEFAULT_SEO.keywords || '');
     this.setTag('name', 'author', SITE_NAME);
     this.setTag('name', 'robots', seo.robots || 'index, follow, max-image-preview:large');
-    this.setTag('name', 'theme-color', '#f43f5e');
+    this.setTag('name', 'theme-color', '#0B74D1');
+    this.setTag('name', 'format-detection', 'telephone=no');
     this.setTag('property', 'og:site_name', SITE_NAME);
     this.setTag('property', 'og:title', pageTitle);
     this.setTag('property', 'og:description', seo.description);
@@ -76,6 +78,7 @@ export class SeoService {
         description: DEFAULT_SEO.description,
         publisher: { '@id': `${SITE_URL}/#organization` },
         inLanguage: ['en-IN', 'ta-IN'],
+        keywords: DEFAULT_SEO.keywords,
         potentialAction: {
           '@type': 'SearchAction',
           target: `${SITE_URL}/names?q={search_term_string}`,
@@ -91,6 +94,7 @@ export class SeoService {
         image: imageUrl,
         isPartOf: { '@id': `${SITE_URL}/#website` },
         about: { '@id': `${SITE_URL}/#organization` },
+        primaryImageOfPage: imageUrl,
         inLanguage: ['en-IN', 'ta-IN']
       }
     ];
@@ -119,6 +123,25 @@ export class SeoService {
       this.document.head.appendChild(link);
     }
     link.setAttribute('href', url);
+  }
+
+  private setAlternateLinks(url: string): void {
+    const alternates = [
+      { hreflang: 'en-IN', href: url },
+      { hreflang: 'ta-IN', href: url },
+      { hreflang: 'x-default', href: url }
+    ];
+
+    alternates.forEach((item) => {
+      let link = this.document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${item.hreflang}"]`);
+      if (!link) {
+        link = this.document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('hreflang', item.hreflang);
+        this.document.head.appendChild(link);
+      }
+      link.setAttribute('href', item.href);
+    });
   }
 
   private setTag(attribute: 'name' | 'property', key: string, content: string): void {

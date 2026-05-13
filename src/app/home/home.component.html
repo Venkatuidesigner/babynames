@@ -1,4 +1,4 @@
-<div class="min-h-screen overflow-hidden bg-[#F5F9FF] text-[#10233F]">
+<div class="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(11,116,209,0.14),transparent_34rem),radial-gradient(circle_at_top_right,rgba(255,159,28,0.16),transparent_30rem),linear-gradient(180deg,#F5F9FF_0%,#FFFFFF_48%,#F5F9FF_100%)] text-[#10233F]">
   <app-header></app-header>
 
   <main>
@@ -18,7 +18,7 @@
           {{ ui.language === 'ta' ? 'கலாச்சாரம், அழகு, அடையாளம் கொண்ட அர்த்தமுள்ள தமிழ் குழந்தை பெயர்களை கண்டறியுங்கள்.' : 'Discover meaningful Tamil baby names with culture, beauty, and identity.' }}
         </p>
 
-        <div class="mt-8 max-w-2xl rounded-[1.4rem] border border-[#DCEBFA] bg-white p-2 shadow-[0_24px_70px_rgba(31,31,31,0.08)] transition duration-300 focus-within:shadow-[0_28px_90px_rgba(11,116,209,0.18)]">
+        <div class="mt-8 max-w-2xl rounded-[1.4rem] border border-white/80 bg-white/90 p-2 shadow-[0_24px_70px_rgba(16,35,63,0.1)] transition duration-300 focus-within:shadow-[0_28px_90px_rgba(11,116,209,0.18)]">
           <div class="grid gap-2 sm:grid-cols-[1fr_auto]">
             <label class="sr-only" for="home-search">{{ ui.language === 'ta' ? 'பெயர் தேடு' : 'Search baby names' }}</label>
             <input
@@ -55,7 +55,7 @@
       </div>
 
       <aside class="relative z-10 grid gap-4 lg:pt-8" aria-label="Tamil naming highlights">
-        <div class="grid min-h-[420px] content-between rounded-[2rem] border border-[#DCEBFA] bg-[#10233F] p-6 text-white shadow-[0_30px_90px_rgba(31,31,31,0.18)] sm:p-8">
+        <div class="grid min-h-[420px] content-between rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#10233F_0%,#0B74D1_58%,#12B8A6_100%)] p-6 text-white shadow-[0_30px_90px_rgba(16,35,63,0.24)] sm:p-8">
           <div class="flex items-start justify-between gap-4">
             <span class="rounded-full border border-white/15 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-white/70">{{ ui.language === 'ta' ? 'தொகுப்பு குறியீடு' : 'Editorial Index' }}</span>
             <span class="font-display text-6xl leading-none text-[#FF9F1C]">அ</span>
@@ -93,7 +93,7 @@
       <div class="grid auto-rows-[minmax(210px,auto)] grid-cols-1 gap-4 md:grid-cols-6">
         <article
           *ngFor="let item of categories; let i = index"
-          class="group rounded-[1.6rem] border border-[#DCEBFA] bg-white p-6 shadow-[0_18px_50px_rgba(31,31,31,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(31,31,31,0.1)] md:[&:nth-child(1)]:col-span-3 md:[&:nth-child(2)]:col-span-3 md:[&:nth-child(3)]:col-span-2 md:[&:nth-child(4)]:col-span-2 md:[&:nth-child(5)]:col-span-2 md:[&:nth-child(6)]:col-span-6"
+          class="group rounded-[1.6rem] border border-[#DCEBFA] bg-[linear-gradient(145deg,#FFFFFF_0%,#F5F9FF_100%)] p-6 shadow-[0_18px_50px_rgba(16,35,63,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(11,116,209,0.13)] md:[&:nth-child(1)]:col-span-3 md:[&:nth-child(2)]:col-span-3 md:[&:nth-child(3)]:col-span-2 md:[&:nth-child(4)]:col-span-2 md:[&:nth-child(5)]:col-span-2 md:[&:nth-child(6)]:col-span-6"
         >
           <div class="flex h-full flex-col justify-between gap-6">
             <div class="flex items-start justify-between gap-6">
@@ -113,6 +113,8 @@
       </div>
     </section>
 
+    <app-ad-slot slot="1234567890"></app-ad-slot>
+
     <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="mb-7 flex items-end justify-between gap-4">
         <div>
@@ -122,7 +124,7 @@
       </div>
 
       <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-4">
-        <article *ngFor="let item of trendingNames" class="min-w-[290px] snap-start rounded-[1.5rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_18px_50px_rgba(31,31,31,0.06)] transition hover:-translate-y-1 sm:min-w-[350px]">
+        <article *ngFor="let item of trendingNames" class="min-w-[290px] snap-start rounded-[1.5rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_18px_50px_rgba(16,35,63,0.06)] transition hover:-translate-y-1 sm:min-w-[350px]">
           <div class="flex items-start justify-between gap-4">
             <div>
               <h3 class="font-display text-3xl font-black text-[#10233F]">{{ item.tamil }}</h3>
@@ -147,7 +149,7 @@
     </section>
 
     <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div class="rounded-[2rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_18px_50px_rgba(31,31,31,0.06)] sm:p-8">
+      <div class="rounded-[2rem] border border-[#DCEBFA] bg-[linear-gradient(135deg,#FFFFFF_0%,#F5F9FF_65%,rgba(18,184,166,0.08)_100%)] p-5 shadow-[0_18px_50px_rgba(16,35,63,0.06)] sm:p-8">
         <div class="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <p class="text-xs font-black uppercase tracking-[0.22em] text-[#0B74D1]">{{ ui.language === 'ta' ? 'தமிழ் அ-ஔ' : 'Tamil A-Z' }}</p>
@@ -165,7 +167,7 @@
     </section>
 
     <section class="mx-auto grid max-w-7xl gap-4 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-      <div class="rounded-[2rem] bg-[#10233F] p-8 text-white">
+      <div class="rounded-[2rem] bg-[linear-gradient(135deg,#10233F_0%,#0B74D1_100%)] p-8 text-white">
         <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'தமிழ் மரபுத் தொகுப்பு' : 'Tamil Heritage Collection' }}</p>
         <h2 class="mt-5 font-display text-3xl font-black leading-tight">{{ ui.language === 'ta' ? 'கவிதை, ஊர், நினைவால் வடிவான பெயர்கள்.' : 'Names shaped by poetry, place, and memory.' }}</h2>
       </div>
@@ -182,6 +184,40 @@
         </article>
       </div>
     </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="overflow-hidden rounded-[2rem] border border-[#DCEBFA] bg-white shadow-[0_24px_80px_rgba(16,35,63,0.08)]">
+        <div class="bg-[linear-gradient(120deg,#0B74D1_0%,#12B8A6_58%,#FF9F1C_100%)] p-8 text-white sm:p-10">
+          <p class="text-xs font-black uppercase tracking-[0.22em] text-white/80">{{ ui.language === 'ta' ? 'பெயர் வழிகாட்டி' : 'SEO name guide' }}</p>
+          <h2 class="mt-4 max-w-3xl font-display text-3xl font-black leading-tight sm:text-4xl">
+            {{ ui.language === 'ta' ? 'தமிழ் குழந்தை பெயர்களை அர்த்தம், எழுத்து, பயன்பாடு மூலம் தேர்வு செய்யுங்கள்.' : 'Choose Tamil baby names by meaning, starting letter, and everyday use.' }}
+          </h2>
+        </div>
+        <div class="grid gap-4 p-5 sm:p-8 lg:grid-cols-3">
+          <article *ngFor="let item of seoGuides" class="rounded-[1.4rem] border border-[#DCEBFA] bg-[#F5F9FF] p-6">
+            <h3 class="text-xl font-black text-[#10233F]">{{ getGuideTitle(item) }}</h3>
+            <p class="mt-3 leading-7 text-[#5B6472]">{{ getGuideDescription(item) }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="rounded-[2rem] bg-[linear-gradient(135deg,#10233F,#0B74D1)] p-8 text-white">
+          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'கேள்விகள்' : 'FAQ' }}</p>
+          <h2 class="mt-4 font-display text-3xl font-black leading-tight">{{ ui.language === 'ta' ? 'தமிழ் பெயர் தேர்வில் பொதுவான சந்தேகங்கள்.' : 'Common questions about Tamil baby names.' }}</h2>
+        </div>
+        <div class="grid gap-4">
+          <article *ngFor="let item of faqs" class="rounded-[1.4rem] border border-[#DCEBFA] bg-white p-6">
+            <h3 class="text-lg font-black text-[#10233F]">{{ getGuideTitle(item) }}</h3>
+            <p class="mt-3 leading-7 text-[#5B6472]">{{ getGuideDescription(item) }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <app-ad-slot label="Sponsored" slot="0987654321"></app-ad-slot>
   </main>
 
   <app-site-footer></app-site-footer>

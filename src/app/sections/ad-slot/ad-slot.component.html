@@ -1,15 +1,20 @@
 <div class="ad-slot" [attr.aria-label]="ui.language === 'ta' ? 'விளம்பரம்' : 'Advertisement'">
   <p class="label">{{ ui.language === 'ta' && label === 'Advertisement' ? 'விளம்பரம்' : label }}</p>
-  <div class="ad-box">
-    <p>{{ ui.language === 'ta' ? 'AdSense விளம்பர இடம்' : 'AdSense ad placement' }}</p>
-    <p class="hint">{{ ui.language === 'ta' ? '(லைவ் விளம்பர அலகாக மாற்றவும்)' : '(replace with a live ad unit)' }}</p>
-  </div>
-  <!-- Example AdSense unit. Replace data-ad-client/slot in production.
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
-       data-ad-slot="{{ slot }}"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  -->
+
+  <ins
+    *ngIf="enabled; else adPreview"
+    class="adsbygoogle ad-unit"
+    [attr.data-ad-client]="client"
+    [attr.data-ad-slot]="slot"
+    [attr.data-ad-format]="format"
+    [attr.data-ad-layout]="layout || null"
+    [attr.data-full-width-responsive]="responsive ? 'true' : 'false'"
+  ></ins>
+
+  <ng-template #adPreview>
+    <div class="ad-box">
+      <p>{{ ui.language === 'ta' ? 'AdSense விளம்பர இடம் தயார்' : 'AdSense placement ready' }}</p>
+      <p class="hint">{{ ui.language === 'ta' ? 'seo.config.ts-ல் உங்கள் ca-pub ID சேர்க்கவும்.' : 'Add your ca-pub ID in seo.config.ts to enable live ads.' }}</p>
+    </div>
+  </ng-template>
 </div>

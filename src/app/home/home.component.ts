@@ -20,6 +20,13 @@ type ShowcaseName = {
   categoryTa: string;
 };
 
+type SeoGuideItem = {
+  title: string;
+  titleTa: string;
+  description: string;
+  descriptionTa: string;
+};
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -89,6 +96,48 @@ export class HomeComponent {
     { tamil: 'யாழினி', english: 'Yaazhini', meaning: 'Musical, graceful', meaningTa: 'இசை நயம், அழகிய தன்மை', category: 'Girl', categoryTa: 'பெண்' }
   ];
 
+  seoGuides: SeoGuideItem[] = [
+    {
+      title: 'Tamil baby girl names with meaning',
+      titleTa: 'அர்த்தமுள்ள தமிழ் பெண் குழந்தை பெயர்கள்',
+      description: 'Browse modern and traditional girl names with Tamil spelling, English pronunciation, and short meaning notes for quick comparison.',
+      descriptionTa: 'தமிழ் எழுத்து, ஆங்கில உச்சரிப்பு, சுருக்கமான அர்த்த குறிப்புகளுடன் பெண் பெயர்களை ஒப்பிடுங்கள்.'
+    },
+    {
+      title: 'Tamil baby boy names by starting letter',
+      titleTa: 'முதல் எழுத்து வழியாக ஆண் குழந்தை பெயர்கள்',
+      description: 'Filter boy names by Tamil letters like அ, க, ச, த, ந, ம, ர, ல, and வ to match family sound preferences.',
+      descriptionTa: 'அ, க, ச, த, ந, ம, ர, ல, வ போன்ற எழுத்துகள் வழியாக ஆண் பெயர்களை தேர்வு செய்யுங்கள்.'
+    },
+    {
+      title: 'Modern Tamil names for global families',
+      titleTa: 'உலகத் தமிழ் குடும்பங்களுக்கு நவீன பெயர்கள்',
+      description: 'Find names that feel rooted in Tamil culture while staying short, memorable, and easy to pronounce internationally.',
+      descriptionTa: 'தமிழ் வேருடன் உலகளவில் எளிதாக உச்சரிக்கப்படும் குறுகிய, நினைவில் நிற்கும் பெயர்களை கண்டறியுங்கள்.'
+    }
+  ];
+
+  faqs: SeoGuideItem[] = [
+    {
+      title: 'How do I choose a Tamil baby name?',
+      titleTa: 'தமிழ் குழந்தை பெயரை எப்படி தேர்வு செய்வது?',
+      description: 'Start with meaning, pronunciation, family tradition, starting letter, and how the name sounds in both Tamil and English.',
+      descriptionTa: 'அர்த்தம், உச்சரிப்பு, குடும்ப மரபு, முதல் எழுத்து, தமிழ் மற்றும் ஆங்கிலத்தில் ஒலி ஆகியவற்றைப் பார்த்து தேர்வு செய்யலாம்.'
+    },
+    {
+      title: 'Can I search by Tamil letter?',
+      titleTa: 'தமிழ் எழுத்து வழியாக தேட முடியுமா?',
+      description: 'Yes. Use the Tamil A-Z section to browse names by starting sound and letter.',
+      descriptionTa: 'ஆம். தமிழ் அ-ஔ பகுதியை பயன்படுத்தி முதல் ஒலி மற்றும் எழுத்து வழியாக பெயர்களை பார்க்கலாம்.'
+    },
+    {
+      title: 'Are modern Tamil names included?',
+      titleTa: 'நவீன தமிழ் பெயர்களும் உள்ளதா?',
+      description: 'Yes. The collection includes traditional, modern, rare, short, and culturally rooted Tamil baby names.',
+      descriptionTa: 'ஆம். மரபு, நவீன, அரிய, குறுகிய, கலாச்சார வேருடைய தமிழ் பெயர்கள் உள்ளன.'
+    }
+  ];
+
   letters = [
     { tamil: 'அ', slug: 'a', label: 'A' },
     { tamil: 'ஆ', slug: 'aa', label: 'Aa' },
@@ -128,6 +177,14 @@ export class HomeComponent {
 
   getNameCategory(item: ShowcaseName): string {
     return this.ui.language === 'ta' ? item.categoryTa : item.category;
+  }
+
+  getGuideTitle(item: SeoGuideItem): string {
+    return this.ui.language === 'ta' ? item.titleTa : item.title;
+  }
+
+  getGuideDescription(item: SeoGuideItem): string {
+    return this.ui.language === 'ta' ? item.descriptionTa : item.description;
   }
 
   onSearch(): void {

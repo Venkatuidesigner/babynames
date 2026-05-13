@@ -1,0 +1,3 @@
+# Google AdSense sellers file.
+# Replace pub-XXXXXXXXXXXXXXX with your numeric publisher ID after approval.
+# google.com, pub-XXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

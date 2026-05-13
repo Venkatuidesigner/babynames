@@ -2,6 +2,8 @@ export const SITE_NAME = 'Tamil Baby Names';
 export const SITE_URL = 'https://tamilbabynames.com';
 export const SITE_IMAGE = `${SITE_URL}/assets/og-image.svg`;
 export const SITE_EMAIL = 'hello@tamilbabynames.com';
+export const ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXX';
+export const ADSENSE_ENABLED = !ADSENSE_CLIENT.includes('XXXXXXXX');
 
 export interface SeoData {
   title: string;
