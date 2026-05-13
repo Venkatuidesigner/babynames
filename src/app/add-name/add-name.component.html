@@ -1,37 +1,57 @@
-<div class="add-shell">
+<div class="min-h-screen bg-[#F5F9FF] text-[#10233F]">
   <app-header></app-header>
 
-  <main class="add-main">
-    <section class="form-card">
-      <div class="form-head">
-        <p class="eyebrow">{{ ui.language === 'ta' ? 'பெயர் அனுப்பவும்' : 'Submit a Name' }}</p>
-        <h1>{{ ui.language === 'ta' ? 'புதிய தமிழ் பெயரை சேர்க்கவும்' : 'Add a new Tamil baby name' }}</h1>
-        <p class="subtitle">
-          {{ ui.language === 'ta'
-            ? 'உங்கள் விருப்ப பெயரை பகிர்ந்து எங்களது பட்டியலில் சேர்க்கவும்.'
-            : 'Share a favorite name and we will review and add it to the list.' }}
-        </p>
+  <main class="mx-auto grid max-w-7xl gap-6 px-4 py-10 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8 lg:py-16">
+    <section class="rounded-[2rem] bg-[#10233F] p-7 text-white sm:p-10">
+      <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'பெயர் பங்களிப்பு' : 'Name contribution' }}</p>
+      <h1 class="mt-6 font-display text-4xl font-black leading-tight sm:text-5xl">
+        {{ ui.language === 'ta' ? 'உங்கள் குடும்பத்தில் வாழும் பெயரை பகிருங்கள்.' : 'Share a name that lives in your family.' }}
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-8 text-white/72">
+        {{ ui.language === 'ta'
+          ? 'அர்த்தம், ஒலி, மரபு ஆகியவற்றை சேர்த்து அனுப்புங்கள். எங்கள் தொகுப்பாளர்கள் மதிப்பாய்வு செய்வார்கள்.'
+          : 'Send the meaning, sound, and heritage notes. Our editors will review it for the collection.' }}
+      </p>
+      <div class="mt-10 grid gap-3 sm:grid-cols-2">
+        <div class="rounded-3xl border border-white/10 bg-white/10 p-5">
+          <strong class="block text-2xl text-[#FF9F1C]">48h</strong>
+          <span class="mt-2 block text-sm text-white/70">{{ ui.language === 'ta' ? 'மதிப்பாய்வு நேரம்' : 'Editorial review' }}</span>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/10 p-5">
+          <strong class="block text-2xl text-[#FF9F1C]">100%</strong>
+          <span class="mt-2 block text-sm text-white/70">{{ ui.language === 'ta' ? 'மனித தொகுப்பு' : 'Human curated' }}</span>
+        </div>
       </div>
+    </section>
 
-      <form class="add-form">
-        <label>
+    <section class="rounded-[2rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_24px_80px_rgba(31,31,31,0.08)] sm:p-8">
+      <form class="grid gap-5">
+        <label class="grid gap-2 text-sm font-black text-[#10233F]">
           {{ ui.language === 'ta' ? 'தமிழ் பெயர்' : 'Tamil name' }}
-          <input type="text" [placeholder]="ui.language === 'ta' ? 'அகல்விழி' : 'Akalvizhi'" />
+          <input type="text" class="min-h-14 rounded-2xl border border-[#DCEBFA] bg-[#F5F9FF] px-4 font-semibold outline-none focus:ring-4 focus:ring-[#FF9F1C]/40" [placeholder]="ui.language === 'ta' ? 'அகல்விழி' : 'அகல்விழி'" />
         </label>
-        <label>
-          {{ ui.language === 'ta' ? 'ஆங்கில எழுத்துப்பெயர்' : 'English transliteration' }}
-          <input type="text" [placeholder]="ui.language === 'ta' ? 'அகல்விழி (ஆங்கில எழுத்து)' : 'Akalvizhi (English transliteration)'" />
+        <label class="grid gap-2 text-sm font-black text-[#10233F]">
+          {{ ui.language === 'ta' ? 'ஆங்கில எழுத்துப்பெயர்' : 'English spelling' }}
+          <input type="text" class="min-h-14 rounded-2xl border border-[#DCEBFA] bg-[#F5F9FF] px-4 font-semibold outline-none focus:ring-4 focus:ring-[#FF9F1C]/40" placeholder="Akalvizhi" />
         </label>
-        <label>
-          {{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning (optional)' }}
-          <input type="text" [placeholder]="ui.language === 'ta' ? 'உதா: அர்த்தம், நவீனம், மரபு' : 'Example: meaning, modern, traditional'" />
+        <label class="grid gap-2 text-sm font-black text-[#10233F]">
+          {{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning' }}
+          <input type="text" class="min-h-14 rounded-2xl border border-[#DCEBFA] bg-[#F5F9FF] px-4 font-semibold outline-none focus:ring-4 focus:ring-[#FF9F1C]/40" [placeholder]="ui.language === 'ta' ? 'பெயரின் அர்த்தம்' : 'Meaning of the name'" />
         </label>
-        <label>
+        <label class="grid gap-2 text-sm font-black text-[#10233F]">
+          {{ ui.language === 'ta' ? 'குறிப்பு' : 'Cultural note' }}
+          <textarea rows="5" class="rounded-2xl border border-[#DCEBFA] bg-[#F5F9FF] px-4 py-4 font-semibold outline-none focus:ring-4 focus:ring-[#FF9F1C]/40" [placeholder]="ui.language === 'ta' ? 'குடும்ப மரபு, இலக்கியம், உச்சரிப்பு...' : 'Family context, literature, pronunciation...'"></textarea>
+        </label>
+        <label class="grid gap-2 text-sm font-black text-[#10233F]">
           {{ ui.language === 'ta' ? 'உங்கள் பெயர்' : 'Your name' }}
-          <input type="text" [placeholder]="ui.language === 'ta' ? 'பெற்றோர் பெயர்' : 'Parent name'" />
+          <input type="text" class="min-h-14 rounded-2xl border border-[#DCEBFA] bg-[#F5F9FF] px-4 font-semibold outline-none focus:ring-4 focus:ring-[#FF9F1C]/40" [placeholder]="ui.language === 'ta' ? 'பெற்றோர் பெயர்' : 'Parent name'" />
         </label>
-        <button type="button" class="primary-btn">{{ ui.language === 'ta' ? 'பெயரை அனுப்பவும்' : 'Submit name' }}</button>
+        <button type="button" class="mt-2 min-h-14 w-fit rounded-full bg-[#0B74D1] px-7 text-sm font-black uppercase tracking-[0.16em] text-white shadow-[0_16px_38px_rgba(11,116,209,0.28)] transition hover:-translate-y-0.5 hover:bg-[#10233F] focus:outline-none focus:ring-4 focus:ring-[#FF9F1C]/60">
+          {{ ui.language === 'ta' ? 'பெயரை அனுப்பவும்' : 'Submit name' }}
+        </button>
       </form>
     </section>
   </main>
+
+  <app-site-footer></app-site-footer>
 </div>

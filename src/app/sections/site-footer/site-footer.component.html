@@ -1,31 +1,35 @@
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="brand-copy">
-      <h3>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள்' : 'Meaningful Tamil Baby Names' }}</h3>
-      <p>
+<footer class="border-t border-[#DCEBFA] bg-[#F5F9FF]">
+  <div class="mx-auto grid max-w-7xl gap-5 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_0.9fr_0.9fr] lg:px-8">
+    <div class="rounded-[2rem] bg-[#10233F] p-7 text-white">
+      <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#FF9F1C] font-display text-xl font-black text-[#10233F]">த</span>
+      <h3 class="mt-6 font-display text-2xl font-black">{{ ui.language === 'ta' ? 'தமிழ் பெயர் ஸ்டூடியோ' : 'Tamil Names Studio' }}</h3>
+      <p class="mt-4 max-w-md leading-7 text-white/70">
         {{ ui.language === 'ta'
-          ? 'அர்த்தம், ஒலிப்பு, மரபு மற்றும் நவீன பயன்பாட்டுடன் குடும்பங்களுக்கு பொருத்தமான தமிழ்ப்பெயர்களை ஆராய உதவுகிறோம்.'
-          : 'Explore Tamil baby names with meaning, pronunciation, cultural roots, and modern usage notes for families.' }}
+          ? 'அர்த்தம், ஒலி, மரபு, நவீன பயன்பாடு ஆகியவற்றுடன் தமிழ் பெயர்களை தேர்வு செய்ய உதவும் அமைதியான அனுபவம்.'
+          : 'A calm, modern way to explore Tamil names through meaning, sound, heritage, and identity.' }}
       </p>
     </div>
-    <div class="footer-note">
-      <h4>{{ ui.language === 'ta' ? 'சட்டம் மற்றும் தகவல்' : 'Legal and Info' }}</h4>
-      <p>
-        {{ ui.language === 'ta'
-          ? 'இந்த தளம் தகவல் பயன்பாட்டிற்காக உருவாக்கப்பட்டது. பயன்பாட்டு நிபந்தனைகள், தனியுரிமை விவரங்கள் மற்றும் தொடர்பு தகவல்களை கீழே பார்க்கலாம்.'
-          : 'This website is designed for information and inspiration. You can review our terms, privacy details, and contact information below.' }}
-      </p>
+
+    <div class="rounded-[2rem] border border-[#DCEBFA] bg-white p-7">
+      <h4 class="text-xs font-black uppercase tracking-[0.22em] text-[#0B74D1]">{{ ui.language === 'ta' ? 'ஆராயுங்கள்' : 'Explore' }}</h4>
+      <div class="mt-5 grid gap-3">
+        <a routerLink="/names" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'பெயர்கள்' : 'Names' }}</a>
+        <a routerLink="/add-name" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'பெயர் சேர்க்க' : 'Add a name' }}</a>
+        <a routerLink="/about" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'எங்களை பற்றி' : 'About' }}</a>
+        <a routerLink="/contact" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'தொடர்பு' : 'Contact' }}</a>
+      </div>
     </div>
-    <div class="links">
-      <a routerLink="/about">{{ ui.language === 'ta' ? 'எங்களை பற்றி' : 'About' }}</a>
-      <a routerLink="/contact">{{ ui.language === 'ta' ? 'தொடர்பு' : 'Contact' }}</a>
-      <a routerLink="/privacy">{{ ui.language === 'ta' ? 'தனியுரிமை கொள்கை' : 'Privacy Policy' }}</a>
-      <a routerLink="/cookies">{{ ui.language === 'ta' ? 'குக்கீ கொள்கை' : 'Cookie Policy' }}</a>
-      <a routerLink="/terms">{{ ui.language === 'ta' ? 'விதிமுறைகள்' : 'Terms & Conditions' }}</a>
+
+    <div class="rounded-[2rem] border border-[#DCEBFA] bg-white p-7">
+      <h4 class="text-xs font-black uppercase tracking-[0.22em] text-[#12B8A6]">{{ ui.language === 'ta' ? 'சட்டம்' : 'Legal' }}</h4>
+      <div class="mt-5 grid gap-3">
+        <a routerLink="/privacy" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'தனியுரிமை' : 'Privacy' }}</a>
+        <a routerLink="/cookies" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'குக்கீகள்' : 'Cookies' }}</a>
+        <a routerLink="/terms" class="font-black text-[#10233F] hover:text-[#0B74D1]">{{ ui.language === 'ta' ? 'விதிமுறைகள்' : 'Terms' }}</a>
+      </div>
     </div>
   </div>
-  <p class="copyright">
-    © {{ year }}
-    {{ ui.language === 'ta' ? 'தமிழ் குழந்தை பெயர்கள். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.' : 'Tamil Baby Names. All rights reserved.' }}
+  <p class="mx-auto max-w-7xl px-4 pb-8 text-sm font-bold text-[#5B6472] sm:px-6 lg:px-8">
+    © {{ year }} {{ ui.language === 'ta' ? 'தமிழ் குழந்தை பெயர்கள்.' : 'Tamil Baby Names.' }}
   </p>
 </footer>

@@ -40,6 +40,8 @@ export class NamesComponent implements OnInit {
   activeLetter = 'அனைத்தும்';
   activeGender: 'girl' | 'boy' = 'girl';
   currentPage = 1;
+  savedNames = new Set<string>();
+  copiedName = '';
   readonly pageSize = 20;
 
   letterOptions: LetterOption[] = [
@@ -243,6 +245,32 @@ export class NamesComponent implements OnInit {
   setGender(gender: 'girl' | 'boy'): void {
     this.activeGender = gender;
     this.currentPage = 1;
+  }
+
+  toggleSaved(name: string): void {
+    if (this.savedNames.has(name)) {
+      this.savedNames.delete(name);
+      return;
+    }
+    this.savedNames.add(name);
+  }
+
+  copyName(name: string): void {
+    this.copiedName = name;
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(name).catch(() => undefined);
+    }
+    window.setTimeout(() => {
+      if (this.copiedName === name) {
+        this.copiedName = '';
+      }
+    }, 1400);
+  }
+
+  whatsappUrl(item: NameItem): string {
+    const name = item.tamil || item.name || item.english;
+    const meaning = item.meaning ? ` - ${item.meaning}` : '';
+    return `https://wa.me/?text=${encodeURIComponent(`${name} (${item.english})${meaning}`)}`;
   }
 
   private normalizeNameItem(entry: any, index: number, defaultGender: 'girl' | 'boy'): NameItem {

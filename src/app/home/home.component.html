@@ -1,20 +1,188 @@
-<div class="home-shell">
-  <canvas #heroCanvas class="hero-canvas" aria-hidden="true"></canvas>
-  <div class="hero-glow"></div>
+<div class="min-h-screen overflow-hidden bg-[#F5F9FF] text-[#10233F]">
   <app-header></app-header>
 
-  <ng-container *ngIf="content">
-    <app-home-hero [content]="content.hero"></app-home-hero>
-    <app-home-categories [categories]="content.categories"></app-home-categories>
-    <app-ad-slot></app-ad-slot>
-    <app-home-letters [letters]="content.letters"></app-home-letters>
-    <app-home-popular [names]="content.popular"></app-home-popular>
-    <app-ad-slot></app-ad-slot>
-    <app-home-blog [posts]="content.blog"></app-home-blog>
-    <app-home-affiliate [items]="content.affiliate"></app-home-affiliate>
-    <app-home-trust [items]="content.trust"></app-home-trust>
-    <app-home-cta [content]="content.cta"></app-home-cta>
-  </ng-container>
+  <main>
+    <section class="relative mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pb-24 lg:pt-16">
+      <div class="pointer-events-none absolute left-[6%] top-20 h-28 w-28 rounded-[42%_58%_62%_38%] border border-[#DCEBFA] bg-[#FF9F1C]/25 blur-[1px] motion-safe:animate-[floatSoft_12s_ease-in-out_infinite]"></div>
+      <div class="pointer-events-none absolute right-[8%] top-12 h-44 w-44 rounded-[60%_40%_44%_56%] bg-[#12B8A6]/20 motion-safe:animate-[floatSoft_14s_ease-in-out_infinite]"></div>
+      <div class="pointer-events-none absolute bottom-12 left-[42%] hidden h-20 w-44 rotate-[-10deg] rounded-full border border-[#0B74D1]/20 bg-white/30 lg:block"></div>
+
+      <div class="relative z-10 flex flex-col justify-center">
+        <p class="w-fit rounded-full border border-[#DCEBFA] bg-white/55 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#5B6472] backdrop-blur">
+          {{ ui.language === 'ta' ? 'தமிழ் பெயர் ஸ்டூடியோ' : 'Tamil name studio' }}
+        </p>
+        <h1 class="mt-6 max-w-4xl font-display text-4xl font-black leading-tight tracking-normal text-[#10233F] sm:text-5xl lg:text-6xl">
+          {{ ui.language === 'ta' ? 'ஒவ்வொரு பெயரிலும் ஒரு அழகான கதை உள்ளது' : 'Every Name Holds a Beautiful Story' }}
+        </h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-[#5B6472] sm:text-lg">
+          {{ ui.language === 'ta' ? 'கலாச்சாரம், அழகு, அடையாளம் கொண்ட அர்த்தமுள்ள தமிழ் குழந்தை பெயர்களை கண்டறியுங்கள்.' : 'Discover meaningful Tamil baby names with culture, beauty, and identity.' }}
+        </p>
+
+        <div class="mt-8 max-w-2xl rounded-[1.4rem] border border-[#DCEBFA] bg-white p-2 shadow-[0_24px_70px_rgba(31,31,31,0.08)] transition duration-300 focus-within:shadow-[0_28px_90px_rgba(11,116,209,0.18)]">
+          <div class="grid gap-2 sm:grid-cols-[1fr_auto]">
+            <label class="sr-only" for="home-search">{{ ui.language === 'ta' ? 'பெயர் தேடு' : 'Search baby names' }}</label>
+            <input
+              id="home-search"
+              [(ngModel)]="searchValue"
+              (keyup.enter)="onSearch()"
+              class="min-h-14 rounded-2xl bg-[#F5F9FF] px-5 text-base font-semibold text-[#10233F] outline-none placeholder:text-[#5B6472]/70"
+              [placeholder]="ui.language === 'ta' ? 'தமிழ் அல்லது ஆங்கில பெயர் தேடு...' : 'Search Tamil or English name...'"
+            />
+            <button
+              type="button"
+              (click)="onSearch()"
+              class="min-h-14 rounded-2xl bg-[#0B74D1] px-6 text-sm font-black uppercase tracking-[0.16em] text-white shadow-[0_16px_38px_rgba(11,116,209,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#10233F] focus:outline-none focus:ring-4 focus:ring-[#FF9F1C]/60"
+            >
+              {{ ui.language === 'ta' ? 'தேடு' : 'Search' }}
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 grid max-w-xl grid-cols-3 gap-3">
+          <div class="rounded-3xl border border-[#DCEBFA] bg-white/70 p-4">
+            <strong class="block text-2xl text-[#10233F]">12K+</strong>
+            <span class="mt-1 block text-xs font-bold uppercase tracking-[0.14em] text-[#5B6472]">{{ ui.language === 'ta' ? 'பெயர்கள்' : 'Names' }}</span>
+          </div>
+          <div class="rounded-3xl border border-[#DCEBFA] bg-white/70 p-4">
+            <strong class="block text-2xl text-[#10233F]">20</strong>
+            <span class="mt-1 block text-xs font-bold uppercase tracking-[0.14em] text-[#5B6472]">{{ ui.language === 'ta' ? 'எழுத்துகள்' : 'Letters' }}</span>
+          </div>
+          <div class="rounded-3xl border border-[#DCEBFA] bg-white/70 p-4">
+            <strong class="block text-2xl text-[#10233F]">AI</strong>
+            <span class="mt-1 block text-xs font-bold uppercase tracking-[0.14em] text-[#5B6472]">{{ ui.language === 'ta' ? 'உதவி' : 'Assist' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="relative z-10 grid gap-4 lg:pt-8" aria-label="Tamil naming highlights">
+        <div class="grid min-h-[420px] content-between rounded-[2rem] border border-[#DCEBFA] bg-[#10233F] p-6 text-white shadow-[0_30px_90px_rgba(31,31,31,0.18)] sm:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <span class="rounded-full border border-white/15 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-white/70">{{ ui.language === 'ta' ? 'தொகுப்பு குறியீடு' : 'Editorial Index' }}</span>
+            <span class="font-display text-6xl leading-none text-[#FF9F1C]">அ</span>
+          </div>
+          <div>
+            <p class="max-w-sm text-xl font-black leading-tight sm:text-2xl">
+              {{ ui.language === 'ta' ? 'ஒலி, அர்த்தம், நினைவு, அடையாளம் — அனைத்தும் ஒரு அமைதியான தேடலில்.' : 'Sound, meaning, memory, and identity in one calm search flow.' }}
+            </p>
+            <div class="mt-8 grid grid-cols-2 gap-3">
+              <div class="rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+                <span class="text-xs font-black uppercase tracking-[0.18em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning' }}</span>
+                <p class="mt-2 text-sm text-white/72">{{ ui.language === 'ta' ? 'ஒவ்வொரு பெயரின் உணர்வை புரிந்துகொள்ளுங்கள்.' : 'Understand the emotion behind each name.' }}</p>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+                <span class="text-xs font-black uppercase tracking-[0.18em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'கலாச்சாரம்' : 'Culture' }}</span>
+                <p class="mt-2 text-sm text-white/72">{{ ui.language === 'ta' ? 'தமிழ் வேரும் நவீன உணர்வும் கொண்ட பெயர்களை தேர்வு செய்யுங்கள்.' : 'Choose names with Tamil roots and modern presence.' }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div>
+          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#0B74D1]">{{ ui.language === 'ta' ? 'தொகுப்பு வழிகள்' : 'Bento collections' }}</p>
+          <h2 class="mt-3 max-w-3xl font-display text-3xl font-black leading-tight text-[#10233F] sm:text-4xl">{{ ui.language === 'ta' ? 'உணர்வு, குடும்பம், வடிவம் மூலம் தேடுங்கள்.' : 'Browse by feeling, family, and form.' }}</h2>
+        </div>
+        <a routerLink="/names" class="w-fit rounded-full border border-[#DCEBFA] bg-white px-5 py-3 text-sm font-black text-[#10233F] transition hover:-translate-y-0.5 hover:border-[#0B74D1]">
+          {{ ui.language === 'ta' ? 'அனைத்தையும் காண்க' : 'View all names' }}
+        </a>
+      </div>
+
+      <div class="grid auto-rows-[minmax(210px,auto)] grid-cols-1 gap-4 md:grid-cols-6">
+        <article
+          *ngFor="let item of categories; let i = index"
+          class="group rounded-[1.6rem] border border-[#DCEBFA] bg-white p-6 shadow-[0_18px_50px_rgba(31,31,31,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(31,31,31,0.1)] md:[&:nth-child(1)]:col-span-3 md:[&:nth-child(2)]:col-span-3 md:[&:nth-child(3)]:col-span-2 md:[&:nth-child(4)]:col-span-2 md:[&:nth-child(5)]:col-span-2 md:[&:nth-child(6)]:col-span-6"
+        >
+          <div class="flex h-full flex-col justify-between gap-6">
+            <div class="flex items-start justify-between gap-6">
+              <span class="font-display text-4xl font-black text-[#0B74D1]">{{ item.mark }}</span>
+              <span class="text-xs font-black uppercase tracking-[0.18em] text-[#5B6472]/70">0{{ i + 1 }}</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-black text-[#10233F]">{{ getCategoryTitle(item) }}</h3>
+              <p class="mt-3 max-w-xl leading-7 text-[#5B6472]">{{ getCategoryDescription(item) }}</p>
+              <a [routerLink]="['/names']" [queryParams]="{ category: item.slug }" class="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#0B74D1]">
+                {{ ui.language === 'ta' ? 'தொகுப்பை திற' : 'Open collection' }}
+                <span class="transition group-hover:translate-x-1" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mb-7 flex items-end justify-between gap-4">
+        <div>
+          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#12B8A6]">{{ ui.language === 'ta' ? 'டிரெண்டிங் பெயர்கள்' : 'Trending names' }}</p>
+          <h2 class="mt-3 font-display text-3xl font-black text-[#10233F]">{{ ui.language === 'ta' ? 'இந்த வாரம் பெற்றோர் சேமித்த பெயர்கள்.' : 'Saved by parents this week.' }}</h2>
+        </div>
+      </div>
+
+      <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-4">
+        <article *ngFor="let item of trendingNames" class="min-w-[290px] snap-start rounded-[1.5rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_18px_50px_rgba(31,31,31,0.06)] transition hover:-translate-y-1 sm:min-w-[350px]">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-display text-3xl font-black text-[#10233F]">{{ item.tamil }}</h3>
+              <p class="mt-1 font-bold text-[#5B6472]">{{ item.english }}</p>
+            </div>
+            <button type="button" (click)="toggleSaved(item.tamil)" class="grid h-11 w-11 place-items-center rounded-full border border-[#DCEBFA] text-lg text-[#0B74D1] transition hover:bg-[#F5F9FF]" [attr.aria-label]="'Save ' + item.english">
+              {{ savedNames.has(item.tamil) ? '♥' : '♡' }}
+            </button>
+          </div>
+          <p class="mt-5 min-h-14 leading-7 text-[#5B6472]">{{ getNameMeaning(item) }}</p>
+          <div class="mt-5 flex flex-wrap items-center gap-2">
+            <span class="rounded-full bg-[#FF9F1C]/35 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#10233F]">{{ getNameCategory(item) }}</span>
+            <button type="button" (click)="copyName(item.tamil)" class="rounded-full border border-[#DCEBFA] px-3 py-2 text-xs font-black text-[#10233F] transition hover:border-[#0B74D1]">
+              {{ copiedName === item.tamil ? (ui.language === 'ta' ? 'நகலெடுத்தது' : 'Copied') : (ui.language === 'ta' ? 'நகல்' : 'Copy') }}
+            </button>
+            <a [href]="whatsappUrl(item)" target="_blank" rel="noopener" class="rounded-full bg-[#12B8A6] px-3 py-2 text-xs font-black text-white transition hover:bg-[#10233F]">
+              WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="rounded-[2rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_18px_50px_rgba(31,31,31,0.06)] sm:p-8">
+        <div class="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="text-xs font-black uppercase tracking-[0.22em] text-[#0B74D1]">{{ ui.language === 'ta' ? 'தமிழ் அ-ஔ' : 'Tamil A-Z' }}</p>
+            <h2 class="mt-3 font-display text-3xl font-black text-[#10233F]">{{ ui.language === 'ta' ? 'எழுத்து வழியாக தேடுங்கள்' : 'Filter by Tamil letter' }}</h2>
+          </div>
+          <p class="max-w-sm leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'ஒரு எழுத்தைத் தேர்ந்தெடுத்து அந்த ஒலியில் தொடங்கும் பெயர்களை பார்க்கலாம்.' : 'Choose a sound and browse names that begin with that Tamil letter.' }}</p>
+        </div>
+        <div class="grid grid-cols-4 gap-2 sm:grid-cols-5 md:grid-cols-10">
+          <a *ngFor="let letter of letters" [routerLink]="['/names', letter.slug]" class="group grid min-h-20 place-items-center rounded-2xl border border-[#DCEBFA] bg-[#F5F9FF] text-center transition hover:-translate-y-0.5 hover:border-[#0B74D1] hover:bg-white">
+            <span class="font-display text-2xl font-black text-[#10233F]">{{ letter.tamil }}</span>
+            <span class="text-[0.65rem] font-black uppercase tracking-[0.16em] text-[#5B6472]">{{ letter.label }}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl gap-4 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+      <div class="rounded-[2rem] bg-[#10233F] p-8 text-white">
+        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'தமிழ் மரபுத் தொகுப்பு' : 'Tamil Heritage Collection' }}</p>
+        <h2 class="mt-5 font-display text-3xl font-black leading-tight">{{ ui.language === 'ta' ? 'கவிதை, ஊர், நினைவால் வடிவான பெயர்கள்.' : 'Names shaped by poetry, place, and memory.' }}</h2>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <article class="rounded-[2rem] border border-[#DCEBFA] bg-white p-6">
+          <span class="font-display text-2xl font-black text-[#0B74D1]">01</span>
+          <h3 class="mt-8 text-xl font-black">{{ ui.language === 'ta' ? 'இலக்கிய வேர்கள்' : 'Literary roots' }}</h3>
+          <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'தமிழ் ஒலி, கவிதை உருவகம், குடும்ப மொழி ஆகியவற்றால் ஈர்க்கப்பட்ட பெயர்கள்.' : 'Explore names inspired by Tamil sound, poetic imagery, and enduring family language.' }}</p>
+        </article>
+        <article class="rounded-[2rem] border border-[#DCEBFA] bg-white p-6">
+          <span class="font-display text-2xl font-black text-[#12B8A6]">02</span>
+          <h3 class="mt-8 text-xl font-black">{{ ui.language === 'ta' ? 'நவீன அடையாளம்' : 'Modern identity' }}</h3>
+          <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'வீடு, பள்ளி, வேலை, உலகம் அனைத்திலும் அழகாக பொருந்தும் பெயர்கள்.' : 'Find names that work beautifully across home, school, work, and the wider world.' }}</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <app-site-footer></app-site-footer>
 </div>

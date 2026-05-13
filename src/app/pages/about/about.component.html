@@ -1,41 +1,39 @@
-<div class="page-shell">
+<div class="min-h-screen bg-[#F5F9FF] text-[#10233F]">
   <app-header></app-header>
-  <main class="page">
-    <section class="page-hero">
-      <span class="page-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-          <path d="M8 7h8" />
-          <path d="M8 11h6" />
-        </svg>
-      </span>
-      <p class="eyebrow">{{ ui.language === 'ta' ? 'எங்கள் கதை' : 'Our Story' }}</p>
-      <h1>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் குழந்தை பெயர்கள் பற்றி' : 'About Meaningful Tamil Baby Names' }}</h1>
-      <p class="lead">
-        {{ ui.language === 'ta'
-          ? 'கலாச்சாரப் பின்னணி, உச்சரிப்பு உதவிக்குறிப்பு, நவீன பயன்பாடு ஆகியவற்றை சேர்த்து அர்த்தமுள்ள தமிழ் பெயர்களை தொகுக்கிறோம். உண்மையான, காலத்தால் அழியாத, எளிதில் புரியும் பெயர்களை குடும்பங்கள் தேர்வு செய்ய உதவுவதே எங்கள் நோக்கம்.'
-          : 'We curate meaningful Tamil names with cultural context, pronunciation help, and modern usage notes. Our goal is to help families choose names that feel authentic, timeless, and easy to understand.' }}
-      </p>
+  <main class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section class="grid gap-5 lg:grid-cols-[1fr_0.8fr]">
+      <div class="rounded-[2rem] bg-[#10233F] p-8 text-white sm:p-10">
+        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'எங்கள் கதை' : 'Our story' }}</p>
+        <h1 class="mt-6 font-display text-4xl font-black leading-tight sm:text-5xl">
+          {{ ui.language === 'ta' ? 'தமிழ் பெயர்களை நவீனமாக தொகுக்கும் ஸ்டூடியோ.' : 'A modern studio for meaningful Tamil names.' }}
+        </h1>
+      </div>
+      <div class="rounded-[2rem] border border-[#DCEBFA] bg-white p-8">
+        <p class="text-lg leading-8 text-[#5B6472]">
+          {{ ui.language === 'ta'
+            ? 'கலாச்சாரப் பின்னணி, உச்சரிப்பு உதவி, நவீன பயன்பாடு ஆகியவற்றை இணைத்து குடும்பங்கள் நம்பிக்கையுடன் தேர்வு செய்ய உதவுகிறோம்.'
+            : 'We curate Tamil names with cultural context, pronunciation help, and modern usage notes so families can choose with confidence.' }}
+        </p>
+      </div>
     </section>
 
-    <div class="content-grid">
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9L12 3z" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'எப்படி தொகுக்கிறோம்' : 'How we curate names' }}</h2>
-          <p>
-            {{ ui.language === 'ta'
-              ? 'தமிழ் இலக்கியம், கலாச்சாரம், பயன்பாட்டு போக்குகள் ஆகியவற்றின் மூலங்களை எங்கள் தொகுப்பாளர்கள் ஆய்வு செய்து பாரம்பரியமும் நவீனமும் சமநிலையுடன் இருக்கும் பட்டியலை உருவாக்குகின்றனர்.'
-              : 'Our editors study Tamil literature, culture, and naming trends to build lists that balance heritage with present-day appeal.' }}
-          </p>
-        </div>
-      </section>
-    </div>
+    <section class="mt-5 grid gap-4 md:grid-cols-3">
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <span class="font-display text-2xl font-black text-[#0B74D1]">01</span>
+        <h2 class="mt-8 text-2xl font-black">{{ ui.language === 'ta' ? 'மரபு' : 'Heritage' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'தமிழ் இலக்கியம், குடும்ப வழக்கம், பயன்பாட்டு வரலாறு ஆகியவற்றை கவனிக்கிறோம்.' : 'We pay attention to literature, family usage, and cultural history.' }}</p>
+      </article>
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <span class="font-display text-2xl font-black text-[#12B8A6]">02</span>
+        <h2 class="mt-8 text-2xl font-black">{{ ui.language === 'ta' ? 'ஒலி' : 'Sound' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'பெயர் எப்படி ஒலிக்கிறது, எழுதப்படுகிறது, உலகளவில் புரியப்படுகிறது என்பதையும் பார்க்கிறோம்.' : 'We consider how a name sounds, reads, and travels globally.' }}</p>
+      </article>
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <span class="font-display text-2xl font-black text-[#0B74D1]">03</span>
+        <h2 class="mt-8 text-2xl font-black">{{ ui.language === 'ta' ? 'அர்த்தம்' : 'Meaning' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'ஒவ்வொரு பெயருக்கும் அர்த்தம் மற்றும் உணர்வு தெளிவாக இருக்க வேண்டும்.' : 'Every name should carry a meaning and an emotional reason to choose it.' }}</p>
+      </article>
+    </section>
   </main>
   <app-site-footer></app-site-footer>
 </div>

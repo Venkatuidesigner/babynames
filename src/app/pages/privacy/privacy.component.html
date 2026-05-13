@@ -1,63 +1,29 @@
-<div class="page-shell">
+<div class="min-h-screen bg-[#F5F9FF] text-[#10233F]">
   <app-header></app-header>
-  <main class="page">
-    <section class="page-hero">
-      <span class="page-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <path d="m9 12 2 2 4-5" />
-        </svg>
-      </span>
-      <p class="eyebrow">{{ ui.language === 'ta' ? 'தரவு பாதுகாப்பு' : 'Data Protection' }}</p>
-      <h1>{{ ui.language === 'ta' ? 'தனியுரிமை கொள்கை' : 'Privacy Policy' }}</h1>
-      <p class="lead">
+  <main class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section class="rounded-[2rem] bg-[#10233F] p-8 text-white sm:p-10">
+      <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'தரவு பாதுகாப்பு' : 'Data protection' }}</p>
+      <h1 class="mt-5 font-display text-4xl font-black leading-tight sm:text-5xl">{{ ui.language === 'ta' ? 'தனியுரிமை கொள்கை' : 'Privacy Policy' }}</h1>
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-white/72">
         {{ ui.language === 'ta'
-          ? 'உங்கள் தனியுரிமையை மதிக்கிறோம். இந்த தளம் பகுப்பாய்வு மற்றும் விளம்பர நோக்கங்களுக்காக குக்கீகளை பயன்படுத்தக்கூடும் (Google AdSense உட்பட). உலாவல் நடத்தைக்கு ஏற்ப விளம்பரங்கள் தனிப்பயனாக்கப்படலாம்.'
-          : 'We respect your privacy. This site may use cookies for analytics and advertising purposes, including Google AdSense. Ads may be personalized based on browsing behavior.' }}
+          ? 'உங்கள் தனியுரிமையை மதிக்கிறோம். இந்த தளம் பகுப்பாய்வு மற்றும் விளம்பர நோக்கங்களுக்காக குக்கீகளை பயன்படுத்தக்கூடும்.'
+          : 'We respect your privacy. This site may use cookies for analytics and advertising, including Google AdSense.' }}
       </p>
     </section>
-
-    <div class="content-grid">
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 11h18" />
-            <path d="M5 11V7a7 7 0 0 1 14 0v4" />
-            <path d="M7 11v9h10v-9" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'விளம்பரங்கள் மற்றும் AdSense' : 'Advertising and AdSense' }}</h2>
-          <p>
-            {{ ui.language === 'ta'
-              ? 'தளத்தை இலவசமாக வைத்திருக்க விளம்பரங்களை காட்டுகிறோம். Google AdSense தொடர்புடைய விளம்பரங்களை காட்ட தனிப்பட்டதல்லாத தரவை சேகரிக்கக்கூடும். விளம்பர தனிப்பயனாக்கத்தை உங்கள் Google Ads அமைப்புகளில் நிர்வகிக்கலாம்.'
-              : 'We may show ads to support the site. Google AdSense may collect non-personal data to deliver relevant advertising. Users can manage ad personalization in Google Ads Settings.' }}
-          </p>
+    <section class="mt-5 grid gap-4">
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <h2 class="text-2xl font-black">{{ ui.language === 'ta' ? 'விளம்பரங்கள் மற்றும் AdSense' : 'Advertising and AdSense' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'தளத்தை இலவசமாக வைத்திருக்க விளம்பரங்களை காட்டலாம். Google AdSense தொடர்புடைய விளம்பரங்களுக்கு தனிப்பட்டதல்லாத தரவை பயன்படுத்தக்கூடும்.' : 'We may show ads to support the site. Google AdSense may use non-personal data to deliver relevant advertising.' }}</p>
+      </article>
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <h2 class="text-2xl font-black">{{ ui.language === 'ta' ? 'குக்கீகள்' : 'Cookies' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'Google உட்பட மூன்றாம் தரப்பு வழங்குநர்கள் முந்தைய வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க குக்கீகளை பயன்படுத்தலாம்.' : 'Third-party vendors, including Google, may use cookies to serve ads based on previous visits to this or other websites.' }}</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a class="rounded-full border border-[#DCEBFA] px-4 py-2 text-sm font-black text-[#10233F]" href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>
+          <a class="rounded-full border border-[#DCEBFA] px-4 py-2 text-sm font-black text-[#10233F]" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data</a>
         </div>
-      </section>
-
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M8 12h8" />
-            <path d="M12 8v8" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'Google குக்கீ விளக்கம்' : 'Google Cookie Disclosure' }}</h2>
-          <p>
-            {{ ui.language === 'ta'
-              ? 'Google உட்பட மூன்றாம் தரப்பு வழங்குநர்கள், பயனரின் முந்தைய வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க குக்கீகளை பயன்படுத்தலாம். Google இன் advertising cookies, இந்த தளத்திலும் பிற தளங்களிலும் நடந்த வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க உதவும்.'
-              : 'Third-party vendors, including Google, may use cookies to serve ads based on a user’s prior visits to this site or other websites. Google advertising cookies help serve ads based on visits across the Internet.' }}
-          </p>
-          <div class="link-row">
-            <a class="link-pill" href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>
-            <a class="link-pill" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data</a>
-          </div>
-        </div>
-      </section>
-    </div>
+      </article>
+    </section>
   </main>
   <app-site-footer></app-site-footer>
 </div>

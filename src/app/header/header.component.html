@@ -1,41 +1,35 @@
-<header class="site-header">
-  <nav class="site-nav">
-    <span class="nav-pill">{{ ui.language === 'ta' ? 'குழந்தை ரூட்ஸ்' : 'Baby Roots' }}</span>
-    <div class="nav-links">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+<header class="sticky top-0 z-50 border-b border-[#DCEBFA]/70 bg-[#F5F9FF]/82 backdrop-blur-xl">
+  <nav class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8" aria-label="Primary navigation">
+    <a routerLink="/" class="flex items-center gap-3 text-[#10233F]" aria-label="Tamil baby names home">
+      <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#10233F] font-display text-xl font-black text-[#FF9F1C]">த</span>
+      <span>
+        <strong class="block text-sm font-black leading-none">{{ ui.language === 'ta' ? 'தமிழ் பெயர்கள்' : 'Tamil Names' }}</strong>
+        <small class="mt-1 block text-[0.65rem] font-black uppercase tracking-[0.18em] text-[#5B6472]">
+          {{ ui.language === 'ta' ? 'பெயர் ஸ்டூடியோ' : 'Naming studio' }}
+        </small>
+      </span>
+    </a>
+
+    <div class="flex flex-wrap items-center gap-2 rounded-full border border-[#DCEBFA] bg-white/55 p-1">
+      <a routerLink="/" routerLinkActive="bg-[#10233F] text-white" [routerLinkActiveOptions]="{ exact: true }" class="rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#5B6472] transition hover:text-[#10233F]">
         {{ ui.language === 'ta' ? 'முகப்பு' : 'Home' }}
       </a>
-      <a routerLink="/names" routerLinkActive="active" class="nav-link">
-        {{ ui.language === 'ta' ? 'பெயர்கள்' : 'Explore Names' }}
+      <a routerLink="/names" routerLinkActive="bg-[#10233F] text-white" class="rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#5B6472] transition hover:text-[#10233F]">
+        {{ ui.language === 'ta' ? 'பெயர்கள்' : 'Names' }}
       </a>
-      <a routerLink="/add-name" routerLinkActive="active" class="nav-link">
-        {{ ui.language === 'ta' ? 'பெயர் சேர்' : 'Add Name' }}
+      <a routerLink="/add-name" routerLinkActive="bg-[#10233F] text-white" class="rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#5B6472] transition hover:text-[#10233F]">
+        {{ ui.language === 'ta' ? 'சேர்க்க' : 'Add' }}
       </a>
     </div>
-    <div class="nav-actions">
-      <div class="language-toggle" aria-label="Language selector">
-        <button class="pill" [class.active]="ui.language === 'ta'" type="button" (click)="ui.setLanguage('ta')">
+
+    <div class="flex flex-wrap items-center gap-2">
+      <div class="flex rounded-full border border-[#DCEBFA] bg-white/65 p-1" aria-label="Language selector">
+        <button type="button" (click)="ui.setLanguage('ta')" [class.bg-[#0B74D1]]="ui.language === 'ta'" [class.text-white]="ui.language === 'ta'" class="rounded-full px-3 py-2 text-xs font-black text-[#5B6472] transition">
           தமிழ்
         </button>
-        <button class="pill" [class.active]="ui.language === 'en'" type="button" (click)="ui.setLanguage('en')">
-          English
+        <button type="button" (click)="ui.setLanguage('en')" [class.bg-[#0B74D1]]="ui.language === 'en'" [class.text-white]="ui.language === 'en'" class="rounded-full px-3 py-2 text-xs font-black text-[#5B6472] transition">
+          EN
         </button>
-      </div>
-      <div class="theme-toggle">
-        <!-- <label class="theme-label" for="theme-select">
-          {{ ui.language === 'ta' ? 'தீம்' : 'Theme' }}
-        </label> -->
-        <select
-          id="theme-select"
-          class="theme-select"
-          [ngModel]="ui.theme"
-          (ngModelChange)="ui.setTheme($event)"
-          aria-label="Theme selector"
-        >
-          <option *ngFor="let option of themeOptions" [ngValue]="option.value">
-            {{ getThemeLabel(option) }}
-          </option>
-        </select>
       </div>
     </div>
   </nav>

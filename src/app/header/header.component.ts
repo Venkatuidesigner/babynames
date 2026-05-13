@@ -13,13 +13,6 @@ type ThemeOption = {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  themeOptions: ThemeOption[] = [
-    { value: 'light', labelTa: 'ஒளி', labelEn: 'Light' },
-    { value: 'pink', labelTa: 'பிங்க்', labelEn: 'Pink' },
-    { value: 'blue', labelTa: 'நீலம்', labelEn: 'Blue' },
-    { value: 'yellow', labelTa: 'மஞ்சள்', labelEn: 'Yellow' },
-    { value: 'midnight', labelTa: 'இரவு', labelEn: 'Midnight' }
-  ];
 
   constructor(public ui: UiService) {}
 

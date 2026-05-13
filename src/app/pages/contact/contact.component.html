@@ -1,45 +1,25 @@
-<div class="page-shell">
+<div class="min-h-screen bg-[#F5F9FF] text-[#10233F]">
   <app-header></app-header>
-  <main class="page">
-    <section class="page-hero">
-      <span class="page-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16v16H4z" />
-          <path d="m22 6-10 7L2 6" />
-        </svg>
-      </span>
-      <p class="eyebrow">{{ ui.language === 'ta' ? 'உதவி மற்றும் பரிந்துரைகள்' : 'Help and Suggestions' }}</p>
-      <h1>{{ ui.language === 'ta' ? 'தொடர்பு' : 'Contact' }}</h1>
-      <p class="lead">{{ ui.language === 'ta' ? 'பெயர் பரிந்துரை அல்லது திருத்தம் இருக்கிறதா? எங்களுக்கு தெரிவியுங்கள்.' : 'Have a name suggestion or correction? Let us know.' }}</p>
+  <main class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section class="rounded-[2rem] border border-[#DCEBFA] bg-white p-8 shadow-[0_24px_80px_rgba(31,31,31,0.08)] sm:p-10">
+      <p class="text-xs font-black uppercase tracking-[0.22em] text-[#0B74D1]">{{ ui.language === 'ta' ? 'உதவி' : 'Contact' }}</p>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-black leading-tight sm:text-5xl">
+        {{ ui.language === 'ta' ? 'பெயர் பரிந்துரை அல்லது திருத்தம் உள்ளதா?' : 'Have a name suggestion or correction?' }}
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg leading-8 text-[#5B6472]">{{ ui.language === 'ta' ? 'எங்கள் தொகுப்புக்கான பரிந்துரைகளை அனுப்புங்கள்.' : 'Send us thoughtful suggestions, corrections, or partnership questions.' }}</p>
     </section>
-
-    <div class="content-grid two-column">
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 6 12 13 2 6" />
-            <path d="M2 6h20v12H2z" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'மின்னஞ்சல்' : 'Email' }}</h2>
-          <p><a href="mailto:hello@tamilbabynames.com">hello@tamilbabynames.com</a></p>
-        </div>
-      </section>
-
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 7v5l3 2" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'பதிலளிக்கும் நேரம்' : 'Response Time' }}</h2>
-          <p>{{ ui.language === 'ta' ? '2 வேலை நாட்கள்' : '2 business days' }}</p>
-        </div>
-      </section>
-    </div>
+    <section class="mt-5 grid gap-4 md:grid-cols-2">
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <span class="text-xs font-black uppercase tracking-[0.22em] text-[#12B8A6]">{{ ui.language === 'ta' ? 'மின்னஞ்சல்' : 'Email' }}</span>
+        <h2 class="mt-5 text-2xl font-black">hello@tamilbabynames.com</h2>
+        <a class="mt-6 inline-flex rounded-full bg-[#0B74D1] px-5 py-3 text-sm font-black text-white" href="mailto:hello@tamilbabynames.com">{{ ui.language === 'ta' ? 'மின்னஞ்சல் அனுப்பு' : 'Send email' }}</a>
+      </article>
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-[#10233F] p-6 text-white">
+        <span class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'பதில் நேரம்' : 'Response time' }}</span>
+        <h2 class="mt-5 text-2xl font-black">{{ ui.language === 'ta' ? '2 வேலை நாட்கள்' : '2 business days' }}</h2>
+        <p class="mt-4 leading-7 text-white/70">{{ ui.language === 'ta' ? 'திருத்தங்கள் மற்றும் பெயர் பரிந்துரைகள் கவனமாக மதிப்பாய்வு செய்யப்படும்.' : 'Corrections and name suggestions are reviewed with editorial care.' }}</p>
+      </article>
+    </section>
   </main>
   <app-site-footer></app-site-footer>
 </div>

@@ -1,93 +1,22 @@
-<div class="page-shell">
+<div class="min-h-screen bg-[#F5F9FF] text-[#10233F]">
   <app-header></app-header>
-  <main class="page">
-    <section class="page-hero">
-      <span class="page-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="9" />
-          <circle cx="8.5" cy="10" r="1" fill="currentColor" stroke="none" />
-          <circle cx="14.5" cy="8" r="1" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="15" r="1" fill="currentColor" stroke="none" />
-          <path d="M12 3a4 4 0 0 0 4 4 4 4 0 0 0 4 4" />
-        </svg>
-      </span>
-      <p class="eyebrow">{{ ui.language === 'ta' ? 'தள விருப்பங்கள்' : 'Site Preferences' }}</p>
-      <h1>{{ ui.language === 'ta' ? 'குக்கீ கொள்கை' : 'Cookie Policy' }}</h1>
-      <p class="lead">
-        {{ ui.language === 'ta'
-          ? 'இந்த தளம் குக்கீகளை பயன்படுத்தக்கூடும். அவை தள செயல்பாடு, விருப்பங்கள், விளம்பரங்கள் மற்றும் செயல்திறன் அளவீட்டிற்கு உதவுகின்றன.'
-          : 'This website may use cookies to support site functionality, preferences, advertising, and performance measurement.' }}
-      </p>
+  <main class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+    <section class="rounded-[2rem] bg-[#10233F] p-8 text-white sm:p-10">
+      <p class="text-xs font-black uppercase tracking-[0.22em] text-[#FF9F1C]">{{ ui.language === 'ta' ? 'தள விருப்பங்கள்' : 'Site preferences' }}</p>
+      <h1 class="mt-5 font-display text-4xl font-black leading-tight sm:text-5xl">{{ ui.language === 'ta' ? 'குக்கீ கொள்கை' : 'Cookie Policy' }}</h1>
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-white/72">{{ ui.language === 'ta' ? 'குக்கீகள் தள செயல்பாடு, விருப்பங்கள், விளம்பரங்கள் மற்றும் செயல்திறன் அளவீட்டிற்கு உதவுகின்றன.' : 'Cookies support site functionality, preferences, advertising, and performance measurement.' }}</p>
     </section>
-
-    <div class="content-grid">
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 7h16" />
-            <path d="M7 7v13" />
-            <path d="M17 7v13" />
-            <path d="M5 20h14" />
-            <path d="M8 4h8l1 3H7l1-3z" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'கூகுள் விளம்பர குக்கீகள்' : 'Google Advertising Cookies' }}</h2>
-          <p>
-            {{ ui.language === 'ta'
-              ? 'மூன்றாம் தரப்பு வழங்குநர்களில் Google உட்பட, பயனரின் முந்தைய வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க குக்கீகளை பயன்படுத்தலாம்.'
-              : 'Third-party vendors, including Google, may use cookies to serve ads based on a user’s prior visits to this and other websites.' }}
-          </p>
-        </div>
-      </section>
-
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 20v-8" />
-            <path d="M18 20V8" />
-            <path d="M6 20v-4" />
-            <path d="M4 20h16" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'தனிப்பயன் விளம்பரங்கள்' : 'Personalized Advertising' }}</h2>
-          <p>
-            {{ ui.language === 'ta'
-              ? 'Google இன் விளம்பர குக்கீகள், எங்கள் தளம் மற்றும் இணையதளங்களில் நடந்த உங்கள் வருகைகளின் அடிப்படையில் பொருத்தமான விளம்பரங்களை காட்ட உதவலாம். பயனர்கள் Ads Settings மூலம் தனிப்பயன் விளம்பரங்களை நிர்வகிக்கலாம்.'
-              : 'Google’s advertising cookies can help show more relevant ads based on visits to our site and other sites on the Internet. Users can manage personalized advertising in Ads Settings.' }}
-          </p>
-          <div class="link-row">
-            <a class="link-pill" href="https://adssettings.google.com" target="_blank" rel="noopener">
-              {{ ui.language === 'ta' ? 'Google Ads Settings' : 'Google Ads Settings' }}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <span class="section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 17v-5" />
-            <path d="M12 8h.01" />
-          </svg>
-        </span>
-        <div class="card-body">
-          <h2>{{ ui.language === 'ta' ? 'மேலும் தகவல்' : 'Learn More' }}</h2>
-          <p>
-            {{ ui.language === 'ta'
-              ? 'Google எவ்வாறு தரவைப் பயன்படுத்துகிறது என்பதை கீழே உள்ள இணைப்பில் பார்க்கலாம்.'
-              : 'You can learn more about how Google uses data at the link below.' }}
-          </p>
-          <div class="link-row">
-            <a class="link-pill" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">
-              {{ ui.language === 'ta' ? 'Google எவ்வாறு தரவைப் பயன்படுத்துகிறது' : 'How Google uses information from sites or apps that use its services' }}
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section class="mt-5 grid gap-4">
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <h2 class="text-2xl font-black">{{ ui.language === 'ta' ? 'Google விளம்பர குக்கீகள்' : 'Google advertising cookies' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'Google உட்பட மூன்றாம் தரப்பு வழங்குநர்கள், முந்தைய வருகைகளை அடிப்படையாகக் கொண்டு விளம்பரங்களை வழங்க குக்கீகளை பயன்படுத்தலாம்.' : 'Third-party vendors, including Google, may use cookies to serve ads based on prior visits to this and other websites.' }}</p>
+      </article>
+      <article class="rounded-[1.5rem] border border-[#DCEBFA] bg-white p-6">
+        <h2 class="text-2xl font-black">{{ ui.language === 'ta' ? 'தனிப்பயன் விளம்பரங்கள்' : 'Personalized advertising' }}</h2>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'பயனர்கள் Ads Settings மூலம் தனிப்பயன் விளம்பரங்களை நிர்வகிக்கலாம்.' : 'Users can manage personalized advertising in Google Ads Settings.' }}</p>
+        <a class="mt-5 inline-flex rounded-full bg-[#0B74D1] px-5 py-3 text-sm font-black text-white" href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>
+      </article>
+    </section>
   </main>
   <app-site-footer></app-site-footer>
 </div>

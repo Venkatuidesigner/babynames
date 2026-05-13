@@ -1,168 +1,131 @@
-<div class="page-shell">
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
-  <div class="bg-grid"></div>
+<div class="min-h-screen bg-[#F5F9FF] text-[#10233F]">
+  <app-header></app-header>
 
-  <header class="hero-shell">
-    <app-header></app-header>
+  <main class="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6 lg:px-8">
+    <section class="relative overflow-hidden rounded-[2rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_24px_80px_rgba(31,31,31,0.08)] sm:p-8 lg:p-10">
+      <div class="pointer-events-none absolute right-[-5rem] top-[-5rem] h-60 w-60 rounded-[42%_58%_62%_38%] bg-[#12B8A6]/20"></div>
+      <div class="pointer-events-none absolute bottom-[-4rem] left-[30%] h-36 w-72 rotate-[-10deg] rounded-full bg-[#FF9F1C]/30"></div>
 
-    <div class="mx-auto mt-8 max-w-6xl px-4 text-center">
-      <p class="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-brand-100">
-        {{ ui.language === 'ta' ? 'தமிழ் குழந்தை பெயர்கள்' : 'Tamil Baby Name Explorer' }}
-      </p>
-      <h1 class="mt-5 text-4xl md:text-6xl font-display font-black tracking-tight text-white">
-        {{ ui.language === 'ta' ? 'அர்த்தமுள்ள தமிழ் பெயர்கள்' : 'Discover soulful Tamil names' }}
-      </h1>
-      <p class="mx-auto mt-4 max-w-2xl text-sm md:text-lg text-indigo-100/90">
-        {{ ui.language === 'ta'
-          ? 'தமிழ் எழுத்துகள், ஆங்கில எழுத்துப்பெயர்கள் மற்றும் அழகான பெயர்களை கண்டறியுங்கள்.'
-          : 'Browse transliterations, glide through letter clusters, and find names that feel timeless and bright.' }}
-      </p>
-
-      <div class="mx-auto mt-8 max-w-5xl">
-        <div class="glass-panel search-card">
-          <div class="search-row">
-            <div class="search-input">
-              <label class="text-xs uppercase tracking-[0.3em] text-slate-300/70">{{ ui.language === 'ta' ? 'பெயர் தேடு' : 'Search name' }}</label>
-              <div class="search-field">
-                <input
-                  [(ngModel)]="searchValue"
-                  (ngModelChange)="onSearchChange()"
-                  aria-label="பெயர் தேடு"
-                  [placeholder]="ui.language === 'ta' ? 'தமிழ் அல்லது ஆங்கில பெயர்...' : 'Search Tamil or English name...'"
-                  class="search-control"
-                />
-                <button
-                  class="clear-btn"
-                  type="button"
-                  [disabled]="!searchValue"
-                  (click)="searchValue = ''"
-                  [attr.aria-label]="ui.language === 'ta' ? 'தேடலை நீக்கு' : 'Clear search'"
-                >
-                  ×
-                </button>
-              </div>
-              <p class="search-hint">
-                {{ ui.language === 'ta' ? 'தமிழ் அல்லது ஆங்கில பெயர் எழுதுங்கள்.' : 'Type Tamil or English names.' }}
-              </p>
-            </div>
-            <div class="search-chips">
-              <div class="stat-chip">
-                <span class="chip-label">{{ ui.language === 'ta' ? 'மொத்தம்' : 'Total names' }}</span>
-                <span class="chip-value">{{ currentTotal }}</span>
-              </div>
-              <div class="stat-chip">
-                <span class="chip-label">{{ ui.language === 'ta' ? 'வடிகட்டப்பட்ட' : 'Filtered' }}</span>
-                <span class="chip-value">{{ filteredNames.length }}</span>
-              </div>
-              <div class="stat-chip">
-                <span class="chip-label">{{ ui.language === 'ta' ? 'எழுத்துகள்' : 'Letters' }}</span>
-                <span class="chip-value">{{ letterOptions.length - 1 }}</span>
-              </div>
-            </div>
-          </div>
+      <div class="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div>
+          <p class="w-fit rounded-full border border-[#DCEBFA] bg-[#F5F9FF] px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-[#0B74D1]">
+            {{ ui.language === 'ta' ? 'பெயர் ஆய்வு' : 'Name explorer' }}
+          </p>
+          <h1 class="mt-5 max-w-3xl font-display text-4xl font-black leading-tight text-[#10233F] sm:text-5xl">
+            {{ ui.language === 'ta' ? 'தமிழ் பெயர்களை அமைதியாக தேடுங்கள்' : 'Explore Tamil names with meaning and clarity.' }}
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-[#5B6472]">
+            {{ ui.language === 'ta'
+              ? 'எழுத்து, பாலினம், ஆங்கில எழுத்துப்பெயர், அர்த்தம் ஆகியவற்றின் மூலம் சரியான பெயரை கண்டறியுங்கள்.'
+              : 'Search by Tamil spelling, English transliteration, letter, meaning, and collection.' }}
+          </p>
         </div>
-      </div>
 
-      <div class="mx-auto mt-6 max-w-5xl">
-        <div class="gender-toggle">
-          <button
-            class="gender-btn"
-            [class.active]="activeGender === 'girl'"
-            (click)="setGender('girl')"
-          >
-            {{ ui.language === 'ta' ? 'பெண் பெயர்கள்' : 'Girl Names' }}
-          </button>
-          <button
-            class="gender-btn"
-            [class.active]="activeGender === 'boy'"
-            (click)="setGender('boy')"
-          >
-            {{ ui.language === 'ta' ? 'ஆண் பெயர்கள்' : 'Boy Names' }}
-          </button>
-        </div>
-        <div class="filters-shell">
-          <p class="filters-title">{{ ui.language === 'ta' ? 'எழுத்து வடிகட்டிகள்' : 'Letter filters' }}</p>
-          <div class="filters-row">
+        <div class="rounded-[1.5rem] border border-[#DCEBFA] bg-[#F5F9FF] p-3">
+          <label class="sr-only" for="names-search">{{ ui.language === 'ta' ? 'பெயர் தேடு' : 'Search name' }}</label>
+          <div class="grid gap-2 sm:grid-cols-[1fr_auto]">
+            <input
+              id="names-search"
+              [(ngModel)]="searchValue"
+              (ngModelChange)="onSearchChange()"
+              class="min-h-14 rounded-2xl border border-[#DCEBFA] bg-white px-5 font-semibold text-[#10233F] outline-none placeholder:text-[#5B6472]/70 focus:ring-4 focus:ring-[#FF9F1C]/40"
+              [placeholder]="ui.language === 'ta' ? 'தமிழ் அல்லது ஆங்கில பெயர்...' : 'Search Tamil or English name...'"
+            />
             <button
-              *ngFor="let option of letterOptions"
-              (click)="onLetter(option)"
-              [class]="activeLetter === option.tamil ? 'filter-chip active' : 'filter-chip'"
-              [attr.aria-label]="(ui.language === 'ta' ? 'எழுத்து வடிகட்டி: ' : 'Letter filter: ') + getLetterLabel(option)"
+              type="button"
+              [disabled]="!searchValue"
+              (click)="searchValue = ''; onSearchChange()"
+              class="min-h-14 rounded-2xl border border-[#DCEBFA] bg-white px-5 text-sm font-black uppercase tracking-[0.14em] text-[#5B6472] transition hover:border-[#0B74D1] disabled:opacity-50"
             >
-              {{ getLetterLabel(option) }}
+              {{ ui.language === 'ta' ? 'நீக்கு' : 'Clear' }}
             </button>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <main class="mx-auto max-w-6xl px-4 pb-16">
-    <section class="info-bar">
-      <div>
-        <p class="text-xs uppercase tracking-[0.3em] text-slate-400">{{ ui.language === 'ta' ? 'தற்போதைய எழுத்து' : 'Current filter' }}</p>
-        <p class="mt-1 text-lg font-semibold text-brand-100">{{ activeLetterLabel }}</p>
+    <section class="mt-5 grid gap-3 sm:grid-cols-3">
+      <div class="rounded-[1.4rem] border border-[#DCEBFA] bg-white p-5">
+        <span class="text-xs font-black uppercase tracking-[0.18em] text-[#5B6472]">{{ ui.language === 'ta' ? 'மொத்தம்' : 'Total' }}</span>
+        <strong class="mt-2 block text-2xl text-[#10233F]">{{ currentTotal }}</strong>
       </div>
-      <div class="text-right">
-        <p class="text-xs uppercase tracking-[0.3em] text-slate-400">{{ ui.language === 'ta' ? 'முடிவுகள்' : 'Results' }}</p>
-        <p class="mt-1 text-lg font-semibold text-white">{{ filteredNames.length }} {{ ui.language === 'ta' ? 'பெயர்கள்' : 'names' }}</p>
+      <div class="rounded-[1.4rem] border border-[#DCEBFA] bg-white p-5">
+        <span class="text-xs font-black uppercase tracking-[0.18em] text-[#5B6472]">{{ ui.language === 'ta' ? 'முடிவுகள்' : 'Results' }}</span>
+        <strong class="mt-2 block text-2xl text-[#10233F]">{{ filteredNames.length }}</strong>
+      </div>
+      <div class="rounded-[1.4rem] border border-[#DCEBFA] bg-white p-5">
+        <span class="text-xs font-black uppercase tracking-[0.18em] text-[#5B6472]">{{ ui.language === 'ta' ? 'எழுத்து' : 'Letter' }}</span>
+        <strong class="mt-2 block text-2xl text-[#10233F]">{{ activeLetterLabel }}</strong>
       </div>
     </section>
 
-    <section class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <article
-        *ngFor="let item of pagedNames"
-        class="name-card"
-      >
-        <div class="flex items-baseline justify-between">
-          <h2 class="text-2xl font-display font-black text-brand-50">{{ ui.language === 'ta' ? item.name || item.tamil : item.english }}</h2>
-          <span class="badge">{{ ui.language === 'ta' ? 'தமிழ்' : 'Tamil' }}</span>
+    <section class="mt-5 rounded-[1.6rem] border border-[#DCEBFA] bg-white p-4 sm:p-5">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div class="flex rounded-full border border-[#DCEBFA] bg-[#F5F9FF] p-1">
+          <button type="button" (click)="setGender('girl')" [class.bg-[#10233F]]="activeGender === 'girl'" [class.text-white]="activeGender === 'girl'" class="rounded-full px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-[#5B6472] transition">
+            {{ ui.language === 'ta' ? 'பெண்' : 'Girl' }}
+          </button>
+          <button type="button" (click)="setGender('boy')" [class.bg-[#10233F]]="activeGender === 'boy'" [class.text-white]="activeGender === 'boy'" class="rounded-full px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-[#5B6472] transition">
+            {{ ui.language === 'ta' ? 'ஆண்' : 'Boy' }}
+          </button>
         </div>
-        <p class="name-subtitle">{{ ui.language === 'ta' ? item.english : item.tamil }}</p>
-        <p *ngIf="item.meaning" class="name-meaning">{{ item.meaning }}</p>
-        <p *ngIf="item.description" class="name-description">{{ item.description }}</p>
-        <div class="mt-4 flex items-center gap-2 text-xs text-slate-300">
-          <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
-          <span>{{ ui.language === 'ta' ? 'அர்த்தமுள்ள, நவீன, பாரம்பரியம்' : 'Meaningful, modern, and rooted' }}</span>
+
+        <div class="flex flex-1 flex-wrap gap-2 lg:justify-end">
+          <button
+            *ngFor="let option of letterOptions"
+            type="button"
+            (click)="onLetter(option)"
+            [class.bg-[#0B74D1]]="activeLetter === option.tamil"
+            [class.text-white]="activeLetter === option.tamil"
+            class="min-h-11 rounded-full border border-[#DCEBFA] bg-[#F5F9FF] px-4 text-sm font-black text-[#10233F] transition hover:-translate-y-0.5 hover:border-[#0B74D1]"
+            [attr.aria-label]="(ui.language === 'ta' ? 'எழுத்து வடிகட்டி: ' : 'Letter filter: ') + getLetterLabel(option)"
+          >
+            {{ getLetterLabel(option) }}
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <article *ngFor="let item of pagedNames" class="group rounded-[1.6rem] border border-[#DCEBFA] bg-white p-5 shadow-[0_18px_50px_rgba(31,31,31,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(31,31,31,0.09)]">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="font-display text-2xl font-black text-[#10233F]">{{ ui.language === 'ta' ? item.name || item.tamil : item.english }}</h2>
+            <p class="mt-1 font-bold text-[#5B6472]">{{ ui.language === 'ta' ? item.english : item.tamil }}</p>
+          </div>
+          <button type="button" (click)="toggleSaved(item.tamil)" class="grid h-11 w-11 place-items-center rounded-full border border-[#DCEBFA] text-lg text-[#0B74D1] transition hover:bg-[#F5F9FF]" [attr.aria-label]="(ui.language === 'ta' ? 'சேமி ' : 'Save ') + item.english">
+            {{ savedNames.has(item.tamil) ? '♥' : '♡' }}
+          </button>
+        </div>
+        <p *ngIf="item.meaning" class="mt-5 rounded-2xl bg-[#F5F9FF] p-4 leading-7 text-[#5B6472]">{{ item.meaning }}</p>
+        <p *ngIf="item.description" class="mt-4 leading-7 text-[#5B6472]">{{ item.description }}</p>
+        <div class="mt-5 flex flex-wrap items-center gap-2">
+          <span class="rounded-full bg-[#FF9F1C]/35 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#10233F]">{{ item.gender || activeGender }}</span>
+          <button type="button" (click)="copyName(item.tamil)" class="rounded-full border border-[#DCEBFA] px-3 py-2 text-xs font-black text-[#10233F] transition hover:border-[#0B74D1]">
+            {{ copiedName === item.tamil ? (ui.language === 'ta' ? 'நகலெடுத்தது' : 'Copied') : (ui.language === 'ta' ? 'நகல்' : 'Copy') }}
+          </button>
+          <a [href]="whatsappUrl(item)" target="_blank" rel="noopener" class="rounded-full bg-[#12B8A6] px-3 py-2 text-xs font-black text-white transition hover:bg-[#10233F]">WhatsApp</a>
         </div>
       </article>
 
-      <article *ngIf="filteredNames.length === 0" class="empty-state">
-        <h3 class="text-xl font-display font-semibold text-black">{{ ui.language === 'ta' ? 'பெயர்கள் இல்லை' : 'No matches found' }}</h3>
-        <p class="mt-2 text-sm text-slate-300">{{ ui.language === 'ta' ? 'வேறு எழுத்தை தேர்வு செய்யுங்கள்.' : 'Try a different letter or clear the search to explore more names.' }}</p>
+      <article *ngIf="filteredNames.length === 0" class="rounded-[1.6rem] border border-[#DCEBFA] bg-white p-8">
+        <h3 class="font-display text-2xl font-black text-[#10233F]">{{ ui.language === 'ta' ? 'பெயர்கள் இல்லை' : 'No matches found' }}</h3>
+        <p class="mt-3 leading-7 text-[#5B6472]">{{ ui.language === 'ta' ? 'வேறு எழுத்தை தேர்வு செய்யுங்கள்.' : 'Try a different letter or clear the search.' }}</p>
       </article>
     </section>
 
-    <section *ngIf="filteredNames.length > pageSize" class="pagination mt-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 p-4 text-sm text-slate-300 shadow-sm">
-      <div>
-        {{ pageStart }} - {{ pageEnd }} {{ ui.language === 'ta' ? 'of' : 'of' }} {{ filteredNames.length }}
-      </div>
-      <div class="pagination-buttons flex items-center gap-2">
-        <button
-          class="page-btn"
-          [disabled]="currentPage === 1"
-          (click)="currentPage = currentPage - 1"
-        >
-          {{ ui.language === 'ta' ? 'முந்தைய 20' : 'Previous 20' }}
+    <section *ngIf="filteredNames.length > pageSize" class="mt-8 flex flex-col gap-3 rounded-[1.4rem] border border-[#DCEBFA] bg-white p-4 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-sm font-bold text-[#5B6472]">{{ pageStart }} - {{ pageEnd }} {{ ui.language === 'ta' ? 'மொத்தம்' : 'of' }} {{ filteredNames.length }}</p>
+      <div class="flex gap-2">
+        <button type="button" class="rounded-full border border-[#DCEBFA] px-5 py-3 text-sm font-black text-[#10233F] disabled:opacity-40" [disabled]="currentPage === 1" (click)="currentPage = currentPage - 1">
+          {{ ui.language === 'ta' ? 'முந்தைய' : 'Previous' }}
         </button>
-        <button
-          class="page-btn"
-          [disabled]="currentPage === pageCount"
-          (click)="currentPage = currentPage + 1"
-        >
-          {{ ui.language === 'ta' ? 'அடுத்த 20' : 'Next 20' }}
+        <button type="button" class="rounded-full bg-[#0B74D1] px-5 py-3 text-sm font-black text-white disabled:opacity-40" [disabled]="currentPage === pageCount" (click)="currentPage = currentPage + 1">
+          {{ ui.language === 'ta' ? 'அடுத்தது' : 'Next' }}
         </button>
       </div>
-    </section>
-
-    <section class="how-to"> 
-      <h3 class="font-display text-lg font-bold text-black">{{ ui.language === 'ta' ? 'எப்படி பயன்படுத்துவது' : 'How to use' }}</h3>
-      <ul class="mt-3 list-disc pl-5 text-slate-500">
-        <li>{{ ui.language === 'ta' ? 'தமிழ் எழுத்து அல்லது ஆங்கில எழுத்துப்பெயர் மூலம் தேடுங்கள்.' : 'Search by Tamil letters or English transliteration.' }}</li>
-        <li>{{ ui.language === 'ta' ? 'எழுத்தை தேர்வு செய்து பெயர்களை காணுங்கள்.' : 'Click any filter tile to show names starting with that character.' }}</li>
-      </ul>
     </section>
   </main>
+
+  <app-site-footer></app-site-footer>
 </div>
